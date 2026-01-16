@@ -38,7 +38,7 @@ const MobileNav = () => {
                 key={link.name}
                 className="text-2xl font-bold text-white"
               >
-                <Link href={link.href}>
+                <Link href={link.route}>
                   <p>{link.name}</p>
                 </Link>
               </SheetClose>

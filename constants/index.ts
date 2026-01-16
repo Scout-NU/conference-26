@@ -1,5 +1,5 @@
 export const NavbarLinks = [
-  { name: 'Schedule', href: 'schedule' },
-  { name: 'Speakers', href: 'speakers' },
-  { name: 'Designathon', href: 'designathon' },
+  { name: 'Schedule', route: '/schedule' },
+  { name: 'Speakers', route: '/speakers' },
+  { name: 'Designathon', route: '/designathon' },
 ]
