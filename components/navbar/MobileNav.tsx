@@ -22,10 +22,12 @@ const MobileNav = () => {
           alt="Menu"
           width={36}
           height={36}
-          className="sm:hidden"
+          className="md:hidden"
         />
       </SheetTrigger>
       <SheetContent className="bg-[#323232] border-none p-6">
+        <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
+        
         <Link href="/" className="mb-12 flex items-center">
           <p>Entangle</p>
         </Link>
