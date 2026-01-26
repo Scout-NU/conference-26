@@ -1,24 +1,30 @@
 import { scheduleData, Event } from './scheduleData';
+import handImage from './handimage.png';
 
 const EventItem = ({ time, name, description, location, isLast }: Event & { isLast: boolean }) => (
-  <div className="flex flex-col gap-3 py-6">
-    <div className="text-sm font-medium text-zinc-400">{time}</div>
-    <h3 className="text-xl font-semibold text-white">{name}</h3>
-    <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
-    <div className="flex items-center gap-2 text-sm text-zinc-400">
-      <svg
-        className="h-4 w-4 fill-zinc-400"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-      <span>{location}</span>
+  <div className="flex gap-8 py-6">
+    {/* Time on the left */}
+    <div className="w-24 flex-shrink-0 text-sm font-medium text-zinc-400">{time}</div>
+    
+    {/* Content on the right */}
+    <div className="flex flex-1 flex-col gap-3">
+      <h3 className="text-xl font-semibold text-white">{name}</h3>
+      <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+      <div className="flex items-center gap-2 text-sm text-zinc-400">
+        <svg
+          className="h-4 w-4 fill-zinc-400"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+        <span>{location}</span>
+      </div>
+      {!isLast && (
+        <div className="mt-6 border-t border-zinc-700"></div>
+      )}
     </div>
-    {!isLast && (
-      <div className="mt-6 border-t border-zinc-700"></div>
-    )}
   </div>
 );
 
@@ -57,33 +63,18 @@ export default function Schedule() {
       <div className="mx-auto max-w-4xl px-8 py-16">
         <h1 className="mb-16 text-6xl font-bold text-white">Schedule</h1>
 
-        {/* Single Large Bubble with All Events */}
+        {/* Single Large Bubble with Background Image */}
         <div className="relative overflow-hidden rounded-3xl bg-zinc-800/50 p-8 backdrop-blur-sm">
-          {/* Blue gradient at TOP right - your original */}
+          {/* Background Image - Centered */}
           <div 
-            className="absolute rounded-3xl"
+            className="absolute inset-0 rounded-3xl"
             style={{
-              width: '400px',
-              height: '600px',
-              top: '-200px',
-              right: '-150px',
-              backgroundColor: '#3D46FF',
-              filter: 'blur(100px)',
-              opacity: 0.6
-            }}
-          ></div>
-
-          {/* Blue gradient at BOTTOM right - softer/different */}
-          <div 
-            className="absolute rounded-3xl"
-            style={{
-              width: '400px',
-              height: '500px',
-              bottom: '-200px',
-              right: '-180px',
-              backgroundColor: '#3D46FF',
-              filter: 'blur(100px)',
-              opacity: 0.4
+              backgroundImage: `url(${handImage.src})`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              opacity: 0.4,
+              zIndex: 0
             }}
           ></div>
           
