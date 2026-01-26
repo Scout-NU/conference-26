@@ -50,7 +50,7 @@ export default function Schedule() {
           <a
             href="#about"
             className="text-zinc-400 transition-colors hover:text-white"
-          >
+          > 
             ABOUT
           </a>
           <button className="rounded-md bg-blue-300 px-6 py-2 font-semibold text-black transition-colors hover:bg-blue-400">
@@ -63,33 +63,46 @@ export default function Schedule() {
       <div className="mx-auto max-w-4xl px-8 py-16">
         <h1 className="mb-16 text-6xl font-bold text-white">Schedule</h1>
 
-        {/* Single Large Bubble with Background Image */}
-        <div className="relative overflow-hidden rounded-3xl bg-zinc-800/50 p-8 backdrop-blur-sm">
-          {/* Background Image - Centered */}
+        {/* Container with full-width background */}
+        <div className="relative">
+          {/* Background Image - Full Width */}
           <div 
-            className="absolute inset-0 rounded-3xl"
+            className="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2"
             style={{
               backgroundImage: `url(${handImage.src})`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              opacity: 0.4,
+              opacity: 0.5,
               zIndex: 0
             }}
           ></div>
           
-          {/* Events list */}
-          <div className="relative z-10">
-            {scheduleData.map((event, index) => (
-              <EventItem
-                key={index}
-                time={event.time}
-                name={event.name}
-                description={event.description}
-                location={event.location}
-                isLast={index === scheduleData.length - 1}
-              />
-            ))}
+          {/* Left gradient blend */}
+          <div 
+            className="absolute left-0 top-0 h-full w-screen"
+            style={{
+              background: 'linear-gradient(to right, rgba(24, 24, 27, 1) 0%, rgba(24, 24, 27, 0) 15%, rgba(24, 24, 27, 0) 85%, rgba(24, 24, 27, 1) 100%)',
+              zIndex: 1,
+              pointerEvents: 'none'
+            }}
+          ></div>
+          
+          {/* Card with content */}
+          <div className="relative z-10 overflow-hidden rounded-3xl bg-zinc-800/50 p-8 backdrop-blur-sm">
+            {/* Events list */}
+            <div className="relative">
+              {scheduleData.map((event, index) => (
+                <EventItem
+                  key={index}
+                  time={event.time}
+                  name={event.name}
+                  description={event.description}
+                  location={event.location}
+                  isLast={index === scheduleData.length - 1}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
