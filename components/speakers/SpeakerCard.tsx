@@ -9,7 +9,7 @@ interface SpeakerProps {
     link2: string;
 }
 
-export default function Speaker({ img, name, title, description, link1, link2 }: SpeakerProps) {
+export default function SpeakerCard({ img, name, title, description, link1, link2 }: SpeakerProps) {
     return (
         <div className="flex flex-col md:flex-row m-10">
             <img className="border-2 rounded-2xl w-54 h-60 object-cover shrink-0" src={img}

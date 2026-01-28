@@ -1,9 +1,9 @@
-import Speaker from "../components/speaker";
+import SpeakerCard from "../../components/speakers/SpeakerCard";
 
 export default function Speakers() {
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <Speaker
+      <SpeakerCard
         img=""
         name="Name"
         title="TITLE"
