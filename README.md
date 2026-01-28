@@ -40,6 +40,7 @@ npm install
 npm run dev
 
 # Open browser to http://localhost:3000
+
 ```
 
 ### Development Commands
