@@ -15,7 +15,7 @@ const MobileNav = () => {
     <Sheet>
       <SheetTrigger asChild>
         <button
-          className="md:hidden p-2 -m-2"
+          className="md:hidden p-3 -m-3 min-h-11 min-w-11 flex items-center justify-center"
           aria-label="Open navigation menu"
         >
           <svg
@@ -48,7 +48,7 @@ const MobileNav = () => {
               >
                 <Link 
                   href={link.route}
-                  className="text-2xl font-bold text-cream font-clash py-3"
+                  className="text-2xl font-bold text-cream font-clash py-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
                 >
                   {link.name}
                 </Link>
@@ -60,7 +60,8 @@ const MobileNav = () => {
             <Link
               href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs"
               target="_blank"
-              className="uppercase text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime inline-block"
+              rel="noopener noreferrer"
+              className="uppercase text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal"
             >
               Tickets
             </Link>

@@ -20,7 +20,8 @@ const Navbar = () => {
         <Link
           href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs"
           target="_blank"
-          className='hidden md:flex uppercase text-xl lg:text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime'
+          rel="noopener noreferrer"
+          className='hidden md:flex uppercase text-xl lg:text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream'
         >
           Tickets
         </Link>
