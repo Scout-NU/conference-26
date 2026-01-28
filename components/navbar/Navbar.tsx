@@ -1,32 +1,27 @@
-"use client"
-
 import { NavbarLinks } from '@/constants'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import React from 'react'
+import { NavLink } from './NavLink'
 import MobileNav from './MobileNav'
 
 const Navbar = () => {
-
-  const pathname = usePathname();
-
-  console.log(pathname)
-
   return (
-    <nav className='flex justify-between items-center w-full bg-[#323232] px-3 md:px-5.75 py-8 '>
-      <div>
+    <nav className='flex justify-between items-center w-full bg-charcoal px-3 md:px-6 py-2'>
+      <div className='text-cream font-clash font-bold text-xl'>
         Entangle
       </div>
       <div className='flex justify-between items-center gap-16'>
         
         {NavbarLinks.map((link) => (
-          <Link key={link.name} href={link.route} className={`relative uppercase text-xl lg:text-2xl font-dmSans tracking-[-0.264px] font-bold text-center text-[#FFFCEC] ${pathname === link.route ? "underline decoration-[#F3FF85] decoration-3 underline-offset-8" : ""} max-sm:hidden`}>
+          <NavLink key={link.name} href={link.route}>
             {link.name}
-            {/* <span className="absolute bottom-0 left-0 w-full h-1 bg-[#F3FF85]"></span> */}
-          </Link>
+          </NavLink>
         ))}
 
-        <Link href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs" target="_blank" className='uppercase text-xl lg:text-2xl font-dmSans tracking-[-0.264px] font-bold text-center text-black px-8 py-4 rounded-lg bg-[#F3FF85]'>
+        <Link
+          href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs"
+          target="_blank"
+          className='hidden md:flex uppercase text-xl lg:text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime'
+        >
           Tickets
         </Link>
 
