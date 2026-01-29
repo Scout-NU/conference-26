@@ -1,19 +1,20 @@
+import { Tracks } from "@/constants";
 import SpeakerCard from "../../components/speakers/SpeakerCard";
+import TrackSection from "@/components/speakers/TrackSection";
 
 export default function Speakers() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <SpeakerCard
-        img=""
-        name="Name"
-        title="TITLE"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, 
-        vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque 
-        commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, 
-        turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio."
-        link1=""
-        link2=""
-      />
+    <div className="px-32 py-32 min-h-screen">
+
+      <h1 className="text-center md:text-left text-8xl font-bold text-[#fffcec] mb-64 max-sm:mb-32 max-sm:text-5xl">Speakers</h1>
+
+      {Tracks.map((track) => (
+        <TrackSection
+          key={track.name}
+          name={track.name}
+          speakers={track.speakers}
+        />
+      ))}
     </div>
   );
-}
+  }
