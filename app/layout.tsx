@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import CursorTrail from "@/components/CursorTrail";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} antialiased`}
       >
+        <CursorTrail />
         <Navbar />
         {children}
       </body>
