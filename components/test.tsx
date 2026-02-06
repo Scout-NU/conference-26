@@ -52,11 +52,11 @@ const ScrollFrameAnimation = () => {
     // ============================================
     // CUSTOMIZE THESE VALUES FOR YOUR ANIMATION
     // ============================================
-    const frameCount = 139; // Number of frames in your sequence
+    const frameCount = 336; // Number of frames in your sequence
 
     // Update this function to match YOUR frame file naming
     const currentFrame = (index: number) =>
-      `/Unnamed%20Copy/Unnamed%20Copy_${(index + 1).toString().padStart(4, "0")}.png`;
+      `/entangleanimation/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
     // ============================================
 
     const images: HTMLImageElement[] = [];
@@ -138,6 +138,7 @@ const ScrollFrameAnimation = () => {
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
+        backgroundColor: "#272727",
       }}
     >
       <canvas
