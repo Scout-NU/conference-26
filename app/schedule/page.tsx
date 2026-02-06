@@ -1,5 +1,6 @@
 import { scheduleData, Event } from './scheduleData';
 import handImage from './handimage.png';
+import yellowKnot from './assets/yellow-knot.png';
 
 const EventItem = ({ time, name, description, location, isLast }: Event & { isLast: boolean }) => (
   <div className="flex gap-8 py-6">
@@ -30,9 +31,9 @@ const EventItem = ({ time, name, description, location, isLast }: Event & { isLa
 
 export default function Schedule() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
+    <div className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
       {/* Header */}
-      <nav className="flex items-center justify-between border-b border-zinc-800 px-8 py-4">
+      <nav className="relative z-30 flex items-center justify-between border-b border-zinc-800 px-8 py-4">
         <div className="font-semibold text-white">Conference 2026</div>
         <div className="flex items-center gap-8">
           <a
@@ -59,8 +60,25 @@ export default function Schedule() {
         </div>
       </nav>
 
+    {/* Yellow knot graphic - fixed to right side of viewport */}
+      <div 
+        className="pointer-events-none fixed z-10"
+        style={{
+          width: '150vw',
+          top: '-18vw',
+          right: '-72vw',
+          transform: 'rotate(10deg)',
+        }}
+      >
+        <img
+          src={yellowKnot.src}
+          alt=""
+          className="h-auto w-full object-contain"
+        />
+      </div>
+
       {/* Main Content */}
-      <div className="mx-auto max-w-4xl px-8 py-16">
+      <div className="relative z-20 mx-auto max-w-4xl px-8 py-16">
         <h1 className="mb-16 text-6xl font-bold text-white">Schedule</h1>
 
         {/* Container with full-width background */}
