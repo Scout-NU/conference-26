@@ -1,5 +1,4 @@
 import { scheduleData, Event, TimeSlot } from './scheduleData';
-import handImage from './handimage.png';
 import yellowKnot from './assets/yellow-knot.png';
 import knot1 from './assets/knot-1.png';
 import knot2 from './assets/knot-2.png';
@@ -113,7 +112,6 @@ export default function Schedule() {
           <div
             className="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2"
             style={{
-              backgroundImage: `url(${handImage.src})`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
