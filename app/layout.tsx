@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { MockNavbar } from "@/components/mock-navbar";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Navbar from "@/components/navbar/Navbar";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,8 +9,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Entangle Conference",
-  description: "Join us at Entangle - A conference about design, technology, and innovation",
+  title: "Entangle 2026 | Design & Tech Conference",
+  description: "Join us for Entangle 2026 - a conference bringing together designers and developers.",
 };
 
 export default function RootLayout({
@@ -25,10 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Variable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistMono.variable} antialiased bg-[#212121]`}
       >
-        <MockNavbar />
+        <Navbar />
         {children}
       </body>
     </html>
