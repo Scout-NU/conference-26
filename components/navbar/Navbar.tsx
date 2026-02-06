@@ -6,9 +6,9 @@ import MobileNav from './MobileNav'
 const Navbar = () => {
   return (
     <nav className='flex justify-between items-center w-full bg-charcoal px-3 md:px-6 py-2'>
-      <div className='text-cream font-clash font-bold text-xl'>
+      <Link href="/" className='text-cream font-clash font-bold text-xl'>
         Entangle
-      </div>
+      </Link>
       <div className='flex justify-between items-center gap-16'>
         
         {NavbarLinks.map((link) => (
