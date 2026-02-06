@@ -1,31 +1,57 @@
-import { scheduleData, Event } from './scheduleData';
+import { scheduleData, Event, TimeSlot } from './scheduleData';
 import handImage from './handimage.png';
 import yellowKnot from './assets/yellow-knot.png';
+import knot1 from './assets/knot-1.png';
+import knot2 from './assets/knot-2.png';
+import knot3 from './assets/knot-3.png';
 
-const EventItem = ({ time, name, description, location, isLast }: Event & { isLast: boolean }) => (
-  <div className="flex gap-8 py-6">
-    {/* Time on the left */}
-    <div className="w-24 flex-shrink-0 text-sm font-medium text-zinc-400">{time}</div>
-    
-    {/* Content on the right */}
-    <div className="flex flex-1 flex-col gap-3">
-      <h3 className="text-xl font-semibold text-white">{name}</h3>
-      <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
-      <div className="flex items-center gap-2 text-sm text-zinc-400">
-        <svg
-          className="h-4 w-4 fill-zinc-400"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-        <span>{location}</span>
-      </div>
-      {!isLast && (
-        <div className="mt-6 border-t border-zinc-700"></div>
+const knotImages: Record<string, typeof knot1> = {
+  'knot-1': knot1,
+  'knot-2': knot2,
+  'knot-3': knot3,
+};
+
+const EventCard = ({ name, speaker, description, location, knots }: Event) => (
+  <div className="flex flex-col gap-3">
+    <h3 className="text-xl font-semibold text-white">{name}</h3>
+    {speaker && <p className="text-sm font-semibold text-zinc-300">{speaker}</p>}
+    <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+    <div className="flex items-center gap-2 text-sm text-zinc-400">
+      {knots && knots.length > 0 && (
+        <div className="flex items-center gap-1">
+          {knots.map((knot, i) => (
+            <img
+              key={i}
+              src={knotImages[knot]?.src}
+              alt=""
+              className="h-20 w-20 object-contain"
+            />
+          ))}
+        </div>
       )}
+      <span>{location}</span>
     </div>
+  </div>
+);
+
+const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) => (
+  <div className="py-6">
+    <div className="flex gap-8">
+      {/* Time on the left */}
+      <div className="w-24 flex-shrink-0 text-sm font-medium text-zinc-400">{time}</div>
+
+      {/* Events grid on the right - max 2 per row */}
+      <div className="flex-1">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {events.map((event, i) => (
+            <EventCard key={i} {...event} />
+          ))}
+        </div>
+      </div>
+    </div>
+    {!isLast && (
+      <div className="mt-6 border-t border-zinc-700"></div>
+    )}
   </div>
 );
 
@@ -51,7 +77,7 @@ export default function Schedule() {
           <a
             href="#about"
             className="text-zinc-400 transition-colors hover:text-white"
-          > 
+          >
             ABOUT
           </a>
           <button className="rounded-md bg-blue-300 px-6 py-2 font-semibold text-black transition-colors hover:bg-blue-400">
@@ -60,8 +86,8 @@ export default function Schedule() {
         </div>
       </nav>
 
-    {/* Yellow knot graphic - fixed to right side of viewport */}
-      <div 
+      {/* Yellow knot graphic - fixed to right side of viewport */}
+      <div
         className="pointer-events-none fixed z-10"
         style={{
           width: '150vw',
@@ -84,7 +110,7 @@ export default function Schedule() {
         {/* Container with full-width background */}
         <div className="relative">
           {/* Background Image - Full Width */}
-          <div 
+          <div
             className="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2"
             style={{
               backgroundImage: `url(${handImage.src})`,
@@ -95,9 +121,9 @@ export default function Schedule() {
               zIndex: 0
             }}
           ></div>
-          
+
           {/* Left gradient blend */}
-          <div 
+          <div
             className="absolute left-0 top-0 h-full w-screen"
             style={{
               background: 'linear-gradient(to right, rgba(24, 24, 27, 1) 0%, rgba(24, 24, 27, 0) 15%, rgba(24, 24, 27, 0) 85%, rgba(24, 24, 27, 1) 100%)',
@@ -105,18 +131,16 @@ export default function Schedule() {
               pointerEvents: 'none'
             }}
           ></div>
-          
+
           {/* Card with content */}
           <div className="relative z-10 overflow-hidden rounded-3xl bg-zinc-800/50 p-8 backdrop-blur-sm">
             {/* Events list */}
             <div className="relative">
-              {scheduleData.map((event, index) => (
-                <EventItem
+              {scheduleData.map((slot, index) => (
+                <TimeSlotRow
                   key={index}
-                  time={event.time}
-                  name={event.name}
-                  description={event.description}
-                  location={event.location}
+                  time={slot.time}
+                  events={slot.events}
                   isLast={index === scheduleData.length - 1}
                 />
               ))}
