@@ -57,33 +57,6 @@ const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) =
 export default function Schedule() {
   return (
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
-      {/* Header */}
-      <nav className="relative z-30 flex items-center justify-between border-b border-zinc-800 px-8 py-4">
-        <div className="font-semibold text-white">Conference 2026</div>
-        <div className="flex items-center gap-8">
-          <a
-            href="#schedule"
-            className="border-b-2 border-white pb-1 font-medium text-white"
-          >
-            SCHEDULE
-          </a>
-          <a
-            href="#speakers"
-            className="text-zinc-400 transition-colors hover:text-white"
-          >
-            SPEAKERS
-          </a>
-          <a
-            href="#about"
-            className="text-zinc-400 transition-colors hover:text-white"
-          >
-            ABOUT
-          </a>
-          <button className="rounded-md bg-blue-300 px-6 py-2 font-semibold text-black transition-colors hover:bg-blue-400">
-            TICKETS
-          </button>
-        </div>
-      </nav>
 
       {/* Yellow knot graphic - fixed to right side of viewport */}
       <div
