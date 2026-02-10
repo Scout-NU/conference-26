@@ -37,7 +37,7 @@ const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) =
   <div className="py-6">
     <div className="flex gap-8">
       {/* Time on the left */}
-      <div className="w-24 flex-shrink-0 text-sm font-medium text-zinc-400">{time}</div>
+      <div className="w-24 flex-shrink-0 text-sm font-medium text-cream">{time}</div>
 
       {/* Events grid on the right - max 2 per row */}
       <div className="flex-1">
@@ -56,7 +56,7 @@ const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) =
 
 export default function Schedule() {
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
+    <div className="relative min-h-screen bg-[#1a1a1a] overflow-hidden">
 
       {/* Yellow knot graphic - fixed to right side of viewport */}
       <div
@@ -77,7 +77,7 @@ export default function Schedule() {
 
       {/* Main Content */}
       <div className="relative z-20 mx-auto max-w-4xl px-8 py-16">
-        <h1 className="mb-16 text-6xl font-bold text-white">schedule</h1>
+        <h1 className="mb-16 text-6xl font-bold text-cream">schedule</h1>
 
           {/* Card with content */}
           <div className="relative z-10">
