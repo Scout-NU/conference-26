@@ -9,6 +9,23 @@
   font-style: normal;
   font-display: swap;
 }
+/* PP Neue Montreal Font */
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 :root {
   --background: #FFFCEC;
@@ -25,12 +42,20 @@
   --color-charcoal: #272727;
   --color-cream: #FFFCEC;
 
+  /* Type Hierarchy */
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 32px;
+  --text-2xl: 96px;
+  --text-3xl: 128px;
+
   /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
   /* Font Families */
   --font-clash: 'Clash Display', system-ui, sans-serif;
+  --font-pp-neue: 'PP Neue Montreal', system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   /* shadcn/ui color mappings */
   --color-sidebar-ring: var(--sidebar-ring);

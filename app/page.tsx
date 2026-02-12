@@ -38,112 +38,158 @@ function AvatarPlaceholder() {
   );
 }
 
-const goals = [
-  {
-    title: "Goal 1 yesss",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
-  },
-  {
-    title: "Goal 2 yesss",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
-  },
-  {
-    title: "Goal 3 yesss",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
-  },
-];
-
 export default function Home() {
   return (
-    <main>
-      <ScrollFrameAnimation />
+    <main className="bg-charcoal text-cream">
       {/* Hero Section */}
-      <section className="bg-zinc-200/20 px-6 py-24 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex items-start justify-between">
-            <h1 className="text-7xl font-medium tracking-tight text-black md:text-8xl lg:text-[107px]">
-              Entangle
-            </h1>
-            {/* Scout icon placeholder */}
-            <div className="hidden size-16 rounded-full bg-zinc-300 lg:block" />
-          </div>
-        </div>
-      </section>
+      <ScrollFrameAnimation />
+
 
       {/* About Section */}
-      <section className="bg-white/20 px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-16">
-          {/* Image placeholder */}
-          <div className="aspect-[4/3] w-full rounded-[19px] bg-zinc-300 lg:aspect-auto lg:h-[383px]" />
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-6xl">
 
           {/* Content */}
-          <div className="flex flex-col justify-center">
-            <h2 className="mb-6 text-3xl font-medium tracking-tight text-black lg:text-4xl">
-              About ENTANGLE
-            </h2>
-            <p className="text-xl leading-relaxed text-black">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+          <div className="flex flex-col gap-5 justify-center">
+            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+              about entangle
+            </h1>
+            <div className="flex flex-row gap-16 justify-center">
+              {/* Image placeholder */}
+              <div className="w-5/3 border-lime border bg-zinc-300" />
+              {/* Text */}
+              <div className="text-lg font-pp-neue leading-relaxed">
+                <p className="mb-8">
+                  To design is to entangle. This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
+                  we invite participants to trace the threads that weave humans, technologies, and environments into complex,
+                  evolving relations across scales – from quantum particles to planetary systems, and from intimate gestures to
+                  techno-political infrastructures.
+                </p>
+                <p>
+                  Join us on <span className='font-bold text-lime'>Sunday, March 22nd</span> for a full day of inspiration,
+                  experimentation and collaboration, featuring keynote talks, panel discussions, and interactive workshops!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Goals Section */}
-      <section className="bg-zinc-100 px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mb-16 text-center text-4xl font-medium tracking-tight text-black lg:text-5xl">
-            Goals haha
-          </h2>
-
-          <div className="grid gap-12 md:grid-cols-3 md:gap-8">
-            {goals.map((goal) => (
-              <div key={goal.title} className="flex flex-col items-center">
-                <StarIcon className="mb-6 size-32 text-zinc-300 lg:size-48" />
-                <h3 className="mb-4 text-2xl font-medium text-black lg:text-3xl">
-                  {goal.title}
+      {/* Tracks Section */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-6xl">
+          <h1 className="mb-16 text-xl font-medium tracking-tight lg:text-2xl">
+            tracks
+          </h1>
+          <div className="flex flex-col">
+            {/* Track 1 */}
+            <div className="flex flex-row gap-16 items-center">
+              <img src="images/track1.png" className="object-cover w-140 aspect-204/95"></img>
+              <div className="flex flex-col items-left w-fill">
+                <h3 className="mb-4 text-md font-medium lg:text-xl">
+                  Intention
                 </h3>
-                <p className="text-center text-xl leading-relaxed text-black">
-                  {goal.description}
+                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
                 </p>
               </div>
-            ))}
+            </div>
+            {/* Track 2 */}
+            <div className="flex flex-row gap-16 items-center">
+              <div className="flex flex-col items-left w-fill">
+                <h3 className="mb-4 text-2xl font-medium lg:text-xl">
+                  Investigation
+                </h3>
+                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
+                </p>
+              </div>
+              <img src="images/track2.png" className="object-cover w-120 aspect-63/62"></img>
+            </div>
+            {/* Track 3 */}
+            <div className="flex flex-row gap-16 items-center">
+              <img src="images/track3.png" className="object-cover w-140 aspect-184/91"></img>
+              <div className="flex flex-col items-left w-fill">
+                <h3 className="mb-4 text-md font-medium lg:text-xl">
+                  Impact
+                </h3>
+                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Interventions Section */}
-      <section className="bg-white px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-8 text-4xl font-medium tracking-tight text-black lg:text-5xl">
-            About Interventions
-          </h2>
-          <p className="mb-10 text-xl leading-relaxed text-black">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an
-          </p>
-          <Button
-            asChild
-            variant="outline"
-            className="h-14 rounded-full border-[1.5px] border-black px-6 text-xl font-medium hover:bg-zinc-50"
-          >
-            <Link href="https://scout.com" target="_blank" rel="noopener">
-              Scout Website
-              <ArrowRight className="ml-2 size-5" />
-            </Link>
-          </Button>
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-6xl">
+
+          {/* Content */}
+          <div className="flex flex-col gap-5 justify-center">
+            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+              about interventions
+            </h1>
+            <div className="flex flex-col gap-16 justify-center">
+
+              {/* Text */}
+              <p className="text-lg font-pp-neue leading-relaxed">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+              {/* Images */}
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row justify-end items-start my-40 ">
+          <div className="inline-block border border-lime shrink-0">
+            <img src="/images/placeholder.png" className="w-160 object-cover aspect-159/100" />
+          </div>
+          <div className="inline-block border border-lime -m-24 shrink-0">
+            <img src="/images/placeholder.png" className="w-120 object-cover aspect-159/100" />
+          </div>
+          <div className="inline-block border border-lime my-16 shrink-0">
+            <img src="/images/placeholder.png" className="w-110 object-cover aspect-159/100" />
+          </div>
+        </div>
+      </section>
+
+      {/* About Scout */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-6xl">
+
+          {/* Content */}
+          <div className="flex flex-col gap-5 justify-center">
+            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+              about scout
+            </h1>
+            <div className="flex flex-row gap-16 justify-center">
+
+              {/* Text */}
+              <div className="text-lg font-pp-neue leading-relaxed">
+                <p className="mb-16">
+                  We're Scout, Northeastern's student-driven design organization, and we're honored to be your hosts
+                  this March 22nd! Our 100+ students work with real clients, offering creative solutions each semester.
+                  Beyond client work, we enrich the Northeastern design community through events, Scout Labs collaborations
+                  with local organizations, and Scout Media's focus on animation, photography, and video. And of course,
+                  we're behind Interventions, our annual design conference that brings together Boston's creative professionals.
+                </p>
+                <Link href="https://scout.camd.northeastern.edu/"
+                  className="bg-lime text-charcoal text-xl px-8 py-4 hover:bg-sky">
+                  Scout Website
+                </Link>
+              </div>
+              {/* Image placeholder */}
+              <div className="w-5/3 border-lime border bg-zinc-300" />
+            </div>
+          </div>
         </div>
       </section>
 

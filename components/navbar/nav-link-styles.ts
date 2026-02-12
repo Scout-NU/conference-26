@@ -11,8 +11,8 @@ export const navLinkVariants = cva(
         buttonLight: "text-charcoal font-bold bg-lime px-8 py-4 rounded-lg focus-visible:outline-cream",
       },
       size: {
-        default: "text-xl lg:text-2xl",
-        mobile: "text-2xl",
+        default: "text-xl lg:text-xl",
+        mobile: "text-xl",
       },
     },
     defaultVariants: {
