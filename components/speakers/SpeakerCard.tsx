@@ -15,15 +15,15 @@ export default function SpeakerCard({ img, name, title, description, link1, link
             <img className="border-2 rounded-2xl w-54 h-60 object-cover shrink-0" src={img}
                 alt="Speaker Image">
             </img>
-            <div className="flex flex-col w-full md:w-2/3 mt-5 md:mt-0 md:ml-15 gap-5 max-md:text-center">
+            <div className="flex flex-col w-full md:w-2/3 mt-5 md:mt-0 md:ml-15 gap-8">
                 <div>
-                    <h1 className="text-4xl font-semibold">{name}</h1>
-                    <h2>{title}</h2>
+                    <h1 className="text-4xl font-medium">{name}</h1>
+                    <h2 className="mt-2 font-semibold text-[25px]">{title}</h2>
                 </div>
                 <p> {description} </p>
                 <div>
-                    <h2 className="mb-2 cursor-pointer">LEARN MORE</h2>
-                    <div className="flex max-md:justify-center">
+                    <h2 className="mb-2 font-medium cursor-pointer">LEARN MORE</h2>
+                    <div className="flex">
                         <div className="mr-1">
                             <BsLinkedin href={link1} className="text-2xl cursor-pointer" />
                         </div>
