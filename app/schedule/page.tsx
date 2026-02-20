@@ -17,7 +17,7 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
     <h3 className="text-xl font-semibold text-cream uppercase">{name}</h3>
     {speaker && <p className="text-base font-semibold text-cream">{speaker}</p>}
     <p className="text-sm leading-relaxed text-cream">{description}</p>
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 mt-1">
       {knots && knots.length > 0 && (
         <div className="flex items-center gap-1">
           {knots.map((knot, i) => (
@@ -43,7 +43,7 @@ const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) =
 
       {/* Events grid on the right - max 2 per row */}
       <div className="flex-1">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {events.map((event, i) => (
             <EventCard key={i} {...event} />
           ))}
