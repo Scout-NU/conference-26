@@ -1,6 +1,7 @@
 import { scheduleData, Event, TimeSlot } from './scheduleData';
 import yellowKnot from './assets/yellow-knot.png';
 import blue_blob_header from './assets/blue_blob_header.png';
+import blue_blob_center from './assets/blue_blob_center.png';
 import impact_pink from './assets/impact_pink.png';
 import intention_blue from './assets/intention_blue.png';
 import investigation_yellow from './assets/investigation_yellow.png'
@@ -85,6 +86,18 @@ export default function Schedule() {
           src={yellowKnot.src}
           alt=""
           className="h-auto w-full object-contain"
+        />
+      </div>
+
+
+      {/* Blue blob 2 — mid page, left side */}
+      <div className="pointer-events-none absolute left-0 z-0 hidden md:block"
+        style={{ width: 'clamp(600px, 65vw, 950px)', top: '38%', left: '15%' }}
+      >
+        <img
+          src={blue_blob_center.src}
+          alt=""
+          className="w-full h-auto object-contain -translate-x-10 rotate-255 scale-110"
         />
       </div>
 
