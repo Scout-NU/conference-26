@@ -1,14 +1,15 @@
 import { scheduleData, Event, TimeSlot } from './scheduleData';
 import yellowKnot from './assets/yellow-knot.png';
 import blue_blob_header from './assets/blue_blob_header.png';
-import knot1 from './assets/knot-1.png';
-import knot2 from './assets/knot-2.png';
-import knot3 from './assets/knot-3.png';
+import impact_pink from './assets/impact_pink.png';
+import intention_blue from './assets/intention_blue.png';
+import investigation_yellow from './assets/investigation_yellow.png'
+import { StaticImageData } from 'next/image';
 
-const knotImages: Record<string, typeof knot1> = {
-  'knot-1': knot1,
-  'knot-2': knot2,
-  'knot-3': knot3,
+const knotImages: Record<string, StaticImageData > = {
+  'impact_pink': impact_pink,
+  'intention_blue': intention_blue,
+  'investigation_yellow': investigation_yellow
 };
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
@@ -16,21 +17,19 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
     <h3 className="text-xl font-semibold text-white">{name}</h3>
     {speaker && <p className="text-sm font-semibold text-zinc-300">{speaker}</p>}
     <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
-    <div className="flex items-center gap-2 text-sm text-zinc-400">
-      {knots && knots.length > 0 && (
-        <div className="flex items-center gap-1">
-          {knots.map((knot, i) => (
-            <img
-              key={i}
-              src={knotImages[knot]?.src}
-              alt=""
-              className="h-20 w-20 object-contain"
-            />
-          ))}
-        </div>
-      )}
-      <span>{location}</span>
-    </div>
+    {knots && knots.length > 0 && (
+      <div className="flex items-center gap-1">
+        {knots.map((knot, i) => (
+          <img
+            key={i}
+            src={knotImages[knot]?.src}
+            alt=""
+            className="h-20 w-20 object-contain"
+          />
+        ))}
+      </div>
+    )}
+    <p className="text-sm font-bold text-white">{location}</p>
   </div>
 );
 

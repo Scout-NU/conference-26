@@ -16,18 +16,17 @@ export const scheduleData: TimeSlot[] = [
     time: "9:00 AM",
     events: [
       {
-        name: "Opening Keynote",
+        name: "Sign in",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        location: "Main Auditorium",
-        knots: ["knot-3", "knot-2"],
+        "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",        
+        location: "Main Auditorium"
       },
       {
         name: "Breakfast",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
         location: "Room 201",
-        knots: ["knot-2"],
+        knots: ["impact_pink"],
       },
     ],
   },
@@ -45,7 +44,6 @@ export const scheduleData: TimeSlot[] = [
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
         location: "Room 201",
-        knots: ["knot-3", "knot-2"],
       },
     ],
   },
@@ -57,7 +55,6 @@ export const scheduleData: TimeSlot[] = [
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
         location: "Conference Hall",
-        knots: ["knot-1", "knot-3"],
       },
     ],
   },
