@@ -22,6 +22,13 @@ export const scheduleData: TimeSlot[] = [
         location: "Main Auditorium",
         knots: ["knot-3", "knot-2"],
       },
+      {
+        name: "Breakfast",
+        description:
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
+        location: "Room 201",
+        knots: ["knot-2"],
+      },
     ],
   },
   {

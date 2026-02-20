@@ -1,5 +1,6 @@
 import { scheduleData, Event, TimeSlot } from './scheduleData';
 import yellowKnot from './assets/yellow-knot.png';
+import blue_blob_header from './assets/blue_blob_header.png';
 import knot1 from './assets/knot-1.png';
 import knot2 from './assets/knot-2.png';
 import knot3 from './assets/knot-3.png';
@@ -58,14 +59,25 @@ export default function Schedule() {
   return (
     <div className="relative min-h-screen bg-[#1a1a1a] overflow-hidden">
 
-      {/* Yellow knot graphic - fixed to right side of viewport */}
+    {/* Blue blob — anchored top-right, below yellow knot */}
+      <div className="pointer-events-none absolute top-0 right-0 z-0 hidden md:block"
+        style={{ width: 'clamp(500px, 55vw, 900px)' }}
+      >
+        <img
+          src={blue_blob_header.src}
+          alt=""
+          className="w-full h-auto object-contain translate-x-16 -translate-y-8"
+        />
+      </div>
+
+      {/* Yellow knot — above blue blob, still behind content */}
       <div
-        className="pointer-events-none fixed z-10"
+        className="pointer-events-none absolute z-10"
         style={{
-          width: '150vw',
-          top: '-18vw',
-          right: '-72vw',
-          transform: 'rotate(10deg)',
+          width: 'clamp(1100px, 120vw, 1500px)',
+          top: 0,
+          right: 0,
+          transform: 'translate(48%, -25%) rotate(10.17deg)',
         }}
       >
         <img
@@ -76,24 +88,29 @@ export default function Schedule() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 mx-auto max-w-4xl px-8 py-16">
-        <h1 className="mb-16 text-6xl font-bold text-cream">schedule</h1>
+      <div className="relative z-20 mx-auto max-w-6xl px-8 py-16">
+        <h1 className="mb-40 text-6xl font-bold text-cream">schedule</h1>
 
-          {/* Card with content */}
-          <div className="relative z-10">
-            {/* Events list */}
-            <div className="relative">
-              {scheduleData.map((slot, index) => (
-                <TimeSlotRow
-                  key={index}
-                  time={slot.time}
-                  events={slot.events}
-                  isLast={index === scheduleData.length - 1}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Glass card wrapping all schedule content */}
+        <div
+          className="relative z-10 rounded-2xl p-8"
+          style={{
+            background: 'rgba(30, 30, 30, 0.25)',
+            backdropFilter: 'blur(0.5px) contrast(1.1) saturate(1.4)',
+            WebkitBackdropFilter: 'blur(0.5px) contrast(1.1) saturate(1.4)',
+            border: '1px solid rgba(255,255,255,0.08)',
+          }}
+        >
+          {scheduleData.map((slot, index) => (
+            <TimeSlotRow
+              key={index}
+              time={slot.time}
+              events={slot.events}
+              isLast={index === scheduleData.length - 1}
+            />
+          ))}
         </div>
       </div>
+    </div>
   );
 }
