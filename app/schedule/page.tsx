@@ -14,30 +14,32 @@ const knotImages: Record<string, StaticImageData > = {
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
   <div className="flex flex-col gap-3">
-    <h3 className="text-xl font-semibold text-white">{name}</h3>
-    {speaker && <p className="text-sm font-semibold text-zinc-300">{speaker}</p>}
-    <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
-    {knots && knots.length > 0 && (
-      <div className="flex items-center gap-1">
-        {knots.map((knot, i) => (
-          <img
-            key={i}
-            src={knotImages[knot]?.src}
-            alt=""
-            className="h-20 w-20 object-contain"
-          />
-        ))}
-      </div>
-    )}
-    <p className="text-sm font-bold text-white">{location}</p>
+    <h3 className="text-xl font-semibold text-cream uppercase">{name}</h3>
+    {speaker && <p className="text-base font-semibold text-cream">{speaker}</p>}
+    <p className="text-sm leading-relaxed text-cream">{description}</p>
+    <div className="flex items-center gap-2">
+      {knots && knots.length > 0 && (
+        <div className="flex items-center gap-1">
+          {knots.map((knot, i) => (
+            <img
+              key={i}
+              src={knotImages[knot]?.src}
+              alt=""
+              className="h-20 w-20 object-contain"
+            />
+          ))}
+        </div>
+      )}
+      <p className="text-sm font-bold text-cream">{location}</p>
+    </div>
   </div>
 );
 
 const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) => (
   <div className="py-6">
-    <div className="flex gap-8">
+    <div className="flex gap-10">
       {/* Time on the left */}
-      <div className="w-24 flex-shrink-0 text-sm font-medium text-cream">{time}</div>
+      <div className="w-28 flex-shrink-0 text-base font-semibold text-cream">{time}</div>
 
       {/* Events grid on the right - max 2 per row */}
       <div className="flex-1">
@@ -88,13 +90,13 @@ export default function Schedule() {
 
       {/* Main Content */}
       <div className="relative z-20 mx-auto max-w-6xl px-8 py-16">
-        <h1 className="mb-40 text-6xl font-bold text-cream">schedule</h1>
+        <h1 className="mb-40 text-6xl font-semibold text-cream">schedule</h1>
 
         {/* Glass card wrapping all schedule content */}
         <div
           className="relative z-10 rounded-2xl p-8"
           style={{
-            background: 'rgba(30, 30, 30, 0.25)',
+            background: 'rgba(255, 255, 255, 0.07)',
             backdropFilter: 'blur(0.5px) contrast(1.1) saturate(1.4)',
             WebkitBackdropFilter: 'blur(0.5px) contrast(1.1) saturate(1.4)',
             border: '1px solid rgba(255,255,255,0.08)',

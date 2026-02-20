@@ -18,32 +18,51 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "Sign in",
         description:
-        "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",        
-        location: "Main Auditorium"
+          "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",
+        location: "Atrium",
       },
       {
         name: "Breakfast",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Room 201",
+        location: "Atrium",
         knots: ["impact_pink"],
+      },
+      {
+        name: "Morning Networking",
+        description:
+        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",        
+        location: "Atrium",
+      }
+    ],
+  },
+  {
+    time: "9:30 AM",
+    events: [
+      {
+        name: "Opening Ceremony",
+        description:
+        "We'll officially kick off the day with the Entangle opening ceremony, where you'll learn about our schedule of events and hear opening remarks from the Scout Conference team!",    
+        location: "Atrium",
       },
     ],
   },
   {
-    time: "10:30 AM",
+    time: "10:00 AM",
     events: [
       {
-        name: "Tech Workshop",
+        name: "Panel 01",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Room 201",
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+        location: "Atrium",
+        knots: ["intention_blue"],
       },
-      {
-        name: "Tech Workshop",
+       {
+        name: "Speaker 01",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Room 201",
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+        location: "Atrium",
+        knots: ["impact_pink"],
       },
     ],
   },
@@ -51,10 +70,41 @@ export const scheduleData: TimeSlot[] = [
     time: "11:00 AM",
     events: [
       {
-        name: "Panel Discussion",
+        name: "Workshop 01",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
-        location: "Conference Hall",
+        location: "Atrium",
+        knots: ["impact_pink"],
+      },
+       {
+        name: "Speaker 02",
+        description:
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+        location: "Atrium",
+        knots: ["investigation_yellow"],
+      },
+    ],
+  },
+  {
+    time: "12:00 PM",
+    events: [
+      {
+        name: "Lunch Break",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+      {
+        name: "Poster Presentations",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+      {
+        name: "Midday Networking",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
       },
     ],
   },
@@ -62,21 +112,65 @@ export const scheduleData: TimeSlot[] = [
     time: "1:00 PM",
     events: [
       {
-        name: "Lunch Break",
+        name: "Panel 2",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-        location: "Cafeteria",
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
+        location: "Atrium",
+        knots: ["investigation_yellow"],
+      },
+      {
+        name: "Student Presenters",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+      {
+        name: "Lobby Activities",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
       },
     ],
   },
   {
-    time: "2:30 PM",
+    time: "2:00 PM",
     events: [
       {
-        name: "Breakout Sessions",
+        name: "Coffee Break + Tabling",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Various Rooms",
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+      {
+        name: "Portfolio Reviews",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+      {
+        name: "Workshop 2",
+        description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        location: "Atrium",
+      },
+    ],
+  },
+  {
+    time: "3:00 PM",
+    events: [
+      {
+        name: "Workshop 3",
+        description:
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+        location: "Atrium",
+        knots: ["impact_pink"],
+      },
+      {
+        name: "Speaker 3",
+        description:
+          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+        location: "Atrium",
+        knots: ["intention_blue"],
       },
     ],
   },
@@ -84,10 +178,10 @@ export const scheduleData: TimeSlot[] = [
     time: "4:00 PM",
     events: [
       {
-        name: "Closing Remarks",
+        name: "Closing Ceremony",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-        location: "Main Auditorium",
+        location: "Atrium",
       },
     ],
   },
