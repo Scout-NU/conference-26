@@ -23,10 +23,10 @@ export default function Footer() {
         </div>
 
         {/* Logo and Social */}
-        <div className="w-80 flex flex-col gap-4 lg:ml-auto">
+        <div className=" text-cream w-80 flex flex-col gap-4 lg:ml-auto">
           <img className="" src="/brand/Lockup4.svg" />
         <div>
-          <p className="font-pp-neue font-medium text-cream text-xl mb-3">
+          <p className="font-pp-neue font-medium text-xl mb-3">
             Connect with us!
           </p>
           <div className="flex gap-4">

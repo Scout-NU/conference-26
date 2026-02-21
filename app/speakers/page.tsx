@@ -1,5 +1,4 @@
 import { Tracks } from "@/constants";
-import SpeakerCard from "../../components/speakers/SpeakerCard";
 import TrackSection from "@/components/speakers/TrackSection";
 
 export default function Speakers() {

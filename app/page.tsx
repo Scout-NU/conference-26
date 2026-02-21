@@ -84,7 +84,7 @@ export default function Home() {
           {/* Content */}
           <div className="flex flex-col gap-5 justify-center">
             <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
-              about entangle
+              to design is to entangle
             </h1>
             <div className="flex flex-row gap-16 justify-center">
               {/* Image placeholder */}
@@ -92,7 +92,7 @@ export default function Home() {
               {/* Text */}
               <div className="text-lg font-pp-neue leading-relaxed">
                 <p className="mb-8">
-                  To design is to entangle. This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
+                  This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
                   evolving relations across scales – from quantum particles to planetary systems, and from intimate gestures to
                   techno-political infrastructures.
@@ -219,7 +219,8 @@ export default function Home() {
                 </Link>
               </div>
               {/* Image placeholder */}
-              <div className="w-5/3 border-lime border bg-zinc-300" />
+              <img className="w-105" src="/brand/limelogo.png"></img>
+              
             </div>
           </div>
         </div>
