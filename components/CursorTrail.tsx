@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 
+const PALETTE = ['#3c44f4', '#f200a9', '#e7f27e', '#e7f27e', '#badcf2'];
+
 export default function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -23,41 +25,12 @@ export default function CursorTrail() {
     }> = [];
     const maxPoints = 60;
 
-    function getBackgroundBrightness(x: number, y: number): number {
-      const element = document.elementFromPoint(x, y);
-      if (!element) return 128;
-      
-      const style = window.getComputedStyle(element);
-      let bgColor = style.backgroundColor;
-      
-      let currentElement: HTMLElement | null = element as HTMLElement;
-      while (bgColor === 'rgba(0, 0, 0, 0)' || bgColor === 'transparent') {
-        currentElement = currentElement.parentElement;
-        if (!currentElement) {
-          bgColor = 'rgb(26, 26, 26)';
-          break;
-        }
-        bgColor = window.getComputedStyle(currentElement).backgroundColor;
-      }
-      
-      const match = bgColor.match(/\d+/g);
-      if (!match) return 128;
-      
-      const r = parseInt(match[0]);
-      const g = parseInt(match[1]);
-      const b = parseInt(match[2]);
-      
-      return r * 0.299 + g * 0.587 + b * 0.114;
-    }
+    let colorIndex = 0;
 
-    function getRainbowColor(x: number, y: number): string {
-      const hue = ((x / (canvas?.width || 1)) * 360 + (y / (canvas?.height || 1)) * 360) % 360;
-      const bgBrightness = getBackgroundBrightness(x, y);
-      const lightness = bgBrightness < 128 
-        ? 70 + (bgBrightness / 128) * 20 
-        : 50 - ((bgBrightness - 128) / 128) * 20;
-      
-      return `hsl(${hue}, 100%, ${lightness}%)`;
+    function getPaletteColor(): string {
+      const color = PALETTE[colorIndex % PALETTE.length];
+      colorIndex = (colorIndex + 1) % PALETTE.length;
+      return color;
     }
 
     function interpolatePoints(
@@ -71,10 +44,7 @@ export default function CursorTrail() {
         interpolated.push({
           x: p1.x + (p2.x - p1.x) * t,
           y: p1.y + (p2.y - p1.y) * t,
-          color: getRainbowColor(
-            p1.x + (p2.x - p1.x) * t,
-            p1.y + (p2.y - p1.y) * t
-          ),
+          color: getPaletteColor(),
           time: Date.now(),
         });
       }
@@ -88,7 +58,7 @@ export default function CursorTrail() {
       const newPoint = {
         x: e.clientX,
         y: e.clientY,
-        color: getRainbowColor(e.clientX, e.clientY),
+        color: getPaletteColor(),
         time: Date.now(),
       };
 
@@ -139,7 +109,6 @@ export default function CursorTrail() {
         ctx!.strokeStyle = points[i].color;
         ctx!.lineWidth = width * 1.2;
         ctx!.lineCap = 'round';
-
         ctx!.beginPath();
         ctx!.moveTo(points[i].x, points[i].y);
         ctx!.lineTo(points[i + 1].x, points[i + 1].y);
@@ -151,7 +120,6 @@ export default function CursorTrail() {
         ctx!.strokeStyle = points[i].color;
         ctx!.lineWidth = width * 0.6;
         ctx!.lineCap = 'round';
-
         ctx!.beginPath();
         ctx!.moveTo(points[i].x, points[i].y);
         ctx!.lineTo(points[i + 1].x, points[i + 1].y);
@@ -161,18 +129,14 @@ export default function CursorTrail() {
     }
 
     function animate() {
-     if (!ctx || !canvas) return;
-  
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas completely
-
-    drawDenseBlur();
-
-    const now = Date.now();
-    while (points.length > 0 && now - points[0].time > 1500) {
+      if (!ctx || !canvas) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawDenseBlur();
+      const now = Date.now();
+      while (points.length > 0 && now - points[0].time > 1500) {
         points.shift();
-    }
-
-    requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
     }
 
     function handleResize() {
