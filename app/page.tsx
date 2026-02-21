@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ScrollFrameAnimation from "@/components/test";
+import TeamSection from "@/components/TeamMembers";
+import type { Member, Team, TeamProps } from "@/components/TeamMembers"
 
 // Placeholder star icon component
 function StarIcon({ className }: { className?: string }) {
@@ -37,6 +39,35 @@ function AvatarPlaceholder() {
     </div>
   );
 }
+
+const MEMBERS: Member[] = [
+{ name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "Andrew Wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "Adeline Yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "Nicole Schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "Kendra Ruan", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "Saloni Bhatia", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "Saidah Ly", role: "Design Lead", image: "/images/placeholder.png", team: "design" },
+  { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
+  { name: "Ruby Harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
+  { name: "Jocelyn Hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
+  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design"},
+  { name: "Katherine Kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
+  { name: "Autumn Gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "Alexandra Katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "Lea Lang", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "Ah-roh Ko", role: "Marketing Lead", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Reagan White", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Anika Parikh", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Eva Yuan", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Bhasuk (Bua) Limpkittisin", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Medha Gollamudi", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Sairah Sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.png", team: "marketing" },
+  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/placeholder.png", team: "tech" },
+  { name: "Afra Ankita", role: "Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "Ivan Lam", role: "Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
+];
 
 export default function Home() {
   return (
@@ -193,36 +224,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Previous Conferences Section */}
-      <section className="bg-white px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-3xl font-medium tracking-tight text-black">
-            Previous Conferences
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3 md:gap-8">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="aspect-[345/367] w-full rounded-[19px] bg-zinc-300"
-              />
-            ))}
-          </div>
-        </div>
+       {/* Meet the Team */}
+      <section className="py-16 lg:py-24">
+        <TeamSection members={ MEMBERS }></TeamSection>
       </section>
 
-      {/* Speakers Section */}
-      <section className="bg-zinc-100 px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="overflow-hidden opacity-30">
-                <AvatarPlaceholder />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
