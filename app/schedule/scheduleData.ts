@@ -24,8 +24,7 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "Breakfast",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Atrium",
+        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",        location: "Atrium",
         knots: ["impact_pink"],
       },
       {
@@ -52,15 +51,15 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "Panel 01",
-        description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+        speaker: "Speaker",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         location: "Atrium",
         knots: ["intention_blue"],
       },
        {
         name: "Speaker 01",
-        description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+        speaker: "Speaker",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         location: "Atrium",
         knots: ["impact_pink"],
       },
@@ -78,6 +77,7 @@ export const scheduleData: TimeSlot[] = [
       },
        {
         name: "Speaker 02",
+        speaker: "Speaker",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
         location: "Atrium",
@@ -113,6 +113,7 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "Panel 2",
+        speaker: "Speaker",
         description:
           "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
         location: "Atrium",
