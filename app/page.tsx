@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import ScrollFrameAnimation from "@/components/test";
 import TeamSection from "@/components/TeamMembers";
 import type { Member, Team, TeamProps } from "@/components/TeamMembers"
+import Footer from "@/components/designathon/Footer";
 
 // Placeholder star icon component
 function StarIcon({ className }: { className?: string }) {
@@ -225,9 +226,11 @@ export default function Home() {
       </section>
 
        {/* Meet the Team */}
-      <section className="py-16 lg:py-24">
+      <section className="py-24 mb-48 lg:py-24">
         <TeamSection members={ MEMBERS }></TeamSection>
       </section>
+
+      <Footer />
 
     </main>
   );
