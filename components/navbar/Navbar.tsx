@@ -7,15 +7,19 @@ import Image from 'next/image'
 const Navbar = () => {
   return (
     <nav className='flex justify-between items-center w-full bg-charcoal px-12 max-sm:px-6 py-2'>
-      <div className='flex justify-center items-center text-cream font-clash font-medium text-[24px]'>
+      <Link
+        href="/"
+        aria-label="Go to home page"
+        className='flex items-center text-cream font-clash font-medium text-[24px]'
+      >
         <Image
           src="/assets/logo.png"
           alt="Entangle Logo"
           width={64}
           height={64}
         />
-        <h1>entangle</h1>
-      </div>
+        <span>entangle</span>
+      </Link>
       <div className='flex justify-between items-center gap-16 h-full'>
 
         {NavbarLinks.map((link) => (
