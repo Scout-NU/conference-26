@@ -20,7 +20,7 @@ const TrackSection = ({ name, img, speakers }: TrackSectionProps) => {
           height={72}
           className="h-auto w-24 md:w-28"
         />
-        <h2 className="font-clash text-2xl font-medium lowercase leading-none text-cream sm:text-3xl md:text-[2.5rem]">
+        <h2 className="font-clash text-2xl font-semibold lowercase leading-none tracking-[-0.01em] text-cream sm:text-3xl md:text-[2.5rem]">
           {name}
         </h2>
       </div>

@@ -75,10 +75,10 @@ export default function SpeakerCard({ img, name, title, description, link1, link
             </div>
             <div className="mt-10 flex flex-col gap-7">
                 <div>
-                    <h3 className="text-[1.75rem] font-medium leading-none text-cream md:text-[2.25rem]">{name}</h3>
-                    <p className="mt-2 text-xl font-bold leading-none text-cream md:text-[1.5625rem]">{title}</p>
+                    <h3 className="text-[1.75rem] font-semibold leading-tight tracking-[-0.02em] text-cream md:text-[2.25rem]">{name}</h3>
+                    <p className="mt-2 text-xl font-bold uppercase leading-tight tracking-[-0.02em] text-cream md:text-[1.5625rem]">{title}</p>
                 </div>
-                <p className="text-sm leading-relaxed text-cream/90 md:text-base">
+                <p className="text-sm leading-relaxed tracking-[-0.01em] text-cream/90 md:text-base">
                     {description}
                 </p>
                 <div className="flex flex-col gap-3">
@@ -86,7 +86,7 @@ export default function SpeakerCard({ img, name, title, description, link1, link
                         href={link1}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex w-fit items-center gap-2 text-sm font-bold text-cream transition-opacity hover:opacity-90"
+                        className="inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-[-0.02em] text-cream transition-opacity hover:opacity-90"
                     >
                         <ArrowRightIcon />
                         <span>Learn More</span>
