@@ -1,19 +1,21 @@
-import { HiArrowRight } from "react-icons/hi";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="px-6 md:px-8 lg:px-[136px] py-12 lg:py-[51px]">
-      <h1 className="font-clash text-5xl md:text-7xl lg:text-[100px] text-cream leading-tight tracking-tight">
-        designathon
-      </h1>
-      <div className="mt-6 lg:mt-[25px]">
-        <a
-          href="#register"
-          className="inline-flex items-center gap-3 px-8 py-3 border-[1.5px] border-cream rounded-full text-cream font-clash text-lg md:text-2xl transition-colors hover:bg-cream/10"
+    <section className="mx-auto w-full max-w-6xl px-6 pb-16 pt-14 md:px-10 md:pb-24 md:pt-20">
+      <div className="max-w-4xl space-y-6">
+        <h1 className="font-clash font-medium leading-[0.95] text-[clamp(2.625rem,8vw,6.25rem)]">
+          designathon
+        </h1>
+        <Link
+          href="https://entangle-designation.devpost.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex min-h-14 items-center gap-2 rounded-full border border-cream/80 px-7 py-3 text-base font-semibold transition-colors hover:border-cream hover:bg-cream/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime md:min-h-16 md:px-9 md:text-lg"
         >
           Register Now
-          <HiArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-        </a>
+          <span aria-hidden="true">-&gt;</span>
+        </Link>
       </div>
     </section>
   );

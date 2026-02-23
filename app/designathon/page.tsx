@@ -1,21 +1,27 @@
-import HeroSection from "@/components/designathon/HeroSection";
 import AboutSection from "@/components/designathon/AboutSection";
-import ScheduleSection from "@/components/designathon/ScheduleSection";
-import PrizesSection from "@/components/designathon/PrizesSection";
+import DecorativeBackground from "@/components/designathon/DecorativeBackground";
+import HeroSection from "@/components/designathon/HeroSection";
 import JudgesSection from "@/components/designathon/JudgesSection";
-import CriteriaSection from "@/components/designathon/CriteriaSection";
-import Footer from "@/components/designathon/Footer";
+import JudgingCriteriaSection from "@/components/designathon/JudgingCriteriaSection";
+import PrizesSection from "@/components/designathon/PrizesSection";
+import ScheduleSection from "@/components/designathon/ScheduleSection";
+import {
+  designathonSchedule,
+  judges,
+  judgingCriteria,
+  prizes,
+} from "@/components/designathon/data";
 
 export default function DesignathonPage() {
   return (
-    <main className="min-h-screen bg-charcoal">
+    <main className="relative overflow-hidden bg-charcoal text-cream font-medium">
+      <DecorativeBackground />
       <HeroSection />
       <AboutSection />
-      <ScheduleSection />
-      <PrizesSection />
-      <JudgesSection />
-      <CriteriaSection />
-      <Footer />
+      <ScheduleSection schedule={designathonSchedule} />
+      <PrizesSection prizes={prizes} />
+      <JudgesSection judges={judges} />
+      <JudgingCriteriaSection criteria={judgingCriteria} />
     </main>
   );
 }

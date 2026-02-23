@@ -1,38 +1,20 @@
-interface Judge {
-  name: string;
-  title: string;
-  image?: string;
-}
+import { Judge } from "./types";
 
-const judges: Judge[] = [
-  { name: "Name", title: "Title" },
-  { name: "Name", title: "Title" },
-  { name: "Name", title: "Title" },
-  { name: "Name", title: "Title" },
-];
-
-export default function JudgesSection() {
+export default function JudgesSection({ judges }: { judges: Judge[] }) {
   return (
-    <section className="px-6 md:px-8 lg:px-[108px] py-16 lg:py-[109px] overflow-hidden">
-      <h2 className="font-clash text-4xl md:text-5xl lg:text-[64px] text-cream mb-10 lg:mb-[193px]">
-        Judges
-      </h2>
-
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[56px]">
+    <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10 md:py-20">
+      <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] leading-none">Judges</h2>
+      <div className="mt-8 grid grid-cols-2 gap-5 md:mt-10 md:grid-cols-4 md:gap-8">
         {judges.map((judge, index) => (
-          <div key={index} className="flex flex-col items-center gap-4 lg:gap-8">
-            {/* Placeholder Image */}
-            <div className="w-full max-w-[247px] aspect-[247/309] bg-neutral-300 rounded-[19px]" />
-            {/* Judge Info */}
-            <div className="text-center">
-              <p className="font-clash text-2xl md:text-4xl lg:text-[40px] text-cream">
+          <article key={`${judge.name}-${index}`} className="space-y-3 text-center">
+            <div className="aspect-[247/309] w-full bg-zinc-300" />
+            <div>
+              <p className="font-clash text-[clamp(1.625rem,3vw,2.5rem)] leading-none">
                 {judge.name}
               </p>
-              <p className="text-xl md:text-2xl lg:text-[25px] text-cream font-bold">
-                {judge.title}
-              </p>
+              <p className="mt-1 text-sm font-bold md:text-base">{judge.title}</p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
