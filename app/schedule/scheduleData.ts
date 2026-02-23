@@ -1,9 +1,11 @@
+export type Knot = "impact_pink" | "intention_blue" | "investigation_yellow";
+
 export interface Event {
   name: string;
   speaker?: string;
   description: string;
   location: string;
-  knots?: string[];
+  knots?: Knot[];
 }
 
 export interface TimeSlot {

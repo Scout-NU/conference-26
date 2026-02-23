@@ -1,42 +1,42 @@
-import { Tracks } from "@/constants";
+import { speakersData } from "./speakersData";
 import TrackSection from "@/components/speakers/TrackSection";
 import Image from "next/image";
 
 export default function Speakers() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden bg-charcoal">
       {/* Vector backgrounds - right side */}
-      <div className="absolute top-0 right-0 w-full max-w-[55vw] h-[85vh] min-h-[500px] pointer-events-none -z-10 overflow-hidden hidden md:block">
+      <div className="pointer-events-none absolute right-[-8rem] z-0 hidden h-[56rem] w-[72rem] overflow-visible md:block">
         <Image
           src="/assets/speakers-svgs/vector2.png"
           alt=""
           fill
-          className="object-contain object-top-right scale-80 -rotate-20 translate-x-50 -translate-y-30"
+          sizes="(min-width: 1280px) 72rem, 90vw"
+          className="object-contain object-top-right -translate-y-[2rem] translate-x-[8rem] -rotate-[20deg] scale-[0.95]"
         />
         <Image
           src="/assets/speakers-svgs/vector1.png"
           alt=""
           fill
-          className="object-contain object-top-right scale-175 rotate-20 translate-y-30 translate-x-70  origin-top-right xl:translate-y-20 xl:scale-150 xl:translate-x-120 "
+          sizes="(min-width: 1280px) 72rem, 90vw"
+          className="origin-top-right object-contain object-top-right translate-x-[19rem] translate-y-[12rem] rotate-[22deg] scale-[1.55] xl:translate-x-[30rem]"
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-8 md:px-12 lg:px-16 py-4">
-
-        <h1 className="text-center font-clash md:text-left text-6xl font-medium text-[#fffcec] mt-32 md:mt-13 mb-40 max-sm:mb-32 max-sm:text-5xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-10 md:px-12 lg:px-20">
+        <h1 className="mb-14 mt-16 text-center font-clash text-4xl font-semibold lowercase leading-none tracking-[-0.01em] text-cream sm:text-5xl md:mb-20 md:mt-10 md:text-left lg:mb-50 lg:text-[5.5rem]">
           speakers
         </h1>
 
-      {Tracks.map((track) => (
-        <TrackSection
-          key={track.name}
-          name={track.name}
-          trackColor={track.trackColor}
-          img={track.img}
-          speakers={track.speakers}
-        />
-      ))}
+        {speakersData.map((track) => (
+          <TrackSection
+            key={track.name}
+            name={track.name}
+            img={track.img}
+            speakers={track.speakers}
+          />
+        ))}
       </div>
     </div>
   );
-  }
+}
