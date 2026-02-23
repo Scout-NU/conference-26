@@ -1,16 +1,9 @@
 import { scheduleData, Event, TimeSlot } from './scheduleData';
-import yellowKnot from './assets/yellow-knot.png';
-import blue_blob_header from './assets/blue_blob_header.png';
-import blue_blob_center from './assets/blue_blob_center.png';
-import impact_pink from './assets/impact_pink.png';
-import intention_blue from './assets/intention_blue.png';
-import investigation_yellow from './assets/investigation_yellow.png'
-import { StaticImageData } from 'next/image';
 
-const knotImages: Record<string, StaticImageData> = {
-  'impact_pink': impact_pink,
-  'intention_blue': intention_blue,
-  'investigation_yellow': investigation_yellow
+const knotStyles: Record<string, string> = {
+  impact_pink: "bg-[#ff66d8]",
+  intention_blue: "bg-[#80b8ff]",
+  investigation_yellow: "bg-[#ffe57d]",
 };
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
@@ -22,11 +15,10 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
       {knots && knots.length > 0 && (
         <div className="flex items-center gap-1">
           {knots.map((knot, i) => (
-            <img
+            <span
               key={i}
-              src={knotImages[knot]?.src}
-              alt=""
-              className="h-20 w-20 object-contain"
+              aria-hidden="true"
+              className={`h-3 w-3 rounded-full ${knotStyles[knot] ?? "bg-cream/70"}`}
             />
           ))}
         </div>
@@ -60,46 +52,18 @@ const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) =
 export default function Schedule() {
   return (
     <div className="relative min-h-screen bg-[#1a1a1a] overflow-hidden">
-
-      {/* Blue blob — anchored top-right, below yellow knot */}
-      <div className="pointer-events-none absolute top-0 right-0 z-0 hidden md:block"
-        style={{ width: 'clamp(500px, 55vw, 900px)' }}
-      >
-        <img
-          src={blue_blob_header.src}
-          alt=""
-          className="w-full h-auto object-contain translate-x-16 -translate-y-8"
-        />
-      </div>
-
-      {/* Yellow knot — above blue blob, still behind content */}
       <div
-        className="pointer-events-none absolute z-10"
-        style={{
-          width: 'clamp(1100px, 120vw, 1500px)',
-          top: 0,
-          right: 0,
-          transform: 'translate(48%, -25%) rotate(10.17deg)',
-        }}
-      >
-        <img
-          src={yellowKnot.src}
-          alt=""
-          className="h-auto w-full object-contain"
-        />
-      </div>
-
-
-      {/* Blue blob 2 — mid page, left side */}
-      <div className="pointer-events-none absolute left-0 z-0 hidden md:block"
-        style={{ width: 'clamp(600px, 65vw, 950px)', top: '38%', left: '15%' }}
-      >
-        <img
-          src={blue_blob_center.src}
-          alt=""
-          className="w-full h-auto object-contain -translate-x-10 rotate-255 scale-110"
-        />
-      </div>
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-8rem] top-[-10rem] z-0 h-[28rem] w-[40rem] rounded-full bg-[radial-gradient(70%_60%_at_50%_50%,rgba(130,186,255,0.35),rgba(130,186,255,0)_72%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-24rem] top-[-22rem] z-0 h-[58rem] w-[58rem] rotate-[12deg] rounded-full border-[2.5rem] border-[#ffe57d]/55"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[8%] top-[36%] z-0 hidden h-[34rem] w-[44rem] rounded-full bg-[radial-gradient(62%_58%_at_50%_50%,rgba(130,186,255,0.25),rgba(130,186,255,0)_72%)] md:block"
+      />
 
       {/* Main Content */}
       <div className="relative z-20 mx-auto max-w-6xl px-8 py-16">
