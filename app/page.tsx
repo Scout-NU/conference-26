@@ -83,7 +83,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
               to design is to entangle
             </h1>
             <div className="flex flex-row gap-16 justify-center">
@@ -110,7 +110,7 @@ export default function Home() {
       {/* Tracks Section */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto grid max-w-6xl">
-          <h1 className="mb-16 text-xl font-medium tracking-tight lg:text-2xl">
+          <h1 className="mb-16 text-[2rem] font-medium tracking-tight lg:text-[7rem]">
             tracks
           </h1>
           <div className="flex flex-col">
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="flex flex-row gap-16 items-center">
               <img src="images/track1.png" className="object-cover w-140 aspect-204/95"></img>
               <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-md font-medium lg:text-xl">
+                <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
                   Intention
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
@@ -130,7 +130,7 @@ export default function Home() {
             {/* Track 2 */}
             <div className="flex flex-row gap-16 items-center">
               <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-2xl font-medium lg:text-xl">
+                <h3 className="mb-4 text-[7rem] font-medium lg:text-[2rem]">
                   Investigation
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="flex flex-row gap-16 items-center">
               <img src="images/track3.png" className="object-cover w-140 aspect-184/91"></img>
               <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-md font-medium lg:text-xl">
+                <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
                   Impact
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
@@ -163,7 +163,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
               about interventions
             </h1>
             <div className="flex flex-col gap-16 justify-center">
@@ -199,7 +199,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
               about scout
             </h1>
             <div className="flex flex-row gap-16 justify-center">
@@ -214,7 +214,7 @@ export default function Home() {
                   we're behind Interventions, our annual design conference that brings together Boston's creative professionals.
                 </p>
                 <Link href="https://scout.camd.northeastern.edu/"
-                  className="bg-lime text-charcoal text-xl px-8 py-4 hover:bg-sky">
+                  className="bg-lime text-charcoal text-[2rem] px-8 py-4 hover:bg-sky">
                   Scout Website
                 </Link>
               </div>

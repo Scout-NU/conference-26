@@ -42,13 +42,6 @@
   --color-charcoal: #272727;
   --color-cream: #FFFCEC;
 
-  /* Type Hierarchy */
-  --text-md: 16px;
-  --text-lg: 20px;
-  --text-xl: 32px;
-  --text-2xl: 96px;
-  --text-3xl: 128px;
-
   /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
