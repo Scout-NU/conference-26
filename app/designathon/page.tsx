@@ -14,7 +14,7 @@ import {
 
 export default function DesignathonPage() {
   return (
-    <main className="relative overflow-hidden bg-charcoal text-cream">
+    <main className="relative overflow-hidden bg-charcoal text-cream font-medium">
       <DecorativeBackground />
       <HeroSection />
       <AboutSection />

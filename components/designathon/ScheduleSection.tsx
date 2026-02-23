@@ -1,5 +1,20 @@
 import { DesignathonEvent } from "./types";
 
+function renderTimeLabel(time: string) {
+  const parts = time.trim().split(/\s+/);
+  if (parts.length < 3) return time;
+
+  const lastPart = parts[parts.length - 1];
+  const firstLine = parts.slice(0, -1).join(" ");
+
+  return (
+    <>
+      <span className="block">{firstLine}</span>
+      <span className="block">{lastPart}</span>
+    </>
+  );
+}
+
 function ScheduleEventRow({
   event,
   isLast,
@@ -9,8 +24,8 @@ function ScheduleEventRow({
 }) {
   return (
     <article className="space-y-5 pb-8 md:grid md:grid-cols-[12rem_1fr] md:gap-10 md:space-y-0 md:pb-10">
-      <h3 className="max-w-[18ch] text-lg font-bold uppercase leading-tight tracking-wide text-cream md:text-[1.75rem]">
-        {event.time}
+      <h3 className="max-w-[18ch] text-lg font-bold uppercase leading-tight tracking-wide text-cream md:text-[1.75rem] lg:text-[1.5rem]">
+        {renderTimeLabel(event.time)}
       </h3>
 
       <div className="space-y-4">

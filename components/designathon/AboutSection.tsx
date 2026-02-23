@@ -23,7 +23,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="border-l-4 border-cream pl-4 text-base leading-relaxed md:pl-6 md:text-lg">
+        <div className="mt-3 h-fit self-start border-l-[6px] border-cream pl-4 text-base leading-relaxed md:mt-8 md:pl-6 md:text-lg lg:mt-[4.5rem] font-semibold">
           <p>THEME: Design and Technology</p>
           <p className="mt-2">DATE: March 20th - March 22nd</p>
           <p className="mt-2">LOCATIONS: Center for Design, ISEC</p>
