@@ -42,7 +42,7 @@ function AvatarPlaceholder() {
 }
 
 const MEMBERS: Member[] = [
-{ name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Andrew Wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Adeline Yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Nicole Schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
@@ -52,7 +52,7 @@ const MEMBERS: Member[] = [
   { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
   { name: "Ruby Harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
   { name: "Jocelyn Hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design"},
+  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design" },
   { name: "Katherine Kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
   { name: "Autumn Gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
   { name: "Alexandra Katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
@@ -72,13 +72,16 @@ const MEMBERS: Member[] = [
 
 export default function Home() {
   return (
-    <main className="bg-charcoal text-cream">
+    <main className="bg-charcoal text-cream overflow-hidden">
       {/* Hero Section */}
       <ScrollFrameAnimation />
 
 
       {/* About Section */}
-      <section className="py-16 lg:py-24">
+      <section className="relative py-24">
+        <img className="absolute w-[95vw] top-[65vh] right-[12vw] rotate-7" src="/images/bluerope.png"></img>
+        <img className="absolute w-[85vw] top-[75vh] left-170 " src="/images/doubleloop.svg"></img>
+
         <div className="mx-auto grid max-w-6xl">
 
           {/* Content */}
@@ -90,7 +93,7 @@ export default function Home() {
               {/* Image placeholder */}
               <div className="w-5/3 border-lime border bg-zinc-300" />
               {/* Text */}
-              <div className="text-lg font-pp-neue leading-relaxed">
+              <div className="text-lg font-pp-neue font-medium leading-relaxed">
                 <p className="mb-8">
                   This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
@@ -108,7 +111,12 @@ export default function Home() {
       </section>
 
       {/* Tracks Section */}
-      <section className="py-16 lg:py-24">
+      <section className="relative py-16 lg:py-24 lg: mt-48">
+        <img className="absolute w-screen aspect-auto top-[155vh]" src="/images/bluerope2.png"></img>
+        <img className="absolute w-screen top-[165vh] rotate-2" src="/images/squiggleoutline2.svg"></img>
+        <img className="absolute w-screen aspect-auto top-[310vh]" src="/images/bluerope3.png"></img>
+        <img className="absolute w-screen top-[350vh]" src="/images/squiggleoutline.svg"></img>
+
         <div className="mx-auto grid max-w-6xl">
           <h1 className="mb-16 text-xl font-medium tracking-tight lg:text-2xl">
             tracks
@@ -121,7 +129,7 @@ export default function Home() {
                 <h3 className="mb-4 text-md font-medium lg:text-xl">
                   Intention
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="text-left text-lg font-pp-neue font-medium leading-relaxed">
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
                 </p>
@@ -133,7 +141,7 @@ export default function Home() {
                 <h3 className="mb-4 text-2xl font-medium lg:text-xl">
                   Investigation
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="text-left text-lg font-pp-neue font-medium leading-relaxed">
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
                 </p>
@@ -147,7 +155,7 @@ export default function Home() {
                 <h3 className="mb-4 text-md font-medium lg:text-xl">
                   Impact
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="text-left text-lg font-pp-neue font-medium leading-relaxed">
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
                 </p>
@@ -158,18 +166,18 @@ export default function Home() {
       </section>
 
       {/* About Interventions Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 lg:mt-80">
         <div className="mx-auto grid max-w-6xl">
 
           {/* Content */}
           <div className="flex flex-col gap-5 justify-center">
             <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
-              about interventions
+              what is interventions?
             </h1>
             <div className="flex flex-col gap-16 justify-center">
 
               {/* Text */}
-              <p className="text-lg font-pp-neue leading-relaxed">
+              <p className="text-lg font-pp-neue font-medium leading-relaxed">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
                 type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -205,7 +213,7 @@ export default function Home() {
             <div className="flex flex-row gap-16 justify-center">
 
               {/* Text */}
-              <div className="text-lg font-pp-neue leading-relaxed">
+              <div className="text-lg font-pp-neue font-medium leading-relaxed">
                 <p className="mb-16">
                   We're Scout, Northeastern's student-driven design organization, and we're honored to be your hosts
                   this March 22nd! Our 100+ students work with real clients, offering creative solutions each semester.
@@ -220,15 +228,15 @@ export default function Home() {
               </div>
               {/* Image placeholder */}
               <img className="w-105" src="/brand/limelogo.png"></img>
-              
+
             </div>
           </div>
         </div>
       </section>
 
-       {/* Meet the Team */}
+      {/* Meet the Team */}
       <section className="py-24 mb-48 lg:py-24">
-        <TeamSection members={ MEMBERS }></TeamSection>
+        <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
       <Footer />

@@ -26,12 +26,12 @@ const TeamSection = ({ members }: TeamProps) => {
                 meet the team
             </h1>
             {/* team nav */}
-            <div className="flex flex-row py-8 justify-between">
+            <div className="font-pp-neue  flex flex-row py-8 justify-between">
                 {TEAMS.map((team) => (
                     <div
                         key={team}
                         onClick={() => setActiveTeam(team)}
-                        className={`px-4 py-2 text-xl font-medium capitalize transition-colors border-b-2 -mb-px
+                        className={`px-4 py-2 text-xl uppercase transition-colors border-b-2 -mb-px
               ${activeTeam === team
                                 ? "border-lime"
                                 : "border-transparent"}`}>
