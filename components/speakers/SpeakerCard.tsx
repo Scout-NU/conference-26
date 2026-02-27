@@ -60,17 +60,23 @@ interface SpeakerProps {
 }
 
 export default function SpeakerCard({ img, name, title, description, link1, link2 }: SpeakerProps) {
+    const hasSpeakerImage = Boolean(img) && img !== "/assets/speaker-placeholder.png";
+
     return (
         <article className="flex flex-col rounded-2xl bg-transparent p-6 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)] md:p-8">
             <div>
                 <div className="relative w-full aspect-video overflow-hidden">
-                    <Image
-                    src={img}
-                    alt={`${name} - Speaker`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 24rem"
-                />
+                    {hasSpeakerImage ? (
+                        <Image
+                            src={img}
+                            alt={`${name} - Speaker`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 24rem"
+                        />
+                    ) : (
+                        <div className="h-full w-full" aria-hidden="true" />
+                    )}
                 </div>
             </div>
             <div className="mt-10 flex flex-col gap-7">
