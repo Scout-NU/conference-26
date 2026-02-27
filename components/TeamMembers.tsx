@@ -43,11 +43,15 @@ const TeamSection = ({ members }: TeamProps) => {
             <div className="grid gap-8 grid-cols-4">
                 {currentTeam.map((member) => (
                     <div key={member.name} className="flex flex-col gap-2">
-                        <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full aspect-square object-cover border border-lime"
-                        />
+                        {member.image && member.image !== "/images/placeholder.png" ? (
+                            <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-full aspect-square object-cover border border-lime"
+                            />
+                        ) : (
+                            <div className="w-full aspect-square border border-lime" aria-hidden="true" />
+                        )}
                         <h2 className="text-xl font-medium">{member.name}</h2>
                         <p className="font-pp-neue text-lg text-lime">{member.role}</p>
                     </div>
