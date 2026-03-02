@@ -182,13 +182,13 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-end items-start my-40 ">
           <div className="inline-block border border-lime shrink-0">
-            <img src="/images/placeholder.png" className="w-160 object-cover aspect-159/100" />
+            <img src="/images/conference-home-1.jpg" className="w-160 object-cover aspect-159/100" />
           </div>
           <div className="inline-block border border-lime -m-24 shrink-0">
-            <img src="/images/placeholder.png" className="w-120 object-cover aspect-159/100" />
+            <img src="/images/conference-home-2.png" className="w-120 object-cover aspect-159/100" />
           </div>
           <div className="inline-block border border-lime my-16 shrink-0">
-            <img src="/images/placeholder.png" className="w-110 object-cover aspect-159/100" />
+            <img src="/images/conference-home-3.png" className="w-110 object-cover aspect-159/100" />
           </div>
         </div>
       </section>
