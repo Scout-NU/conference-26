@@ -1,156 +1,192 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+const TOTAL_FRAMES = 336;
+const TRIM_END_FRAMES = 50;
+const MOBILE_FRAME_STEP = 2;
+const DESKTOP_FRAME_STEP = 1;
+const PRELOAD_CONCURRENCY = 8;
+const BASE_SCROLL_DISTANCE = 5500;
+
+const getFrameSrc = (index: number) =>
+  `/entangleanimation/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
+
+function loadFrame(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.decoding = "async";
+    image.src = src;
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error(`Failed to load frame: ${src}`));
+  });
+}
 
 const ScrollFrameAnimation = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [canvasDimensions, setCanvasDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
 
   useEffect(() => {
     const container = containerRef.current;
     const canvas = canvasRef.current;
-
-    const resizeCanvas = () => {
-      if (!container || !canvas) return;
-
-      const containerWidth = container.clientWidth;
-      const containerHeight = container.clientHeight;
-
-      const canvasWidth = containerWidth * 0.8;
-      const canvasHeight = containerHeight * 0.8;
-
-      canvas.width = canvasWidth;
-      canvas.height = canvasHeight;
-
-      setCanvasDimensions({ width: canvasWidth, height: canvasHeight });
-    };
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    return () => {
-      window.removeEventListener("resize", resizeCanvas);
-    };
-  }, []);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const canvas = canvasRef.current;
-
     if (!container || !canvas) return;
 
-    const context = canvas.getContext("2d");
+    const context = canvas.getContext("2d", { alpha: true });
     if (!context) return;
 
-    // ============================================
-    // CUSTOMIZE THESE VALUES FOR YOUR ANIMATION
-    // ============================================
-    const frameCount = 336; // Number of frames in your sequence
+    const isMobile = window.matchMedia("(max-width: 48rem)").matches;
+    const usableFrameCount = Math.max(1, TOTAL_FRAMES - TRIM_END_FRAMES);
+    const frameStep = isMobile ? MOBILE_FRAME_STEP : DESKTOP_FRAME_STEP;
+    const frameIndices = Array.from(
+      { length: Math.ceil(usableFrameCount / frameStep) },
+      (_, index) => index * frameStep
+    );
+    const frames: Array<HTMLImageElement | null> = Array(frameIndices.length).fill(
+      null
+    );
 
-    // Update this function to match YOUR frame file naming
-    const currentFrame = (index: number) =>
-      `/entangleanimation/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
-    // ============================================
-
-    const images: HTMLImageElement[] = [];
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     const animation = { frame: 0 };
+    let destroyed = false;
+    let gsapContext: { revert: () => void } | null = null;
 
-    const render = () => {
-      if (!context || !images[animation.frame]) return;
-      context.clearRect(0, 0, canvas.width, canvas.height);
+    const getClosestLoadedFrameIndex = (targetIndex: number) => {
+      if (frames[targetIndex]) return targetIndex;
 
-      const isMobile = window.matchMedia(
-        "only screen and (max-width: 768px)"
-      ).matches;
-
-      let scaleFactor;
-      if (isMobile) {
-        scaleFactor = (canvas.width * 1.4) / images[animation.frame].width;
-      } else {
-        scaleFactor = canvas.height / images[animation.frame].height;
+      for (let i = targetIndex; i >= 0; i -= 1) {
+        if (frames[i]) return i;
       }
-
-      const scaledWidth = images[animation.frame].width * scaleFactor;
-      const scaledHeight = images[animation.frame].height * scaleFactor;
-      const x = (canvas.width - scaledWidth) / 2;
-      const y = (canvas.height - scaledHeight) / 2;
-
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(
-        images[animation.frame],
-        x,
-        y,
-        scaledWidth,
-        scaledHeight
-      );
+      for (let i = targetIndex + 1; i < frames.length; i += 1) {
+        if (frames[i]) return i;
+      }
+      return -1;
     };
 
-    const loadImages = async () => {
-      const loadImage = (src: string): Promise<HTMLImageElement> => {
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = () => resolve(img);
+    const drawFrame = (image: HTMLImageElement) => {
+      const displayWidth = canvas.clientWidth;
+      const displayHeight = canvas.clientHeight;
+
+      const scaleFactor = isMobile
+        ? (displayWidth * 1.2) / image.width
+        : displayHeight / image.height;
+      const scaledWidth = image.width * scaleFactor;
+      const scaledHeight = image.height * scaleFactor;
+      const x = (displayWidth - scaledWidth) / 2;
+      const y = (displayHeight - scaledHeight) / 2;
+
+      context.clearRect(0, 0, displayWidth, displayHeight);
+      context.drawImage(image, x, y, scaledWidth, scaledHeight);
+    };
+
+    const render = () => {
+      if (destroyed) return;
+
+      const targetIndex = Math.min(
+        Math.max(Math.round(animation.frame), 0),
+        frameIndices.length - 1
+      );
+      const loadedIndex = getClosestLoadedFrameIndex(targetIndex);
+      if (loadedIndex === -1) return;
+
+      const frameImage = frames[loadedIndex];
+      if (!frameImage) return;
+      drawFrame(frameImage);
+    };
+
+    const resizeCanvas = () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      context.setTransform(dpr, 0, 0, dpr, 0, 0);
+      render();
+    };
+
+    const resizeObserver = new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(container);
+    resizeCanvas();
+
+    const initGsap = async () => {
+      const [{ gsap }, { ScrollTrigger }] = await Promise.all([
+        import("gsap"),
+        import("gsap/dist/ScrollTrigger"),
+      ]);
+      if (destroyed) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsapContext = gsap.context(() => {
+        gsap.to(animation, {
+          frame: frameIndices.length - 1,
+          snap: "frame",
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: `+=${Math.max(BASE_SCROLL_DISTANCE, frameIndices.length * 18)}`,
+            pin: true,
+            scrub: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+          },
+          onUpdate: render,
         });
-      };
-
-      for (let i = 0; i < frameCount; i++) {
-        const img = await loadImage(currentFrame(i));
-        images.push(img);
-      }
-
-      gsap.to(animation, {
-        frame: frameCount - 1,
-        snap: "frame",
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: "8000", // Scroll distance - adjust for faster/slower
-          pin: true,
-          scrub: true,
-          anticipatePin: 1,
-        },
-        onUpdate: render,
       });
     };
 
-    loadImages();
+    const preloadFrames = async () => {
+      try {
+        frames[0] = await loadFrame(getFrameSrc(frameIndices[0]));
+        if (destroyed) return;
+        render();
+        await initGsap();
+      } catch {
+        return;
+      }
+
+      let nextIndex = 1;
+      const worker = async () => {
+        while (!destroyed) {
+          const index = nextIndex;
+          nextIndex += 1;
+          if (index >= frameIndices.length) return;
+          try {
+            const frame = await loadFrame(getFrameSrc(frameIndices[index]));
+            if (destroyed) return;
+            frames[index] = frame;
+          } catch {
+            // Skip missing or failed frames to keep animation responsive.
+          }
+        }
+      };
+
+      await Promise.all(
+        Array.from(
+          { length: Math.min(PRELOAD_CONCURRENCY, frameIndices.length - 1) },
+          () => worker()
+        )
+      );
+    };
+
+    void preloadFrames();
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      destroyed = true;
+      resizeObserver.disconnect();
+      gsapContext?.revert();
     };
   }, []);
 
   return (
     <div
       ref={containerRef}
-      style={{
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        position: "relative",
-        backgroundColor: "#272727",
-      }}
+      className="relative flex min-h-svh items-center justify-center bg-charcoal"
     >
       <canvas
         ref={canvasRef}
-        width={canvasDimensions.width}
-        height={canvasDimensions.height}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
+        className="absolute inset-0 h-full w-full"
       />
     </div>
   );

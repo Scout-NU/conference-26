@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ScrollFrameAnimation from "@/components/test";
 import TeamSection from "@/components/TeamMembers";
+import ScrollFrameAnimationLazy from "@/components/ScrollFrameAnimationLazy";
 import type { Member, Team, TeamProps } from "@/components/TeamMembers"
 import Footer from "@/components/designathon/Footer";
 
@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <main className="bg-charcoal text-cream">
       {/* Hero Section */}
-      <ScrollFrameAnimation />
+      <ScrollFrameAnimationLazy />
 
 
       {/* About Section */}
