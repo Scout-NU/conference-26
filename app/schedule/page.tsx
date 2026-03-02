@@ -81,6 +81,9 @@ export default function Schedule() {
           alt=""
           aria-hidden="true"
           priority
+          loading="eager"
+          fetchPriority="high"
+          unoptimized
           sizes="(min-width: 768px) 55vw, 0px"
           className="h-auto w-full translate-x-16 -translate-y-8 object-contain"
         />
@@ -94,6 +97,9 @@ export default function Schedule() {
           alt=""
           aria-hidden="true"
           priority
+          loading="eager"
+          fetchPriority="high"
+          unoptimized
           sizes="(min-width: 768px) 120vw, 0px"
           className="h-auto w-full object-contain"
         />
@@ -104,6 +110,10 @@ export default function Schedule() {
           src={blue_blob_center}
           alt=""
           aria-hidden="true"
+          priority
+          loading="eager"
+          fetchPriority="high"
+          unoptimized
           sizes="(min-width: 768px) 65vw, 0px"
           className="h-auto w-full scale-110 object-contain"
         />
