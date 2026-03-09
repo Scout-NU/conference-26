@@ -6,19 +6,20 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center w-full bg-charcoal px-12 max-sm:px-6 py-2'>
+    <nav className='sticky top-0 z-50 flex w-full items-center justify-between bg-charcoal px-12 pb-5 pt-4 max-sm:px-6 md:pb-6'>
       <Link
         href="/"
         aria-label="Go to home page"
-        className='flex items-center text-cream font-clash font-medium text-[24px]'
+        className='flex items-center'
       >
         <Image
-          src="/assets/logo.png"
+          src="/brand/entangle-logo.png"
           alt="Entangle Logo"
-          width={64}
-          height={64}
+          width={160}
+          height={40}
+          priority
+          className="h-auto w-[140px] sm:w-[160px]"
         />
-        <span>entangle</span>
       </Link>
       <div className='flex justify-between items-center gap-16 h-full'>
 
