@@ -8,24 +8,16 @@ export default function Speakers() {
       {/* Vector backgrounds - right side */}
       <div className="pointer-events-none absolute right-[-8rem] z-0 hidden h-[56rem] w-[72rem] overflow-visible md:block">
         <Image
-          src="/assets/speakers-svgs/vector2.png"
+          src="/assets/speakers-svgs/vector2.webp"
           alt=""
           fill
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 1280px) 72rem, 90vw"
           className="object-contain object-top-right -translate-y-[2rem] translate-x-[8rem] -rotate-[20deg] scale-[0.95]"
         />
         <Image
-          src="/assets/speakers-svgs/vector1.png"
+          src="/assets/speakers-svgs/vector1.webp"
           alt=""
           fill
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 1280px) 72rem, 90vw"
           className="origin-top-right object-contain object-top-right translate-x-[19rem] translate-y-[12rem] rotate-[22deg] scale-[1.55] xl:translate-x-[30rem]"
         />

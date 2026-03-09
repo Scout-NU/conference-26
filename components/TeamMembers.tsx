@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react'
+import Image from "next/image";
 
 
 export interface Member {
@@ -44,11 +45,15 @@ const TeamSection = ({ members }: TeamProps) => {
                 {currentTeam.map((member) => (
                     <div key={member.name} className="flex flex-col gap-2">
                         {member.image && member.image !== "/images/placeholder.png" ? (
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full aspect-square object-cover border border-lime"
-                            />
+                            <div className="relative w-full aspect-square border border-lime">
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    sizes="(max-width: 1024px) 45vw, 20vw"
+                                    className="object-cover"
+                                />
+                            </div>
                         ) : (
                             <div className="w-full aspect-square border border-lime" aria-hidden="true" />
                         )}

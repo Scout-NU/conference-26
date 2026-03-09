@@ -37,10 +37,13 @@ const Navbar = () => {
           >
             Tickets
           </Link>
-          <img 
-            src="/assets/tickets-vector.svg" 
-            alt="Ticket Vector" 
-            className="absolute left-1/2 -translate-x-1/2 -translate-y-[65%] w-[150%] max-w-none pointer-events-none" 
+          <Image
+            src="/assets/tickets-vector.svg"
+            alt="Ticket Vector"
+            width={300}
+            height={96}
+            sizes="300px"
+            className="absolute left-1/2 -translate-x-1/2 -translate-y-[65%] w-[150%] h-auto max-w-none pointer-events-none"
           />
         </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TeamSection from "@/components/TeamMembers";
@@ -89,7 +90,15 @@ export default function Home() {
             <div className="flex flex-row gap-16 justify-center">
               {/* Image placeholder */}
               <div className="w-5/3 border-lime border bg-zinc-300">
-                <img src="/images/conference-home-1.jpg" className="object-cover w-full aspect-159/100" />
+                <Image
+                  src="/images/conference-home-1.webp"
+                  alt="Conference overview"
+                  width={1590}
+                  height={1000}
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover w-full aspect-159/100"
+                />
               </div>
               {/* Text */}
               <div className="text-lg font-pp-neue leading-relaxed">
@@ -118,7 +127,14 @@ export default function Home() {
           <div className="flex flex-col">
             {/* Track 1 */}
             <div className="flex flex-row gap-16 items-center">
-              <img src="images/track1.png" className="object-cover w-140 aspect-204/95"></img>
+              <Image
+                src="/images/track1.webp"
+                alt="Intention track visual"
+                width={2040}
+                height={950}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover w-140 aspect-204/95"
+              />
               <div className="flex flex-col items-left w-fill">
                 <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
                   Intention
@@ -138,11 +154,25 @@ export default function Home() {
                   What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
-              <img src="images/track2.png" className="object-cover w-120 aspect-63/62"></img>
+              <Image
+                src="/images/track2.webp"
+                alt="Investigation track visual"
+                width={630}
+                height={620}
+                sizes="(max-width: 1024px) 100vw, 35vw"
+                className="object-cover w-120 aspect-63/62"
+              />
             </div>
             {/* Track 3 */}
             <div className="flex flex-row gap-16 items-center">
-              <img src="images/track3.png" className="object-cover w-140 aspect-184/91"></img>
+              <Image
+                src="/images/track3.webp"
+                alt="Impact track visual"
+                width={1840}
+                height={910}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover w-140 aspect-184/91"
+              />
               <div className="flex flex-col items-left w-fill">
                 <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
                   Impact
@@ -181,13 +211,34 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-end items-start my-40 ">
           <div className="inline-block border border-lime shrink-0">
-            <img src="/images/home-interventions-1.png" className="w-160 object-cover aspect-159/100" />
+            <Image
+              src="/images/home-interventions-1.webp"
+              alt="Interventions collage image one"
+              width={1590}
+              height={1000}
+              sizes="(max-width: 1024px) 100vw, 30vw"
+              className="w-160 object-cover aspect-159/100"
+            />
           </div>
           <div className="inline-block border border-lime -m-24 shrink-0">
-            <img src="/images/home-interventions-2.png" className="w-120 object-cover aspect-159/100" />
+            <Image
+              src="/images/home-interventions-2.webp"
+              alt="Interventions collage image two"
+              width={1590}
+              height={1000}
+              sizes="(max-width: 1024px) 100vw, 25vw"
+              className="w-120 object-cover aspect-159/100"
+            />
           </div>
           <div className="inline-block border border-lime my-16 shrink-0">
-            <img src="/images/home-interventions-3.png" className="w-110 object-cover aspect-159/100" />
+            <Image
+              src="/images/home-interventions-3.webp"
+              alt="Interventions collage image three"
+              width={1590}
+              height={1000}
+              sizes="(max-width: 1024px) 100vw, 24vw"
+              className="w-110 object-cover aspect-159/100"
+            />
           </div>
         </div>
       </section>
@@ -218,7 +269,14 @@ export default function Home() {
                 </Link>
               </div>
               {/* Image placeholder */}
-              <img className="w-105" src="/brand/limelogo.png"></img>
+              <Image
+                className="w-105 h-auto"
+                src="/brand/limelogo.png"
+                alt="Scout logo mark"
+                width={971}
+                height={971}
+                sizes="(max-width: 1024px) 70vw, 35vw"
+              />
 
             </div>
           </div>

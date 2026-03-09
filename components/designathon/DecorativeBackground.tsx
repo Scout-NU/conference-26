@@ -11,10 +11,6 @@ export default function DecorativeBackground() {
           src="/assets/designathon/blue-vector.webp"
           alt=""
           fill
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="100vw"
           className="object-contain object-right-top opacity-100 mix-blend-screen"
         />
@@ -27,10 +23,6 @@ export default function DecorativeBackground() {
           src="/assets/designathon/purple-vector.webp"
           alt=""
           fill
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 768px) 56rem, 42rem"
           className="object-contain object-left-top opacity-80 mix-blend-screen"
         />

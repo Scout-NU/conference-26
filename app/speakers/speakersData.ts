@@ -17,7 +17,7 @@ export interface SpeakerTrack {
 export const speakersData: SpeakerTrack[] = [
   {
     name: "Intention",
-    img: "/assets/intention.png",
+    img: "/assets/intention.webp",
     speakers: [
       {
         id: "intention-1",
@@ -83,7 +83,7 @@ export const speakersData: SpeakerTrack[] = [
   },
   {
     name: "Investigation",
-    img: "/assets/investigation.png",
+    img: "/assets/investigation.webp",
     speakers: [
       {
         id: "investigation-1",
@@ -149,7 +149,7 @@ export const speakersData: SpeakerTrack[] = [
   },
   {
     name: "Impact",
-    img: "/assets/impact.png",
+    img: "/assets/impact.webp",
     speakers: [
       {
         id: "impact-1",
