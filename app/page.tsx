@@ -95,14 +95,6 @@ export default function Home({
 
   return (
     <main className="bg-charcoal text-cream">
-      <section className="px-6 pt-6">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 text-sm font-pp-neue text-cream/80">
-          <span>Frame set (code toggle):</span>
-          <span className="rounded border border-lime bg-lime px-3 py-1 font-semibold text-charcoal">
-            {frameVariant}
-          </span>
-        </div>
-      </section>
       {/* Hero Section */}
       <ScrollFrameAnimationLazy variant={frameVariant} />
 
