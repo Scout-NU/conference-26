@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { scheduleData, Event, TimeSlot, Knot } from './scheduleData';
-import yellowKnot from './assets/yellow-knot.png';
-import blue_blob_header from './assets/blue_blob_header.png';
+import yellowKnot from './assets/yellow-knot.webp';
+import blue_blob_header from './assets/blue_blob_header.webp';
 import blue_blob_center from './assets/blue_blob_center.png';
 import impact_pink from './assets/impact_pink.png';
 import intention_blue from './assets/intention_blue.png';
@@ -80,10 +80,6 @@ export default function Schedule() {
           src={blue_blob_header}
           alt=""
           aria-hidden="true"
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 768px) 55vw, 0px"
           className="h-auto w-full translate-x-16 -translate-y-8 object-contain"
         />
@@ -96,10 +92,6 @@ export default function Schedule() {
           src={yellowKnot}
           alt=""
           aria-hidden="true"
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 768px) 120vw, 0px"
           className="h-auto w-full object-contain"
         />
@@ -110,10 +102,6 @@ export default function Schedule() {
           src={blue_blob_center}
           alt=""
           aria-hidden="true"
-          priority
-          loading="eager"
-          fetchPriority="high"
-          unoptimized
           sizes="(min-width: 768px) 65vw, 0px"
           className="h-auto w-full scale-110 object-contain"
         />

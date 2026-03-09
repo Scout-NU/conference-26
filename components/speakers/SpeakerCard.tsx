@@ -97,26 +97,6 @@ export default function SpeakerCard({ img, name, title, description, link1, link
                         <ArrowRightIcon />
                         <span>Learn More</span>
                     </a>
-                    <div className="flex gap-3 text-magenta">
-                        <a
-                            href={link1}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                            className="transition-colors hover:text-cream"
-                        >
-                            <LinkedinIcon />
-                        </a>
-                        <a
-                            href={link2}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                            className="transition-colors hover:text-cream"
-                        >
-                            <InstagramIcon />
-                        </a>
-                    </div>
                 </div>
             </div>
         </article>

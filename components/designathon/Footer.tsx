@@ -1,13 +1,29 @@
 import { BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="relative bg-indigo px-24 py-16">
-      <img className="absolute left-0 bottom-full" src="/images/transitionGradient.png"></img>
+      <Image
+        className="absolute left-0 bottom-full w-full h-auto"
+        src="/images/transitionGradient.webp"
+        alt=""
+        aria-hidden="true"
+        width={1600}
+        height={500}
+        sizes="100vw"
+      />
       <div className="flex flex-col lg:flex-row gap-24 ">
         {/* Branding */}
         <div className="w-150">
-          <img src="/brand/Lockup_Light_Interventions.png" />
+          <Image
+            src="/brand/Lockup_Light_Interventions.png"
+            alt="Interventions lockup"
+            width={1200}
+            height={320}
+            sizes="(max-width: 1024px) 90vw, 38rem"
+            className="h-auto w-full"
+          />
         </div>
 
         {/* Event Details */}
@@ -24,7 +40,14 @@ export default function Footer() {
 
         {/* Logo and Social */}
         <div className=" text-cream w-80 flex flex-col gap-4 lg:ml-auto">
-          <img className="" src="/brand/Lockup4.svg" />
+          <Image
+            src="/brand/Lockup4.svg"
+            alt="Scout lockup"
+            width={251}
+            height={57}
+            sizes="251px"
+            className="h-auto w-auto"
+          />
         <div>
           <p className="font-pp-neue font-medium text-xl mb-3">
             Connect with us!

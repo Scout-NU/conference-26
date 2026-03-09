@@ -1,15 +1,37 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { gsap, ScrollTrigger } from "@/lib/gsapConfig";
 
-const TOTAL_FRAMES = 336;
-const TRIM_END_FRAMES = 50;
 const MOBILE_FRAME_STEP = 2;
 const DESKTOP_FRAME_STEP = 1;
 const PRELOAD_CONCURRENCY = 8;
 const BASE_SCROLL_DISTANCE = 5500;
 
-const getFrameSrc = (index: number) =>
-  `/entangleanimation/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
+export type FrameVariant = "original" | "optimized" | "maxOptimized";
+
+const FRAME_SETS: Record<
+  FrameVariant,
+  { basePath: string; totalFrames: number; trimEndFrames: number }
+> = {
+  original: {
+    basePath: "/entangleanimation",
+    totalFrames: 336,
+    trimEndFrames: 50,
+  },
+  optimized: {
+    basePath: "/entangleanimation_q70_step2",
+    totalFrames: 168,
+    trimEndFrames: 25,
+  },
+  maxOptimized: {
+    basePath: "/entangleanimation_q70_720p_step2",
+    totalFrames: 168,
+    trimEndFrames: 25,
+  },
+};
+
+const getFrameSrc = (basePath: string, index: number) =>
+  `${basePath}/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
 
 function loadFrame(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -21,11 +43,12 @@ function loadFrame(src: string): Promise<HTMLImageElement> {
   });
 }
 
-const ScrollFrameAnimation = () => {
+const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
+    const selectedFrameSet = FRAME_SETS[variant];
     const container = containerRef.current;
     const canvas = canvasRef.current;
     if (!container || !canvas) return;
@@ -34,7 +57,10 @@ const ScrollFrameAnimation = () => {
     if (!context) return;
 
     const isMobile = window.matchMedia("(max-width: 48rem)").matches;
-    const usableFrameCount = Math.max(1, TOTAL_FRAMES - TRIM_END_FRAMES);
+    const usableFrameCount = Math.max(
+      1,
+      selectedFrameSet.totalFrames - selectedFrameSet.trimEndFrames
+    );
     const frameStep = isMobile ? MOBILE_FRAME_STEP : DESKTOP_FRAME_STEP;
     const frameIndices = Array.from(
       { length: Math.ceil(usableFrameCount / frameStep) },
@@ -48,6 +74,7 @@ const ScrollFrameAnimation = () => {
     const animation = { frame: 0 };
     let destroyed = false;
     let gsapContext: { revert: () => void } | null = null;
+    let tween: gsap.core.Tween | null = null;
 
     const getClosestLoadedFrameIndex = (targetIndex: number) => {
       if (frames[targetIndex]) return targetIndex;
@@ -108,17 +135,9 @@ const ScrollFrameAnimation = () => {
     resizeObserver.observe(container);
     resizeCanvas();
 
-    const initGsap = async () => {
-      const [{ gsap }, { ScrollTrigger }] = await Promise.all([
-        import("gsap"),
-        import("gsap/dist/ScrollTrigger"),
-      ]);
-      if (destroyed) return;
-
-      gsap.registerPlugin(ScrollTrigger);
-
+    const initGsap = () => {
       gsapContext = gsap.context(() => {
-        gsap.to(animation, {
+        tween = gsap.to(animation, {
           frame: frameIndices.length - 1,
           snap: "frame",
           ease: "none",
@@ -134,14 +153,18 @@ const ScrollFrameAnimation = () => {
           onUpdate: render,
         });
       });
+
+      ScrollTrigger.refresh();
     };
 
     const preloadFrames = async () => {
       try {
-        frames[0] = await loadFrame(getFrameSrc(frameIndices[0]));
+        frames[0] = await loadFrame(
+          getFrameSrc(selectedFrameSet.basePath, frameIndices[0])
+        );
         if (destroyed) return;
         render();
-        await initGsap();
+        initGsap();
       } catch {
         return;
       }
@@ -153,7 +176,9 @@ const ScrollFrameAnimation = () => {
           nextIndex += 1;
           if (index >= frameIndices.length) return;
           try {
-            const frame = await loadFrame(getFrameSrc(frameIndices[index]));
+            const frame = await loadFrame(
+              getFrameSrc(selectedFrameSet.basePath, frameIndices[index])
+            );
             if (destroyed) return;
             frames[index] = frame;
           } catch {
@@ -175,9 +200,11 @@ const ScrollFrameAnimation = () => {
     return () => {
       destroyed = true;
       resizeObserver.disconnect();
+      tween?.scrollTrigger?.kill();
+      tween?.kill();
       gsapContext?.revert();
     };
-  }, []);
+  }, [variant]);
 
   return (
     <div
