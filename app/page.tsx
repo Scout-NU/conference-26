@@ -1,47 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import TeamSection from "@/components/TeamMembers";
 import ScrollFrameAnimationLazy from "@/components/ScrollFrameAnimationLazy";
-import type { Member, Team, TeamProps } from "@/components/TeamMembers"
+import type { Member } from "@/components/TeamMembers"
 import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
-
-// Placeholder star icon component
-function StarIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1}
-    >
-      <polygon
-        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-        fill="currentColor"
-        stroke="none"
-      />
-    </svg>
-  );
-}
-
-// Placeholder avatar icon component
-function AvatarPlaceholder() {
-  return (
-    <div className="flex aspect-square w-full items-center justify-center bg-zinc-300">
-      <svg
-        className="size-2/3 text-zinc-400"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <circle cx="12" cy="8" r="4" />
-        <path d="M12 14c-6 0-8 3-8 6v2h16v-2c0-3-2-6-8-6z" />
-      </svg>
-    </div>
-  );
-}
 
 const MEMBERS: Member[] = [
   { name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
@@ -100,17 +63,17 @@ export default function Home({
 
 
       {/* About Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto grid max-w-6xl">
+      <section className="py-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
-          <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
+          <div className="flex flex-col justify-center gap-6 lg:gap-5">
+            <h1 className="max-w-[18ch] text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:max-w-none lg:text-[7rem]">
               to design is to entangle
             </h1>
-            <div className="flex flex-row gap-16 justify-center">
+            <div className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-16">
               {/* Image placeholder */}
-              <div className="w-5/3 border-lime border bg-zinc-300">
+              <div className="w-full border border-lime bg-zinc-300 lg:w-5/3">
                 <Image
                   src="/images/conference-home-1.webp"
                   alt="Conference overview"
@@ -118,12 +81,12 @@ export default function Home({
                   height={1000}
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover w-full aspect-159/100"
+                  className="aspect-159/100 w-full object-cover"
                 />
               </div>
               {/* Text */}
-              <div className="text-lg font-pp-neue leading-relaxed">
-                <p className="mb-8">
+              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+                <p className="mb-6 lg:mb-8">
                   This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
                   evolving relations across scales – from quantum particles to planetary systems, and from intimate gestures to
@@ -140,38 +103,38 @@ export default function Home({
       </section>
 
       {/* Tracks Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto grid max-w-6xl">
-          <h1 className="mb-16 text-[2rem] font-medium tracking-tight lg:text-[7rem]">
+      <section className="py-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
+          <h1 className="mb-10 text-center text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:mb-16 lg:text-left lg:text-[7rem]">
             tracks
           </h1>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-10 lg:gap-0">
             {/* Track 1 */}
-            <div className="flex flex-row gap-16 items-center">
+            <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left">
               <Image
                 src="/images/track1.webp"
                 alt="Intention track visual"
                 width={2040}
                 height={950}
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover w-140 aspect-204/95"
+                className="aspect-204/95 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
-              <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
+              <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
+                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Intention
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   What are the values, assumptions, and politics that underpin design intention?
                 </p>
               </div>
             </div>
             {/* Track 2 */}
-            <div className="flex flex-row gap-16 items-center">
-              <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-[7rem] font-medium lg:text-[2rem]">
+            <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left">
+              <div className="order-2 flex w-full flex-col items-center lg:order-1 lg:w-auto lg:items-start">
+                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Investigation
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
@@ -181,24 +144,24 @@ export default function Home({
                 width={630}
                 height={620}
                 sizes="(max-width: 1024px) 100vw, 35vw"
-                className="object-cover w-120 aspect-63/62"
+                className="order-1 aspect-63/62 w-full max-w-[13rem] object-cover lg:order-2 lg:w-120 lg:max-w-none"
               />
             </div>
             {/* Track 3 */}
-            <div className="flex flex-row gap-16 items-center">
+            <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left">
               <Image
                 src="/images/track3.webp"
                 alt="Impact track visual"
                 width={1840}
                 height={910}
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover w-140 aspect-184/91"
+                className="aspect-184/91 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
-              <div className="flex flex-col items-left w-fill">
-                <h3 className="mb-4 text-md font-medium lg:text-[2rem]">
+              <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
+                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Impact
                 </h3>
-                <p className="text-left text-lg font-pp-neue leading-relaxed">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   How might we record, evaluate, and re-evaluate the social life of technologies and their afterlives?
                 </p>
               </div>
@@ -208,18 +171,21 @@ export default function Home({
       </section>
 
       {/* About Interventions Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto grid max-w-6xl">
+      <section className="py-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
-          <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
+          <div className="flex flex-col justify-center gap-5">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:hidden">
+              what is interventions?
+            </h1>
+            <h1 className="hidden text-[2rem] font-medium tracking-tight lg:block lg:text-[7rem]">
               about interventions
             </h1>
-            <div className="flex flex-col gap-16 justify-center">
+            <div className="flex flex-col justify-center gap-6 lg:gap-16">
 
               {/* Text */}
-              <p className="text-lg font-pp-neue leading-relaxed">
+              <p className="max-w-[36ch] text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-lg">
               Welcome to Entangle, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
               Entangle is more than just a conference, it&apos;s a movement. It&apos;s about pushing boundaries, changing the way we 
               think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
@@ -230,7 +196,7 @@ export default function Home({
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-end items-start my-40 ">
+        <div className="my-40 hidden flex-row items-start justify-end lg:flex">
           <div className="inline-block border border-lime shrink-0">
             <Image
               src="/images/home-interventions-1.webp"
@@ -265,33 +231,33 @@ export default function Home({
       </section>
 
       {/* About Scout */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto grid max-w-6xl">
+      <section className="py-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
-          <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-[2rem] font-medium tracking-tight lg:text-[7rem]">
+          <div className="flex flex-col justify-center gap-5">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[7rem]">
               about scout
             </h1>
-            <div className="flex flex-row gap-16 justify-center">
+            <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">
 
               {/* Text */}
-              <div className="text-lg font-pp-neue leading-relaxed">
-                <p className="mb-16">
-                  We're Scout, Northeastern's student-driven design organization, and we're honored to be your hosts
+              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+                <p className="mb-8 lg:mb-16">
+                  We&apos;re Scout, Northeastern&apos;s student-driven design organization, and we&apos;re honored to be your hosts
                   this March 22nd! Our 100+ students work with real clients, offering creative solutions each semester.
                   Beyond client work, we enrich the Northeastern design community through events, Scout Labs collaborations
-                  with local organizations, and Scout Media's focus on animation, photography, and video. And of course,
-                  we're behind Interventions, our annual design conference that brings together Boston's creative professionals.
+                  with local organizations, and Scout Media&apos;s focus on animation, photography, and video. And of course,
+                  we&apos;re behind Interventions, our annual design conference that brings together Boston&apos;s creative professionals.
                 </p>
                 <Link href="https://scout.camd.northeastern.edu/"
-                  className="bg-lime text-charcoal text-[2rem] px-8 py-4 hover:bg-sky rounded-xl">
+                  className="inline-block rounded-xl bg-lime px-6 py-3 text-xl text-charcoal hover:bg-sky lg:px-8 lg:py-4 lg:text-[2rem]">
                   Scout Website
                 </Link>
               </div>
               {/* Image placeholder */}
               <Image
-                className="w-105 h-auto"
+                className="h-auto w-full max-w-[18rem] self-center lg:w-105 lg:max-w-none"
                 src="/brand/limelogo.png"
                 alt="Scout logo mark"
                 width={971}
@@ -309,7 +275,7 @@ export default function Home({
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
 
     </main>
   );
