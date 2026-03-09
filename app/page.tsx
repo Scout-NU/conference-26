@@ -42,7 +42,7 @@ function AvatarPlaceholder() {
 }
 
 const MEMBERS: Member[] = [
-{ name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Andrew Wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Adeline Yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
   { name: "Nicole Schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
@@ -52,7 +52,7 @@ const MEMBERS: Member[] = [
   { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
   { name: "Ruby Harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
   { name: "Jocelyn Hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design"},
+  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design" },
   { name: "Katherine Kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
   { name: "Autumn Gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
   { name: "Alexandra Katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
@@ -88,7 +88,9 @@ export default function Home() {
             </h1>
             <div className="flex flex-row gap-16 justify-center">
               {/* Image placeholder */}
-              <div className="w-5/3 border-lime border bg-zinc-300" />
+              <div className="w-5/3 border-lime border bg-zinc-300">
+                <img src="/images/conference-home-1.jpg" className="object-cover w-full aspect-159/100" />
+              </div>
               {/* Text */}
               <div className="text-lg font-pp-neue leading-relaxed">
                 <p className="mb-8">
@@ -122,8 +124,7 @@ export default function Home() {
                   Intention
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
+                  What are the values, assumptions, and politics that underpin design intention?
                 </p>
               </div>
             </div>
@@ -134,8 +135,7 @@ export default function Home() {
                   Investigation
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
+                  What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
               <img src="images/track2.png" className="object-cover w-120 aspect-63/62"></img>
@@ -148,8 +148,7 @@ export default function Home() {
                   Impact
                 </h3>
                 <p className="text-left text-lg font-pp-neue leading-relaxed">
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
+                  How might we record, evaluate, and re-evaluate the social life of technologies and their afterlives?
                 </p>
               </div>
             </div>
@@ -170,11 +169,11 @@ export default function Home() {
 
               {/* Text */}
               <p className="text-lg font-pp-neue leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+              Welcome to Entangle, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
+              Entangle is more than just a conference, it&apos;s a movement. It&apos;s about pushing boundaries, changing the way we 
+              think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
+               how do designers/creative individuals pause, reflect, and understand the complex systems they&apos;re part of before
+                building the future?
               </p>
               {/* Images */}
             </div>
@@ -182,13 +181,13 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-end items-start my-40 ">
           <div className="inline-block border border-lime shrink-0">
-            <img src="/images/conference-home-1.jpg" className="w-160 object-cover aspect-159/100" />
+            <img src="/images/home-interventions-1.png" className="w-160 object-cover aspect-159/100" />
           </div>
           <div className="inline-block border border-lime -m-24 shrink-0">
-            <img src="/images/conference-home-2.png" className="w-120 object-cover aspect-159/100" />
+            <img src="/images/home-interventions-2.png" className="w-120 object-cover aspect-159/100" />
           </div>
           <div className="inline-block border border-lime my-16 shrink-0">
-            <img src="/images/conference-home-3.png" className="w-110 object-cover aspect-159/100" />
+            <img src="/images/home-interventions-3.png" className="w-110 object-cover aspect-159/100" />
           </div>
         </div>
       </section>
@@ -220,15 +219,15 @@ export default function Home() {
               </div>
               {/* Image placeholder */}
               <img className="w-105" src="/brand/limelogo.png"></img>
-              
+
             </div>
           </div>
         </div>
       </section>
 
-       {/* Meet the Team */}
+      {/* Meet the Team */}
       <section className="py-24 mb-48 lg:py-24">
-        <TeamSection members={ MEMBERS }></TeamSection>
+        <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
       <Footer />
