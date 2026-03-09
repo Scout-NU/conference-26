@@ -1,8 +1,10 @@
-import { speakersData } from "./speakersData";
+import { getPublishedSpeakerTracks, speakersData } from "./speakersData";
 import TrackSection from "@/components/speakers/TrackSection";
 import Image from "next/image";
 
 export default function Speakers() {
+  const publishedTracks = getPublishedSpeakerTracks(speakersData);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-charcoal">
       {/* Vector backgrounds - right side */}
@@ -28,7 +30,7 @@ export default function Speakers() {
           speakers
         </h1>
 
-        {speakersData.map((track) => (
+        {publishedTracks.map((track) => (
           <TrackSection
             key={track.name}
             name={track.name}

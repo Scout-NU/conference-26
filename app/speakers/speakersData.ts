@@ -3,6 +3,7 @@ export interface Speaker {
   img: string;
   name: string;
   title: string;
+  isDraft?: boolean;
   description: string;
   link1: string; // LinkedIn
   link2: string; // Instagram
@@ -74,6 +75,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/bobsmith",
@@ -90,6 +92,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -100,6 +103,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -110,6 +114,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -120,6 +125,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -130,6 +136,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -140,6 +147,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -156,6 +164,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -166,6 +175,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -176,6 +186,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -186,6 +197,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -196,6 +208,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/charlielee",
@@ -206,6 +219,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/assets/speaker-placeholder.png",
         name: "[Speaker Name]",
         title: "Title",
+        isDraft: true,
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
         link1: "https://linkedin.com/in/danawhite",
@@ -214,3 +228,12 @@ export const speakersData: SpeakerTrack[] = [
     ],
   },
 ];
+
+export function getPublishedSpeakerTracks(tracks: SpeakerTrack[]): SpeakerTrack[] {
+  return tracks
+    .map((track) => ({
+      ...track,
+      speakers: track.speakers.filter((speaker) => !speaker.isDraft),
+    }))
+    .filter((track) => track.speakers.length > 0);
+}

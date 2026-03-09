@@ -264,7 +264,7 @@ export default function Home() {
                   we're behind Interventions, our annual design conference that brings together Boston's creative professionals.
                 </p>
                 <Link href="https://scout.camd.northeastern.edu/"
-                  className="bg-lime text-charcoal text-[2rem] px-8 py-4 hover:bg-sky">
+                  className="bg-lime text-charcoal text-[2rem] px-8 py-4 hover:bg-sky rounded-xl">
                   Scout Website
                 </Link>
               </div>
