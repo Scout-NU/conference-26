@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import TeamSection from "@/components/TeamMembers";
 import ScrollFrameAnimationLazy from "@/components/ScrollFrameAnimationLazy";
 import type { Member, Team, TeamProps } from "@/components/TeamMembers"
+import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
 
 // Placeholder star icon component
@@ -71,11 +72,39 @@ const MEMBERS: Member[] = [
   { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
 ];
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams?: { frames?: string | string[] };
+}) {
+  const USE_QUERY_FRAME_VARIANT = false;
+  const FRAME_VARIANT_FOR_COMPARISON: FrameVariant = "maxOptimized";
+
+  const selectedFramesParam = Array.isArray(searchParams?.frames)
+    ? searchParams?.frames[0]
+    : searchParams?.frames;
+  const frameVariantFromQuery: FrameVariant =
+    selectedFramesParam === "optimized"
+      ? "optimized"
+      : selectedFramesParam === "max-optimized"
+        ? "maxOptimized"
+        : "original";
+  const frameVariant = USE_QUERY_FRAME_VARIANT
+    ? frameVariantFromQuery
+    : FRAME_VARIANT_FOR_COMPARISON;
+
   return (
     <main className="bg-charcoal text-cream">
+      <section className="px-6 pt-6">
+        <div className="mx-auto flex max-w-6xl items-center gap-4 text-sm font-pp-neue text-cream/80">
+          <span>Frame set (code toggle):</span>
+          <span className="rounded border border-lime bg-lime px-3 py-1 font-semibold text-charcoal">
+            {frameVariant}
+          </span>
+        </div>
+      </section>
       {/* Hero Section */}
-      <ScrollFrameAnimationLazy />
+      <ScrollFrameAnimationLazy variant={frameVariant} />
 
 
       {/* About Section */}
