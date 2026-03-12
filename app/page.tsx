@@ -296,7 +296,7 @@ export default function Home({
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-5">
-            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[7rem]">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4git rem]">
               about scout
             </h1>
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">
