@@ -20,10 +20,14 @@ export interface TeamProps {
 const TeamSection = ({ members }: TeamProps) => {
     const [activeTeam, setActiveTeam] = useState<Team>("operations");
     const currentTeam = members.filter((m) => m.team === activeTeam);
+    const maxTeamSize = Math.max(
+        ...TEAMS.map((team) => members.filter((member) => member.team === team).length)
+    );
+    const placeholdersNeeded = maxTeamSize - currentTeam.length;
 
     return (
         <div className="mx-auto max-w-6xl justify-center">
-            <h1 className="text-xl font-medium tracking-tight lg:text-2xl">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[6rem]">
                 meet the team
             </h1>
             {/* team nav */}
@@ -59,6 +63,13 @@ const TeamSection = ({ members }: TeamProps) => {
                         )}
                         <h2 className="text-xl font-medium">{member.name}</h2>
                         <p className="font-pp-neue text-lg text-lime">{member.role}</p>
+                    </div>
+                ))}
+                {Array.from({ length: placeholdersNeeded }).map((_, index) => (
+                    <div key={`placeholder-${index}`} className="invisible flex flex-col gap-2" aria-hidden="true">
+                        <div className="w-full aspect-square border border-lime" />
+                        <h2 className="text-xl font-medium">Placeholder Name</h2>
+                        <p className="font-pp-neue text-lg text-lime">Placeholder Role</p>
                     </div>
                 ))}
             </div>

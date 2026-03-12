@@ -7,32 +7,32 @@ import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
 
 const MEMBERS: Member[] = [
-  { name: "Jasmine Sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "Andrew Wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "Adeline Yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "Nicole Schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "Kendra Ruan", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "Saloni Bhatia", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "Saidah Ly", role: "Design Lead", image: "/images/placeholder.png", team: "design" },
-  { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
-  { name: "Ruby Harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "Jocelyn Hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "Ha Ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "Katherine Kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
-  { name: "Autumn Gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "Alexandra Katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "Lea Lang", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "Ah-roh Ko", role: "Marketing Lead", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Reagan White", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "jasmine sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "adeline yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
+  { name: "nicole schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "kendra ruan", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "saloni bhatia", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
+  { name: "saidah ly", role: "Design Lead", image: "/images/placeholder.png", team: "design" },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
+  { name: "ruby harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
+  { name: "jocelyn hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
+  { name: "ha ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design" },
+  { name: "katherine kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
+  { name: "autumn gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "alexandra katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "lea lang", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
+  { name: "ah-roh ko", role: "Marketing Lead", image: "/images/placeholder.png", team: "marketing" },
+  { name: "reagan white", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
   { name: "Anika Parikh", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Eva Yuan", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Bhasuk (Bua) Limpkittisin", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Medha Gollamudi", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Sairah Sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.png", team: "marketing" },
+  { name: "eva yuan", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "medha gollamudi", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
+  { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.png", team: "marketing" },
   { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/placeholder.png", team: "tech" },
-  { name: "Afra Ankita", role: "Developer", image: "/images/placeholder.png", team: "tech" },
-  { name: "Ivan Lam", role: "Developer", image: "/images/placeholder.png", team: "tech" },
-  { name: "Xinning Lucy Liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "afra ankita", role: "Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "ivan lam", role: "Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
 ];
 
 export default function Home({
@@ -57,18 +57,36 @@ export default function Home({
     : FRAME_VARIANT_FOR_COMPARISON;
 
   return (
-    <main className="bg-charcoal text-cream">
+    <main className="overflow-hidden bg-charcoal text-cream">
       {/* Hero Section */}
       <ScrollFrameAnimationLazy variant={frameVariant} />
 
 
       {/* About Section */}
-      <section className="py-12 lg:py-24">
+      <section className="relative py-24">
+        <Image
+          className="absolute top-[50vh] right-[14vw] w-[95vw] rotate-5"
+          src="/images/bluerope.png"
+          alt=""
+          width={1920}
+          height={360}
+          sizes="95vw"
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute top-[70vh] left-200 w-[45vw]"
+          src="/images/doubleloop.svg"
+          alt=""
+          width={674}
+          height={537}
+          sizes="25vw"
+          aria-hidden="true"
+        />
         <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-6 lg:gap-5">
-            <h1 className="max-w-[18ch] text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:max-w-none lg:text-[7rem]">
+            <h1 className="max-w-[18ch] text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:max-w-none lg:text-[4rem]">
               to design is to entangle
             </h1>
             <div className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-16">
@@ -103,9 +121,54 @@ export default function Home({
       </section>
 
       {/* Tracks Section */}
-      <section className="py-12 lg:py-24">
+      <section className="relative py-16 lg:mt-48 lg:py-24">
+        <Image
+          className="absolute top-[135vh] aspect-auto w-screen rotate-2"
+          src="/images/bluerope2.png"
+          alt=""
+          width={1920}
+          height={420}
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute top-[135vh] w-screen rotate-2"
+          src="/images/squiggleoutline2.svg"
+          alt=""
+          width={1440}
+          height={554}
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute top-[210vh] aspect-auto w-screen"
+          src="/images/bluerope3.png"
+          alt=""
+          width={1920}
+          height={420}
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute top-[277vh] w-screen"
+          src="/images/squiggleoutline.svg"
+          alt=""
+          width={1440}
+          height={363}
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <Image
+          className="absolute top-[435vh] w-screen z-0"
+          src="/images/squiggleoutline3.svg"
+          alt=""
+          width={1440}
+          height={363}
+          sizes="100vw"
+          aria-hidden="true"
+        />
         <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
-          <h1 className="mb-10 text-center text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:mb-16 lg:text-left lg:text-[7rem]">
+          <h1 className="mb-10 text-center text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:mb-16 lg:text-left lg:text-[4rem]">
             tracks
           </h1>
           <div className="flex flex-col gap-10 lg:gap-0">
@@ -171,16 +234,13 @@ export default function Home({
       </section>
 
       {/* About Interventions Section */}
-      <section className="py-12 lg:py-24">
+      <section className="py-12 lg:mt-80 lg:py-24">
         <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-5">
-            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:hidden">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] lg:text-[4rem] font-medium tracking-tig">
               what is interventions?
-            </h1>
-            <h1 className="hidden text-[2rem] font-medium tracking-tight lg:block lg:text-[7rem]">
-              about interventions
             </h1>
             <div className="flex flex-col justify-center gap-6 lg:gap-16">
 
@@ -275,7 +335,7 @@ export default function Home({
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
-      {/* <Footer /> */}
+      <Footer />
 
     </main>
   );
