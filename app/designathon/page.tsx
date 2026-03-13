@@ -23,7 +23,7 @@ export default function DesignathonPage() {
       <PrizesSection prizes={prizes} />
       <JudgesSection judges={judges} />
       <JudgingCriteriaSection criteria={judgingCriteria} />
-      <div className="mt-12 lg:mt-[20rem]">
+      <div className="mt-12 lg:mt-[20rem] hidden lg:block md:block">
         <Footer />
       </div>
     </main>

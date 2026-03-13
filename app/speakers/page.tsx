@@ -40,7 +40,7 @@ export default function Speakers() {
           />
         ))}
       </div>
-      <div className="mt-12 lg:mt-[25rem]">
+      <div className="mt-12 lg:mt-[25rem] hidden lg:block md:block">
         <Footer />
       </div>
     </div>

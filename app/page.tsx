@@ -58,8 +58,10 @@ export default function Home({
 
   return (
     <main className="overflow-hidden bg-charcoal text-cream">
-      {/* Hero Section */}
-      <ScrollFrameAnimationLazy variant={frameVariant} />
+      {/* Hero Section (desktop only) */}
+      <div className="hidden md:block">
+        <ScrollFrameAnimationLazy variant={frameVariant} />
+      </div>
 
 
       {/* About Section */}
@@ -337,7 +339,9 @@ export default function Home({
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
-      <Footer />
+      <div className="hidden lg:block md:block">
+        <Footer />
+      </div>
 
     </main>
   );

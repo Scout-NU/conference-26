@@ -26,17 +26,17 @@ const TeamSection = ({ members }: TeamProps) => {
     const placeholdersNeeded = maxTeamSize - currentTeam.length;
 
     return (
-        <div className="mx-auto max-w-6xl justify-center">
+        <div className="mx-auto max-w-6xl justify-center px-4 md:px-0">
             <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[6rem]">
                 meet the team
             </h1>
             {/* team nav */}
-            <div className="flex flex-row py-8 justify-between">
+            <div className="flex flex-wrap gap-2 py-8 md:flex-row md:justify-between">
                 {TEAMS.map((team) => (
                     <div
                         key={team}
                         onClick={() => setActiveTeam(team)}
-                        className={`font-pp-neue px-4 py-2 text-xl font-medium capitalize transition-colors border-b-2 -mb-px
+                        className={`font-pp-neue shrink-0 px-3 py-2 text-base font-medium capitalize transition-colors border-b-2 md:-mb-px md:px-4 md:text-xl
               ${activeTeam === team
                                 ? "border-lime"
                                 : "border-transparent"}`}>
@@ -45,7 +45,7 @@ const TeamSection = ({ members }: TeamProps) => {
                 ))}   
             </div>
             {/* members */}
-            <div className="grid gap-8 grid-cols-4">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 {currentTeam.map((member) => (
                     <div key={member.name} className="flex flex-col gap-2">
                         {member.image && member.image !== "/images/placeholder.png" ? (
