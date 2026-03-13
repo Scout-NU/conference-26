@@ -26,16 +26,10 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "Breakfast",
         description:
-        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",        
+        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters as well as water and coffee to keep guests hydrated and energized for the day.",        
         location: "Atrium",
         // knots: ["impact_pink"],
       },
-      {
-        name: "Morning Networking",
-        description:
-        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",
-        location: "Atrium",
-      }
     ],
   },
   {
@@ -65,18 +59,18 @@ export const scheduleData: TimeSlot[] = [
     time: "10:45 AM",
     events: [
       {
-        name: "Panel 01",
+        name: "Data Visualization Panel",
         description:
-          "DATA VISUALIZATION",
+          "More details to come!",
         location: "Auditorium",
         // knots: ["impact_pink"],
       },
        {
-        name: "Panel 02",
+        name: "Smart Textiles & Biodesign Panel",
         // speaker: "Speaker",
         description:
-          "SMART TEXTILES & BIODESIGN",
-        location: "ROOM 140",
+          "More details to come!",
+        location: "Classroom 140",
         // knots: ["investigation_yellow"],
       },
     ],
@@ -87,19 +81,13 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "lunch",
         description:
-        "Enjoy a provided meal with other attendees! ",
+        "For lunch, a classic sandwich buffet will be provided, featuring turkey and provolone, green goddess chicken salad, and vegan falafel on assorted breads. The meal will be accompanied by house-made potato chips, mixed green salad with red wine vinaigrette, pickles, and an assortment of cookies. Additionally, a water station will be available to keep guests hydrated. Dessert will consist of gluten-free brownies.",
         location: "Atrium",
       },
       {
-        name: "Poster Presentations",
+        name: "mentor chats",
         description:
-        "Admire and engage with exciting work being done by Northeastern students through their poster presentations.",
-        location: "Atrium",
-      },
-      {
-        name: "Midday Networking",
-        description:
-        "Get to know Northeastern design professors and hear more about their experience in the industry and as teachers of the subject.",
+        "While or after enjoying your meal, get to know a few Northeastern professors and hear more about their experience in the industry and as teachers of the subject.",
         location: "Atrium",
       },
     ],
@@ -108,18 +96,18 @@ export const scheduleData: TimeSlot[] = [
     time: "12:45 PM",
     events: [
       {
-        name: "student presenters",
-        description:
-          "Hear and engage with exciting work being done by Northeastern students.",
-        location: "ROOM 140",
-        // knots: ["investigation_yellow"],
-      },
-      {
-        name: "FROM INFORMATION TO INTUITION",
+        name: "From Information to Intuition: Human-Scale Ways to Experience Abstract Tech",
         speaker: "TIANGE WANG",
         description:
         "Learn about human scale ways to experience abstract tech.",
         location: "AUDITORIUM",
+      },
+      {
+        name: "Student Keynote Presentations",
+        description:
+          "Hear and engage with exciting work being done by four Northeastern undergraduate and graduate students through their slide presentations and brief Q&A sessions.",
+        location: "Classroom 140",
+        // knots: ["investigation_yellow"],
       },
       {
         name: "Lobby Activities",
@@ -133,22 +121,31 @@ export const scheduleData: TimeSlot[] = [
     time: "1:45 PM",
     events: [
       {
-        name: "headshots + Tabling",
-        description:
-        "Receive an amazing headshot from Scout’s media team for your professional profile. Connect with other attendees and talk with representatives from the Center for Design and Scout.",
-        location: "Atrium",
-      },
-      {
         name: "designathon presentations",
+        speaker: "Joseph Schnackertz and Snehal Ladkes",
         description:
-        "Enjoy learning about new projects from the talented designation participants.",
+        "See and experience the hard work of all of the Entangle designathon participants during their 36 work period as they present their final presentations to the panel of judges.",
         location: "Auditorium",
       },
       {
-        name: "FROM FRAME TO PRESENCE",
+        name: "Tabling",
         description:
-        "Learn about designing an AI and XR workflow for immersive storytelling.",
-        location: "ROOM 142",
+        "Hear from a few Northeastern organizations about their exciting academic and industry projects in design and technology.",
+        location: "Atrium",
+      },
+      {
+        name: "Professional Headshots",
+        speaker: "Scout Media Team",
+        description:
+        "Need a fresh, high-quality headshot? Stop by the second floor of ISEC, where the Scout Media team will be stationed to capture polished photos for LinkedIn, portfolios, and more!",
+        location: "ISEC 2nd Floor",
+      },
+      {
+        name: "From Frame to Presence - Designing an AI & XR Workflow for Immersive Storytelling",
+        speaker: "Johnny Ouk",
+        description:
+        "More details to come!",
+        location: "ROOM 140",
       },
     ],
   },
@@ -156,25 +153,25 @@ export const scheduleData: TimeSlot[] = [
     time: "2:45 PM",
     events: [
       {
-        name: "portfolio reviews",
-        description:
-          "Receive constructive feedback on your portfolio from seasoned professionals to help your work shine!",
-        location: "Atrium",
-        // knots: ["impact_pink"],
-      },
-      {
         name: "making dreams a reality",
-        speaker: "STEVEN MAX PATTERSON & Y. JENNY WANG",
+        speaker: "With Steven Max Patterson & Y. Jenny Wang",
         description:
-          "",
+          "More details to come!",
         location: "auditorium",
         // knots: ["intention_blue"],
       },
       {
-        name: "workshops",
+        name: "Portal Workshop with NU Oakland",
         description:
-        "Explore various workshops!",
-        location: "ROOM 142",
+        "More details to come!",
+        location: "Classroom 142",
+      },
+      {
+        name: "portfolio reviews",
+        description:
+          "Receive expert feedback on your portfolio from industry professionals and Northeastern professors from the College of Arts, Media, and Design. Whether you're fine-tuning your work or preparing for job opportunities, this session will help you refine your presentation and make a lasting impact.",
+        location: "Atrium",
+        // knots: ["impact_pink"],
       },
     ],
   },
@@ -182,22 +179,33 @@ export const scheduleData: TimeSlot[] = [
     time: "3:30 PM",
     events: [
       {
-        name: "panel 03",
-        speaker: "accessibility and autonomy in the digital age",
+        name: "Accessibility and Autonomy in the Digital Age Panel",
+        // speaker: "accessibility and autonomy in the digital age",
         description:
-          "",
+          "More details to come!",
         location: "auditorium",
       },
     ],
   },
   {
-    time: "4:00 PM",
+    time: "4:30 PM",
     events: [
       {
-        name: "closing ceremony & designathon winners",
+        name: "Closing Ceremony",
         description:
-          "Close out the day by joining us as we celebrate all the learning and inspiration that happened.",
+          "We’ll officially end the night with brief closing remarks and reflections as well as announce the winners of the Entangle designathon.",
         location: "Auditorium",
+      },
+    ],
+  },
+  {
+    time: "5:00 PM",
+    events: [
+      {
+        name: "Networking and Goodbye",
+        description:
+          "",
+        location: "Atrium",
       },
     ],
   },

@@ -44,7 +44,7 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
           ))}
         </div>
       )}
-      <p className="whitespace-nowrap text-sm font-bold uppercase tracking-[-0.02em] text-cream sm:text-base lg:text-[1.25rem]">
+      <p className="font-pp-neue whitespace-nowrap text-[1.25rem] font-medium uppercase tracking-[-0.02em] text-cream">
         {location}
       </p>
     </div>
@@ -54,12 +54,12 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
 const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) => (
   <div className="py-5 sm:py-6">
     <div className="flex flex-col gap-3 sm:flex-row sm:gap-8 lg:gap-10">
-      <div className="font-pp-neue shrink-0 whitespace-nowrap text-lg font-bold uppercase leading-tight tracking-[-0.02em] text-cream sm:w-32 sm:text-xl lg:text-[1.625rem]">
+      <div className="font-pp-neue shrink-0 whitespace-nowrap text-[1.875rem] font-medium uppercase leading-tight tracking-[-0.02em] text-cream sm:w-32">
         {time}
       </div>
 
       <div className="flex-1">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+        <div className={`grid grid-cols-1 gap-6 ${events.length === 1 ? "md:grid-cols-1" : "md:grid-cols-2"} md:gap-8`}>
           {events.map((event) => (
             <EventCard key={`${time}-${event.name}`} {...event} />
           ))}
