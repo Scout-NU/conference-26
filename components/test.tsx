@@ -6,6 +6,7 @@ const MOBILE_FRAME_STEP = 2;
 const DESKTOP_FRAME_STEP = 1;
 const PRELOAD_CONCURRENCY = 8;
 const BASE_SCROLL_DISTANCE = 5500;
+const START_FRAME_INDEX = 41;
 
 export type FrameVariant = "original" | "optimized" | "maxOptimized";
 
@@ -62,9 +63,17 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
       selectedFrameSet.totalFrames - selectedFrameSet.trimEndFrames
     );
     const frameStep = isMobile ? MOBILE_FRAME_STEP : DESKTOP_FRAME_STEP;
+    const clampedStartFrameIndex = Math.min(
+      Math.max(START_FRAME_INDEX, 0),
+      usableFrameCount - 1
+    );
     const frameIndices = Array.from(
-      { length: Math.ceil(usableFrameCount / frameStep) },
-      (_, index) => index * frameStep
+      {
+        length: Math.ceil(
+          (usableFrameCount - clampedStartFrameIndex) / frameStep
+        ),
+      },
+      (_, index) => clampedStartFrameIndex + index * frameStep
     );
     const frames: Array<HTMLImageElement | null> = Array(frameIndices.length).fill(
       null

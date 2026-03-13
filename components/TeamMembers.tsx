@@ -36,7 +36,7 @@ const TeamSection = ({ members }: TeamProps) => {
                     <div
                         key={team}
                         onClick={() => setActiveTeam(team)}
-                        className={`px-4 py-2 text-xl font-medium capitalize transition-colors border-b-2 -mb-px
+                        className={`font-pp-neue px-4 py-2 text-xl font-medium capitalize transition-colors border-b-2 -mb-px
               ${activeTeam === team
                                 ? "border-lime"
                                 : "border-transparent"}`}>
@@ -61,14 +61,14 @@ const TeamSection = ({ members }: TeamProps) => {
                         ) : (
                             <div className="w-full aspect-square border border-lime" aria-hidden="true" />
                         )}
-                        <h2 className="text-xl font-medium">{member.name}</h2>
+                        <h2 className="font-pp-neue text-xl font-medium uppercase">{member.name}</h2>
                         <p className="font-pp-neue text-lg text-lime">{member.role}</p>
                     </div>
                 ))}
                 {Array.from({ length: placeholdersNeeded }).map((_, index) => (
                     <div key={`placeholder-${index}`} className="invisible flex flex-col gap-2" aria-hidden="true">
                         <div className="w-full aspect-square border border-lime" />
-                        <h2 className="text-xl font-medium">Placeholder Name</h2>
+                        <h2 className="font-pp-neue text-xl font-medium uppercase">Placeholder Name</h2>
                         <p className="font-pp-neue text-lg text-lime">Placeholder Role</p>
                     </div>
                 ))}

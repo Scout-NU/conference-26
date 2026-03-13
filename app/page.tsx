@@ -159,7 +159,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[435vh] w-screen z-0"
+          className="absolute top-[400vh] w-screen z-10"
           src="/images/squiggleoutline3.svg"
           alt=""
           width={1440}
@@ -183,7 +183,7 @@ export default function Home({
                 className="aspect-204/95 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
               <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
-                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-pp-neue mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Intention
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
@@ -194,7 +194,7 @@ export default function Home({
             {/* Track 2 */}
             <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left">
               <div className="order-2 flex w-full flex-col items-center lg:order-1 lg:w-auto lg:items-start">
-                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-pp-neue mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Investigation
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
@@ -221,7 +221,7 @@ export default function Home({
                 className="aspect-184/91 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
               <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
-                <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-pp-neue mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Impact
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
@@ -246,8 +246,10 @@ export default function Home({
 
               {/* Text */}
               <p className="max-w-[36ch] text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-lg">
-              Welcome to Entangle, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
-              Entangle is more than just a conference, it&apos;s a movement. It&apos;s about pushing boundaries, changing the way we 
+                Welcome to <span className="text-lime">entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout.
+                Entangle is more than just a conference, it&apos;s a movement. <br /> <br />
+
+                It&apos;s about pushing boundaries, changing the way we 
               think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
                how do designers/creative individuals pause, reflect, and understand the complex systems they&apos;re part of before
                 building the future?
@@ -311,7 +313,7 @@ export default function Home({
                   we&apos;re behind Interventions, our annual design conference that brings together Boston&apos;s creative professionals.
                 </p>
                 <Link href="https://scout.camd.northeastern.edu/"
-                  className="inline-block rounded-xl bg-lime px-6 py-3 text-xl text-charcoal hover:bg-sky lg:px-8 lg:py-4 lg:text-[2rem]">
+                  className="font-pp-neue inline-block rounded-xl bg-lime px-6 py-3 text-xl text-charcoal hover:bg-sky lg:px-8 lg:py-4 lg:text-[2rem]">
                   Scout Website
                 </Link>
               </div>
@@ -331,7 +333,7 @@ export default function Home({
       </section>
 
       {/* Meet the Team */}
-      <section className="py-24 mb-48 lg:py-24">
+      <section className="relative z-10 py-24 mb-48 lg:py-24">
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
