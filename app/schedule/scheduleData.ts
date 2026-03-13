@@ -15,165 +15,178 @@ export interface TimeSlot {
 
 export const scheduleData: TimeSlot[] = [
   {
-    time: "9:00 AM",
+    time: "8:45 AM",
     events: [
       {
         name: "Sign-in",
         description:
-          "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",
+          "Check-in, check your coat, and receive your official Entangle badge and stickers!",
         location: "Atrium",
       },
       {
         name: "Breakfast",
         description:
-        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",        location: "Atrium",
-        knots: ["impact_pink"],
+        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",        
+        location: "Atrium",
+        // knots: ["impact_pink"],
       },
       {
         name: "Morning Networking",
         description:
-        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",        
+        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",
         location: "Atrium",
       }
     ],
   },
   {
-    time: "9:30 AM",
+    time: "9:15 AM",
     events: [
       {
         name: "Opening Ceremony",
         description:
-        "We'll officially kick off the day with the Entangle opening ceremony, where you'll learn about our schedule of events and hear opening remarks from the Scout Conference team!",    
-        location: "Atrium",
+        "We'll officially kick off the day with the Entangle opening ceremony, where you'll learn about our schedule of events and hear opening remarks from the Scout Conference team!",
+        location: "Auditorium",
       },
     ],
   },
   {
-    time: "10:00 AM",
+    time: "9:45 AM",
+    events: [
+      {
+        name: "keynote speaker",
+        speaker: "XIN XIN",
+        description: "Learn about the power of collectives in building a more equitable digital future from Xin Xin,  Co-Executive Director and Processing Foundation Assistant Professor of Interaction and Media Design at The New School.",
+        location: "Auditorium",
+        // knots: ["intention_blue"],
+      },
+    ],
+  },
+  {
+    time: "10:45 AM",
     events: [
       {
         name: "Panel 01",
-        speaker: "Speaker",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        location: "Atrium",
-        knots: ["intention_blue"],
+        description:
+          "DATA VISUALIZATION",
+        location: "Auditorium",
+        // knots: ["impact_pink"],
       },
        {
-        name: "Speaker 01",
-        speaker: "Speaker",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        location: "Atrium",
-        knots: ["impact_pink"],
+        name: "Panel 02",
+        // speaker: "Speaker",
+        description:
+          "SMART TEXTILES & BIODESIGN",
+        location: "ROOM 140",
+        // knots: ["investigation_yellow"],
       },
     ],
   },
   {
-    time: "11:00 AM",
+    time: "11:45 AM",
     events: [
       {
-        name: "Workshop 01",
+        name: "lunch",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
-        location: "Atrium",
-        knots: ["impact_pink"],
-      },
-       {
-        name: "Speaker 02",
-        speaker: "Speaker",
-        description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
-        location: "Atrium",
-        knots: ["investigation_yellow"],
-      },
-    ],
-  },
-  {
-    time: "12:00 PM",
-    events: [
-      {
-        name: "Lunch Break",
-        description:
-        "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",
+        "Enjoy a provided meal with other attendees! ",
         location: "Atrium",
       },
       {
         name: "Poster Presentations",
         description:
-        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",
+        "Admire and engage with exciting work being done by Northeastern students through their poster presentations.",
         location: "Atrium",
       },
       {
         name: "Midday Networking",
         description:
-        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",
+        "Get to know Northeastern design professors and hear more about their experience in the industry and as teachers of the subject.",
         location: "Atrium",
       },
     ],
   },
   {
-    time: "1:00 PM",
+    time: "12:45 PM",
     events: [
       {
-        name: "Panel 2",
-        speaker: "Speaker",
+        name: "student presenters",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
-        location: "Atrium",
-        knots: ["investigation_yellow"],
+          "Hear and engage with exciting work being done by Northeastern students.",
+        location: "ROOM 140",
+        // knots: ["investigation_yellow"],
       },
       {
-        name: "Student Presenters",
+        name: "FROM INFORMATION TO INTUITION",
+        speaker: "TIANGE WANG",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-        location: "Atrium",
+        "Learn about human scale ways to experience abstract tech.",
+        location: "AUDITORIUM",
       },
       {
         name: "Lobby Activities",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Get hands on with string entanglement boards and keychain making!",
         location: "Atrium",
       },
     ],
   },
   {
-    time: "2:00 PM",
+    time: "1:45 PM",
     events: [
       {
-        name: "Coffee Break + Tabling",
+        name: "headshots + Tabling",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Receive an amazing headshot from Scout’s media team for your professional profile. Connect with other attendees and talk with representatives from the Center for Design and Scout.",
         location: "Atrium",
       },
       {
-        name: "Portfolio Reviews",
+        name: "designathon presentations",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-        location: "Atrium",
+        "Enjoy learning about new projects from the talented designation participants.",
+        location: "Auditorium",
       },
       {
-        name: "Workshop 2",
+        name: "FROM FRAME TO PRESENCE",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-        location: "Atrium",
+        "Learn about designing an AI and XR workflow for immersive storytelling.",
+        location: "ROOM 142",
       },
     ],
   },
   {
-    time: "3:00 PM",
+    time: "2:45 PM",
     events: [
       {
-        name: "Workshop 3",
+        name: "portfolio reviews",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+          "Receive constructive feedback on your portfolio from seasoned professionals to help your work shine!",
         location: "Atrium",
-        knots: ["impact_pink"],
+        // knots: ["impact_pink"],
       },
       {
-        name: "Speaker 3",
+        name: "making dreams a reality",
+        speaker: "STEVEN MAX PATTERSON & Y. JENNY WANG",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-        location: "Atrium",
-        knots: ["intention_blue"],
+          "",
+        location: "auditorium",
+        // knots: ["intention_blue"],
+      },
+      {
+        name: "workshops",
+        description:
+        "Explore various workshops!",
+        location: "ROOM 142",
+      },
+    ],
+  },
+  {
+    time: "3:30 PM",
+    events: [
+      {
+        name: "panel 03",
+        speaker: "accessibility and autonomy in the digital age",
+        description:
+          "",
+        location: "auditorium",
       },
     ],
   },
@@ -181,10 +194,10 @@ export const scheduleData: TimeSlot[] = [
     time: "4:00 PM",
     events: [
       {
-        name: "Closing Ceremony",
+        name: "closing ceremony & designathon winners",
         description:
-          "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-        location: "Atrium",
+          "Close out the day by joining us as we celebrate all the learning and inspiration that happened.",
+        location: "Auditorium",
       },
     ],
   },

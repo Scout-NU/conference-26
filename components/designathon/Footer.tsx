@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Branding */}
         <div className="w-150">
           <Image
-            src="/brand/Lockup_Light_Interventions.png"
+            src="/images/Lockup_Light_Subhead.png"
             alt="Interventions lockup"
             width={1200}
             height={320}
