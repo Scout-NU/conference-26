@@ -1,5 +1,6 @@
 import { getPublishedSpeakerTracks, speakersData } from "./speakersData";
 import TrackSection from "@/components/speakers/TrackSection";
+import Footer from "@/components/designathon/Footer";
 import Image from "next/image";
 
 export default function Speakers() {
@@ -38,6 +39,9 @@ export default function Speakers() {
             speakers={track.speakers}
           />
         ))}
+      </div>
+      <div className="mt-12 lg:mt-[25rem]">
+        <Footer />
       </div>
     </div>
   );
