@@ -11,10 +11,9 @@ export default function HeroSection() {
           href="https://entangle-designation.devpost.com/"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex min-h-14 items-center gap-2 rounded-full border border-cream/80 px-7 py-3 text-base font-semibold transition-colors hover:border-cream hover:bg-cream/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime md:min-h-16 md:px-9 md:text-lg"
+          className="inline-flex min-h-14 items-center gap-2 rounded-full lg:text-[1.5rem] border border-cream/80 px-7 py-3 text-base font-semibold transition-colors hover:border-cream hover:bg-cream/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime md:min-h-16 md:px-9 md:text-lg"
         >
-          Register Now
-          <span aria-hidden="true">-&gt;</span>
+          register now
         </Link>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTiktok } from "react-icons/bs";
 import Image from "next/image";
 
 export default function Footer() {
@@ -28,9 +28,9 @@ export default function Footer() {
 
         {/* Event Details */}
         <div className="w-150 flex flex-col gap-2 text-cream">
-          <div className="font-medium text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight">
+          <div className="font-pp-neue font-medium text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight">
             <p>March 22nd, 2026</p>
-            <p>8:30 am - 5:00 pm</p>
+            <p>8:45 am - 5:00 pm</p>
           </div>
           <div className="font-pp-neue text-lg leading-relaxed mt-2">
             <p>Northeastern University Interdisciplinary Science & Engineering Complex</p>
@@ -50,29 +50,29 @@ export default function Footer() {
           />
         <div>
           <p className="font-pp-neue font-medium text-xl mb-3">
-            Connect with us!
+              connect with us!
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+                href="https://www.instagram.com/interventionsbyscout/"
               className="hover:text-cream/80 transition-colors"
               aria-label="Instagram"
             >
               <BsInstagram className="w-8 h-8" />
             </a>
             <a
-              href="#"
+                href="https://www.linkedin.com/in/scout-conference/"
               className="hover:text-cream/80 transition-colors"
               aria-label="LinkedIn"
             >
               <BsLinkedin className="w-8 h-8" />
             </a>
             <a
-              href="#"
+                href="https://www.tiktok.com/@interventions.scout"
               className="hover:text-cream/80 transition-colors"
-              aria-label="Twitter"
+                aria-label="TikTok"
             >
-              <BsTwitterX className="w-8 h-8" />
+                <BsTiktok className="w-8 h-8" />
             </a>
           </div>
         </div>

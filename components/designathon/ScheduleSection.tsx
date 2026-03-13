@@ -1,4 +1,5 @@
 import { DesignathonEvent } from "./types";
+import Image from "next/image";
 
 function renderTimeLabel(time: string) {
   const parts = time.trim().split(/\s+/);
@@ -24,23 +25,30 @@ function ScheduleEventRow({
 }) {
   return (
     <article className="space-y-5 pb-8 md:grid md:grid-cols-[12rem_1fr] md:gap-10 md:space-y-0 md:pb-10">
-      <h3 className="max-w-[18ch] text-lg font-bold uppercase leading-tight tracking-wide text-cream md:text-[1.75rem] lg:text-[1.5rem]">
+      <h3 className="font-pp-neue max-w-[18ch] text-lg font-medium leading-tight tracking-wide text-cream md:text-[1.75rem] lg:text-[1.5rem]">
         {renderTimeLabel(event.time)}
       </h3>
 
       <div className="space-y-4">
-        <p className="text-xl font-bold uppercase leading-tight tracking-wide text-cream md:text-[1.75rem]">
+        <p className="text-xl font-medium leading-tight tracking-wide text-cream md:text-[1.75rem]">
           {event.title}
         </p>
-        <p className="max-w-[70ch] text-sm leading-relaxed text-cream/85 md:text-base">
+        <p className="font-pp-neue max-w-[70ch] text-sm leading-relaxed text-cream/85 md:text-base">
           {event.description}
         </p>
         {event.location ? (
-          <p className="inline-flex min-h-11 items-center gap-2 text-base font-bold uppercase text-cream md:text-xl">
+          <p className="font-pp-neue inline-flex min-h-11 items-center gap-2 text-base font-medium text-cream md:text-xl">
             <span
               aria-hidden="true"
-              className="inline-block h-2.5 w-2.5 rounded-full bg-magenta"
-            />
+              className="relative inline-block h-10 w-10 shrink-0"
+            >
+              <Image
+                src="/images/pinkarrow.svg"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </span>
             {event.location}
           </p>
         ) : null}

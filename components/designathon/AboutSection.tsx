@@ -3,10 +3,10 @@ export default function AboutSection() {
     <section id="about" className="border-y border-cream/10">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-[1.25fr_0.75fr] md:px-10 md:py-20">
         <div className="space-y-6">
-          <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] leading-none">
-            About
+          <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] leading-none lg:text-[4rem]">
+            about
           </h2>
-          <div className="max-w-[72ch] space-y-4 text-sm leading-relaxed text-cream/85 md:text-base">
+          <div className="font-pp-neue max-w-[72ch] space-y-4 text-sm leading-relaxed text-cream/85 md:text-base">
             <p>
               This Designathon invites students to explore the conference theme
               Entangle through a collaborative design process. Working in teams
@@ -24,9 +24,9 @@ export default function AboutSection() {
         </div>
 
         <div className="mt-3 h-fit self-start border-l-[6px] border-cream pl-4 text-base leading-relaxed md:mt-8 md:pl-6 md:text-lg lg:mt-[4.5rem] font-semibold">
-          <p>THEME: Design and Technology</p>
-          <p className="mt-2">DATE: March 20th - March 22nd</p>
-          <p className="mt-2">LOCATIONS: Center for Design, ISEC</p>
+          <p>theme: design and technology</p>
+          <p className="mt-2">date: march 20th - march 22nd</p>
+          <p className="mt-2">locations: center for design, isec</p>
         </div>
       </div>
     </section>
