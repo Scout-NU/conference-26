@@ -27,7 +27,7 @@ export const speakersData: SpeakerTrack[] = [
         title: "Co-Executive Director, Processing Foundation Assistant Professor of Interaction and Media Design, The New School",
         description:
           "Xin Xin (they/them) is a Taiwanese-American cultural producer exploring community-driven technology in creative and educational spaces. As creator of TogetherNet and co-editor of the Critical Coding Cookbook, Xin advocates for liberatory software culture through the reclamation and subversion of power dynamics embedded within digital systems. Born in Taipei and raised in Massachusetts, Xin brings a multicultural perspective to questions of technology and sovereignty. An Eyebeam Rapid Response for a Better Digital Future Fellow and Sundance Art of Practice Fellow, their genre-bending practice weaves together art, education, organizing, and technological experimentation—interrogating who controls technology, who benefits from it, and the power of collectives in building a more equitable digital future.",
-        link1: "https://www.linkedin.com/in/tiange-wang/",
+        link1: "https://www.linkedin.com/in/xinemata/",
         link2: "https://instagram.com/alicejohnson",
       },
       {
@@ -36,8 +36,8 @@ export const speakersData: SpeakerTrack[] = [
         name: "PAOLO CIUCCARELLI",
         title: "",
         description:
-          "Rua M. Williams is an assistant professor in User Experience Design at  Purdue University and a former Just Tech Fellow (2022-2024) with the  Social Science RESEARCH Council. As Principal Investigator of the  CoLiberation Lab, Dr. Williams’s work explores how disabled people  imagine and build their own sociotechnical worlds, and investigate how  technology policy and research practice interact to disrupt disabled  people’s bodily autonomy and access to meaningful public life.",
-        link1: "https://www.linkedin.com/in/wangyijenny/",
+          "",
+        link1: "https://www.linkedin.com/in/paolociuccarelli/",
         link2: "https://instagram.com/bobsmith",
       },
       {
@@ -46,8 +46,8 @@ export const speakersData: SpeakerTrack[] = [
         name: "EILEEN MCGIVNEY",
         title: "",
         description:
-          "Rua M. Williams is an assistant professor in User Experience Design at  Purdue University and a former Just Tech Fellow (2022-2024) with the  Social Science RESEARCH Council. As Principal Investigator of the  CoLiberation Lab, Dr. Williams’s work explores how disabled people  imagine and build their own sociotechnical worlds, and investigate how  technology policy and research practice interact to disrupt disabled  people’s bodily autonomy and access to meaningful public life.",
-        link1: "https://www.linkedin.com/in/sokheanjouk/",
+          "",
+        link1: "https://www.linkedin.com/in/eileen-mcgivney-phd-73733963/",
         link2: "https://instagram.com/alicejohnson",
       },
       {
@@ -56,8 +56,8 @@ export const speakersData: SpeakerTrack[] = [
         name: "STEVEN GEOFREY",
         title: "",
         description:
-          "Rua M. Williams is an assistant professor in User Experience Design at  Purdue University and a former Just Tech Fellow (2022-2024) with the  Social Science RESEARCH Council. As Principal Investigator of the  CoLiberation Lab, Dr. Williams’s work explores how disabled people  imagine and build their own sociotechnical worlds, and investigate how  technology policy and research practice interact to disrupt disabled  people’s bodily autonomy and access to meaningful public life.",
-        link1: "https://www.linkedin.com/in/stevepatterson/",
+          "",
+        link1: "https://www.linkedin.com/in/stevengeofrey/",
         link2: "https://instagram.com/bobsmith",
       },
       {
@@ -110,12 +110,12 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "investigation-3",
-        img: "/assets/speaker-placeholder.png",
+        img: "/images/hughguiney.jpeg",
         name: "HUGH GUINEY",
-        title: "Title",
+        title: "Lead Frontend Engineer, Klaviyo",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        link1: "https://linkedin.com/in/charlielee",
+          "",
+        link1: "https://www.linkedin.com/in/hughguiney/",
         link2: "https://instagram.com/charlielee",
       },
       {
@@ -179,12 +179,12 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "impact-3",
-        img: "/assets/speaker-placeholder.png",
+        img: "/images/catherineclark.jpeg",
         name: "CATHERINE CLARKE",
-        title: "Title",
+        title: "",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        link1: "https://linkedin.com/in/charlielee",
+          "",
+        link1: "https://www.linkedin.com/in/catherine-clarke-b38bb4196/",
         link2: "https://instagram.com/charlielee",
       },
       {
