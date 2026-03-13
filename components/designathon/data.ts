@@ -2,36 +2,38 @@ import { Criteria, DesignathonEvent, Judge, Prize } from "./types";
 
 export const designathonSchedule: DesignathonEvent[] = [
   {
-    time: "FRIDAY 3/20 9:45AM",
+    time: "FRIDAY 3/20 9:35AM",
     title: "kickoff presentation",
     description:
-      "In the opening ceremony for the Designathon, we will introduce the prompt, announce judges and mentors, and pair anyone who still needs a team.",
+      "To kick off the Entangle designathon, the Scout Conference team will explain the prompt, introduce the judges and mentors, and connect any people that needs a team to work with.",
     location: "CENTER FOR DESIGN (102 RYDER HALL) ",
   },
   {
     time: "FRIDAY 3/20 10:00AM",
     title: "ideation with mentors",
+    people: "With Ashley Treni, Snehal Ladke, and Joseph Schnackertz",
     description:
-      "After kickoff, teams can ask questions and get feedback from mentors moving around the room to support each group.",
+      "After the kickoff, teams be able to ask any questions or get feedback from a group of mentors who will be moving around the room to support all of the groups.",
     location: "CENTER FOR DESIGN (102 RYDER HALL) )",
   },
   {
     time: "SATURDAY 3/21 11:59PM",
     title: "submissions due",
-    description: "Send final presentations to interventions@outlook.com.",
+    description: "Submit your final presentation into Devpost!.",
+    location: "Online @ entangle-designation.devpost.com",
   },
   {
     time: "SUNDAY 3/22 1:45PM",
     title: "final presentations",
     description:
-      "Each team will have ten minutes to present their final product to a panel of judges, evaluated using the criteria below.",
+      "Each team will have 10 minutes to present their final product to a panel of judges, who will evaluate each group’s work based on the criteria below",
     location: "ISEC AUDITORIUM",
   },
   {
     time: "SUNDAY 3/22 4:30PM",
     title: "awards ceremony",
     description:
-      "During the Scout Conference closing ceremony, winners of each prize will be announced after final deliberation.",
+      "During the Entangle closing ceremony, after the judges have deliberated, the Conference team will announce the winners of each prize!",
     location: "ISEC AUDITORIUM",
   },
 ];
