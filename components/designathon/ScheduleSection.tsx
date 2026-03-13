@@ -30,7 +30,10 @@ function ScheduleEventRow({
       </h3>
 
       <div className="space-y-4">
-        <p className="text-xl font-medium leading-tight tracking-wide text-cream md:text-[1.75rem]">
+        <p
+          className="text-xl font-medium leading-tight tracking-wide text-cream md:text-[1.75rem]"
+          style={{ fontWeight: 550 }}
+        >
           {event.title}
         </p>
         <p className="font-pp-neue max-w-[70ch] text-sm leading-relaxed text-cream/85 md:text-base">
