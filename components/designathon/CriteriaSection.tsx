@@ -39,8 +39,8 @@ const criteria: Criterion[] = [
 export default function CriteriaSection() {
   return (
     <section className="px-6 md:px-8 lg:px-[110px] py-16 lg:py-[94px] overflow-hidden">
-      <h2 className="font-clash text-4xl md:text-5xl lg:text-[64px] text-cream mb-10 lg:mb-[152px]">
-        Judging Criteria
+      <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] lg:text-[4rem] text-cream mb-10 lg:mb-[152px]">
+        judging criteria
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-x-[111px] lg:gap-y-[53px]">
