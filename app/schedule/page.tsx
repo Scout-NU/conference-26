@@ -3,6 +3,7 @@ import { scheduleData, Event, TimeSlot, Knot } from './scheduleData';
 import yellowKnot from './assets/yellow-knot.webp';
 import blue_blob_header from './assets/blue_blob_header.webp';
 import blue_blob_center from './assets/blue_blob_center.png';
+import pink_splotch from './assets/pink_splotch.png';
 import impact_pink from './assets/impact_pink.png';
 import intention_blue from './assets/intention_blue.png';
 import investigation_yellow from './assets/investigation_yellow.png';
@@ -98,15 +99,60 @@ export default function Schedule() {
         />
       </div>
 
-      <div className="pointer-events-none absolute left-[23%] top-[37%] z-0 hidden w-[clamp(37.5rem,65vw,59.375rem)] -rotate-[108.93deg] md:block">
+      <div className="pointer-events-none absolute left-[15%] top-[32%] z-0 hidden w-[clamp(37.5rem,65vw,59.375rem)] -rotate-[108.93deg] md:block">
         <Image
           src={blue_blob_center}
           alt=""
           aria-hidden="true"
           sizes="(min-width: 768px) 65vw, 0px"
-          className="h-auto w-full scale-110 object-contain"
+          className="h-auto w-auto scale-200 object-contain"
         />
       </div>
+
+      
+      {/* Pink splotches */}
+
+      {/* Left pink splotch */}
+      <div className="pointer-events-none absolute left-0 top-[4%] z-0 hidden w-[clamp(62.5rem,100vw,125rem)] -translate-x-[80%] rotate-100 opacity-60 mix-blend-screen md:block">
+        <Image
+          src={pink_splotch}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full object-contain"
+        />
+      </div>
+
+      {/* Right pink splotch */}
+      <div className="pointer-events-none absolute right-0 top-[36%] z-0 hidden w-[clamp(75rem,120vw,150rem)] translate-x-[80%] -rotate-100 opacity-50 mix-blend-screen md:block">
+        <Image
+          src={pink_splotch}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full object-contain"
+        />
+      </div>
+
+      {/* Dark blue splotches towards bottom - using blue_blob_center */}
+      
+      <div className="pointer-events-none absolute right-0 top-[62%] z-0 hidden w-[clamp(75rem,120vw,150rem)] translate-x-[75%] -rotate-50 opacity-50 mix-blend-screen md:block">
+        <Image
+          src={blue_blob_center}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full object-contain"
+        />
+      </div>
+
+
+      <div className="pointer-events-none absolute left-0 top-[50%] z-0 hidden w-[clamp(62.5rem,100vw,125rem)] -translate-x-[85%] rotate-70 opacity-60 mix-blend-screen md:block">
+        <Image
+          src={blue_blob_center}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-auto object-contain"
+        />
+      </div>
+
 
       <div className="relative z-20 mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
         <h1 className="mb-16 text-4xl font-semibold leading-none tracking-[-0.01em] text-cream sm:mb-24 sm:text-5xl lg:mb-50 lg:text-[5.5rem]">
@@ -114,7 +160,7 @@ export default function Schedule() {
         </h1>
 
         <div
-          className="relative z-10 rounded-2xl border border-white/10 bg-white/10 p-4 supports-[backdrop-filter]:bg-white/5 supports-[backdrop-filter]:backdrop-blur-[1px] supports-[backdrop-filter]:backdrop-saturate-150 sm:p-8"
+          className="relative z-10 rounded-2xl border border-white/10 bg-white/10 p-4 supports-[backdrop-filter]:bg-white/5 supports-[backdrop-filter]:backdrop-blur-[1px] supports-[backdrop-filter]:backdrop-saturate-150 sm:p-8 mb-64"
         >
           {scheduleData.map((slot, index) => (
             <TimeSlotRow
