@@ -82,7 +82,7 @@ export default function SpeakerCard({ img, name, title, description, link1, link
             <div className="mt-10 flex flex-col gap-7">
                 <div>
                     <h3 className="font-pp-neue text-[1.875rem] font-medium leading-tight tracking-[-0.02em] text-cream">{name}</h3>
-                    <p className="font-pp-neue mt-2 text-[1.5625rem] font-medium leading-normal text-cream">{title}</p>
+                    <p className="font-pp-neue mt-2 text-[1.5rem] font-medium leading-[1.2] text-cream">{title}</p>
                 </div>
                 <p className="font-pp-neue text-[1.125rem] leading-relaxed tracking-[-0.01em] text-cream/90">
                     {description}
