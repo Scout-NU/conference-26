@@ -16,7 +16,7 @@ export function NavLink({ href, children }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className="relative hidden md:block text-xl lg:text-2xl font-clash tracking-[-0.264px] font-medium text-center text-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
+      className="relative hidden md:block text-xl lg:text-2xl font-clash lowercase tracking-[-0.264px] font-medium text-center text-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
     >
       <span>{children}</span>
       {isActive ? (

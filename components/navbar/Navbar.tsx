@@ -34,7 +34,7 @@ const Navbar = () => {
             href="https://nuhuskies.evenue.net/event/SL2526/SCOUT0322"
             target="_blank"
             rel="noopener noreferrer"
-            className='relative hidden md:flex text-xl lg:text-2xl font-clash tracking-[-0.264px] font-medium text-center text-lime '
+            className='relative hidden md:flex text-xl lg:text-2xl font-clash lowercase tracking-[-0.264px] font-medium text-center text-lime '
           >
             Tickets
           </Link>

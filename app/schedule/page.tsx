@@ -6,6 +6,7 @@ import blue_blob_center from './assets/blue_blob_center.png';
 import impact_pink from './assets/impact_pink.png';
 import intention_blue from './assets/intention_blue.png';
 import investigation_yellow from './assets/investigation_yellow.png';
+import Footer from '@/components/designathon/Footer';
 
 const knotImages: Record<Knot, StaticImageData> = {
   impact_pink,
@@ -15,7 +16,7 @@ const knotImages: Record<Knot, StaticImageData> = {
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
   <article className="flex flex-col gap-3">
-    <h3 className="text-xl font-semibold uppercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
+    <h3 className="text-xl font-semibold lowercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
       {name}
     </h3>
     {speaker && (
@@ -53,7 +54,7 @@ const EventCard = ({ name, speaker, description, location, knots }: Event) => (
 const TimeSlotRow = ({ time, events, isLast }: TimeSlot & { isLast: boolean }) => (
   <div className="py-5 sm:py-6">
     <div className="flex flex-col gap-3 sm:flex-row sm:gap-8 lg:gap-10">
-      <div className="shrink-0 whitespace-nowrap text-lg font-bold uppercase leading-tight tracking-[-0.02em] text-cream sm:w-32 sm:text-xl lg:text-[1.625rem]">
+      <div className="font-pp-neue shrink-0 whitespace-nowrap text-lg font-bold uppercase leading-tight tracking-[-0.02em] text-cream sm:w-32 sm:text-xl lg:text-[1.625rem]">
         {time}
       </div>
 
@@ -124,6 +125,9 @@ export default function Schedule() {
             />
           ))}
         </div>
+      </div>
+      <div className="mt-12 lg:mt-[20rem]">
+        <Footer />
       </div>
     </div>
   );

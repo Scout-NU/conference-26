@@ -18,7 +18,7 @@ export const scheduleData: TimeSlot[] = [
     time: "9:00 AM",
     events: [
       {
-        name: "Sign in",
+        name: "Sign-in",
         description:
           "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",
         location: "Atrium",
@@ -93,19 +93,19 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "Lunch Break",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Check-in, check your coat, receive your badge and swag with the official Entangle pamphlet, stickers, and other exciting goodies!",
         location: "Atrium",
       },
       {
         name: "Poster Presentations",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Breakfast will include an assortment of freshly baked pastries and sliced fresh fruit platters.",
         location: "Atrium",
       },
       {
         name: "Midday Networking",
         description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Start with an open and welcoming space to connect with fellow attendees over coffee and conversation.",
         location: "Atrium",
       },
     ],
