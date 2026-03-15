@@ -44,9 +44,9 @@ export const speakersData: SpeakerTrack[] = [
         id: "intention-3",
         img: "/images/eileen.jpg",
         name: "EILEEN MCGIVNEY",
-        title: "",
+        title: "Assistant Professor XR Education Design Lab Northeastern University College of Arts, Media and Design",
         description:
-          "",
+          "Dr. Eileen McGivney is an Assistant Professor at Northeastern University's College of Arts, Media, and Design. As Principal Investigator at the XR Education Design Lab, she conducts research on how VR and other immersive technologies can bring transformative learning experiences into the classroom. Using design-based research methods, her current work includes AI-powered simulations for health sciences students to practice patient communication skills, the design of VR field trips for high school STEM classrooms, and the study of problem-solving in VR escape rooms. Prior to Northeastern, Dr. McGivney earned her PhD at the Harvard Graduate School of Education and conducted research on education policy at the Brookings Institution.",
         link1: "https://www.linkedin.com/in/eileen-mcgivney-phd-73733963/",
         link2: "https://instagram.com/alicejohnson",
       },
@@ -54,9 +54,9 @@ export const speakersData: SpeakerTrack[] = [
         id: "intention-4",
         img: "/images/steven.jpg",
         name: "STEVEN GEOFREY",
-        title: "",
+        title: "Associate Teaching Professor and Creative Coding Program Coordinator, Senior Researcher / Design Lead, Partnering Lab",
         description:
-          "",
+          "Steven Geofrey (they/them) is an Associate Teaching Professor and Coordinator of Creative Coding in Art + Design. At Northeastern, they are Program Coordinator for the Information Design and Data Visualization (IDDV) graduate program and coordinate the Coding Clinic, a student-run support service for coding. As a research-practitioner in data, design, and computation, Steven’s practice uses Value-Sensitive Design as framework, code as material, and design as method to investigate representation, interpretation, and meaning. Steven is also Senior Researcher/Design Lead with Partnering Lab and was previously a Senior Research Scientist with Project Information Literacy. They maintain a freelance practice in digital humanities.",
         link1: "https://www.linkedin.com/in/stevengeofrey/",
         link2: "https://instagram.com/bobsmith",
       },
@@ -94,7 +94,7 @@ export const speakersData: SpeakerTrack[] = [
         name: "Tiange Wang",
         title: "Design Lead, Software & Interaction, IDEO",
         description:
-          "From Information to Intuition: Human-Scale Ways to Experience Abstract Tech. Many of today's most important technologies are not immediately intuitive because they're abstract, invisible, or uncertain. In this talk, I'll share ways designers can translate data- and model-driven systems into tangible, playful encounters. Not to oversimplify them, but to make them legible, experiential, and fun. We'll explore how materiality, interaction, and performance can help audiences build intuition for complex ideas like climate signals, GenAI meaning drift, and probability.",
+          "Tiange Wang is an award-winning and internationally-exhibiting designer and creative technologist. Her work investigates innovative interactive paradigms among humans, technology and the environment. Tackling subjects like intelligent systems, multisensory experiences, holistic wellbeing, and climate futures, she employs mediums including multimodal interaction, creative data visualization, multimedia art, software, food, physical AI, and games. As a Senior Design Lead at IDEO, she leads the design and prototyping of human-centered, planet-conscious, data-informed, and emerging-tech enabled products for Fortune 500 clients and high-growth ventures, taking ideas from 0 to 1 and transforming them into market-ready products across the digital and physical realms.",
         link1: "https://www.linkedin.com/in/tiange-wang/",
         link2: "https://instagram.com/alicejohnson",
       },

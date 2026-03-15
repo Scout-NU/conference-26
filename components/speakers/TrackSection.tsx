@@ -11,7 +11,7 @@ interface TrackSectionProps {
 
 const TrackSection = ({ name, img, speakers }: TrackSectionProps) => {
   return (
-    <section className="mt-16 text-cream md:mt-24">
+    <section className="text-cream">
       <div className="mb-6 flex items-center gap-2 md:mb-10">
         <Image
           src={img}
@@ -25,7 +25,7 @@ const TrackSection = ({ name, img, speakers }: TrackSectionProps) => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
+      <div className="grid grid-cols-1 gap-6 md:gap-8">
         {speakers.map((speaker) => (
           <SpeakerCard key={speaker.id} {...speaker} />
         ))}

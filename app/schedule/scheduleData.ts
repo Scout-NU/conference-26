@@ -84,12 +84,12 @@ export const scheduleData: TimeSlot[] = [
         "For lunch, a classic sandwich buffet will be provided, featuring turkey and provolone, green goddess chicken salad, and vegan falafel on assorted breads. The meal will be accompanied by house-made potato chips, mixed green salad with red wine vinaigrette, pickles, and an assortment of cookies. Additionally, a water station will be available to keep guests hydrated. Dessert will consist of gluten-free brownies.",
         location: "Atrium",
       },
-      {
-        name: "mentor chats",
-        description:
-        "While or after enjoying your meal, get to know a few Northeastern professors and hear more about their experience in the industry and as teachers of the subject.",
-        location: "Atrium",
-      },
+      // {
+      //   name: "mentor chats",
+      //   description:
+      //   "While or after enjoying your meal, get to know a few Northeastern professors and hear more about their experience in the industry and as teachers of the subject.",
+      //   location: "Atrium",
+      // },
     ],
   },
   {

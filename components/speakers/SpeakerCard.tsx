@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 function ArrowRightIcon() {
     return (
@@ -50,6 +53,23 @@ function InstagramIcon() {
     );
 }
 
+function ExpandToggleIcon({ expanded }: { expanded: boolean }) {
+    return (
+        <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-7 w-7 text-magenta"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+        >
+            <path d="M5 12h14" />
+            {!expanded ? <path d="M12 5v14" /> : null}
+        </svg>
+    );
+}
+
 interface SpeakerProps {
     img: string;
     name: string;
@@ -61,11 +81,14 @@ interface SpeakerProps {
 
 export default function SpeakerCard({ img, name, title, description, link1, link2 }: SpeakerProps) {
     const hasSpeakerImage = Boolean(img) && img !== "/assets/speaker-placeholder.png";
+    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <article className="flex flex-col rounded-2xl bg-transparent p-6 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)] md:p-8">
+        <article
+            className={`speaker-card-shine relative overflow-hidden flex flex-col rounded-2xl bg-transparent p-6 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)] transition-[height] duration-300 md:p-8 ${isExpanded ? "h-auto" : "h-[42rem]"}`}
+        >
             <div>
-                <div className="relative w-full aspect-video overflow-hidden">
+                <div className="relative w-full overflow-hidden aspect-[23.416667/18.75]">
                     {hasSpeakerImage ? (
                         <Image
                             src={img}
@@ -79,15 +102,21 @@ export default function SpeakerCard({ img, name, title, description, link1, link
                     )}
                 </div>
             </div>
-            <div className="mt-10 flex flex-col gap-7">
-                <div>
+            <div className="mt-10 flex flex-1 flex-col gap-7">
+                <div className="min-h-[8.5rem]">
                     <h3 className="font-pp-neue text-[1.875rem] font-medium leading-tight tracking-[-0.02em] text-cream">{name}</h3>
                     <p className="font-pp-neue mt-2 text-[1.5rem] font-medium leading-[1.2] text-cream">{title}</p>
                 </div>
-                <p className="font-pp-neue text-[1.125rem] leading-relaxed tracking-[-0.01em] text-cream/90">
-                    {description}
-                </p>
-                <div className="flex flex-col gap-3">
+
+                <div
+                    className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${isExpanded ? "max-h-[100rem] opacity-100" : "max-h-0 opacity-0"}`}
+                >
+                    <p className="font-pp-neue text-[1.125rem] leading-relaxed tracking-[-0.01em] text-cream/90">
+                        {description}
+                    </p>
+                </div>
+
+                <div className="mt-auto flex items-center justify-between gap-3">
                     <a
                         href={link1}
                         target="_blank"
@@ -97,6 +126,16 @@ export default function SpeakerCard({ img, name, title, description, link1, link
                         <ArrowRightIcon />
                         <span>Learn More</span>
                     </a>
+
+                    <button
+                        type="button"
+                        onClick={() => setIsExpanded((prev) => !prev)}
+                        aria-expanded={isExpanded}
+                        aria-label={`${isExpanded ? "Collapse" : "Expand"} ${name} description`}
+                        className="inline-flex h-12 w-12 items-center justify-center text-magenta transition-opacity hover:opacity-80"
+                    >
+                        <ExpandToggleIcon expanded={isExpanded} />
+                    </button>
                 </div>
             </div>
         </article>
