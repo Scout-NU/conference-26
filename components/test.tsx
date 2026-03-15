@@ -43,7 +43,7 @@ function loadFrame(src: string): Promise<HTMLImageElement> {
   });
 }
 
-const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant }) => {
+const ScrollFrameAnimation = ({ variant = "original", startFrame = 0 }: { variant?: FrameVariant; startFrame?: number }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -64,7 +64,7 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
     const frameStep = isMobile ? MOBILE_FRAME_STEP : DESKTOP_FRAME_STEP;
     const frameIndices = Array.from(
       { length: Math.ceil(usableFrameCount / frameStep) },
-      (_, index) => index * frameStep
+      (_, index) => startFrame + index * frameStep
     );
     const frames: Array<HTMLImageElement | null> = Array(frameIndices.length).fill(
       null
@@ -204,7 +204,7 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
       tween?.kill();
       gsapContext?.revert();
     };
-  }, [variant]);
+  }, [variant, startFrame]);
 
   return (
     <div

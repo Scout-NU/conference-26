@@ -29,7 +29,7 @@ const MEMBERS: Member[] = [
   { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
   { name: "medha gollamudi", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
   { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/placeholder.png", team: "tech" },
+  { name: "zaydaan jahangir", role: "Tech Lead", image: "/images/placeholder.png", team: "tech" },
   { name: "afra ankita", role: "Developer", image: "/images/placeholder.png", team: "tech" },
   { name: "ivan lam", role: "Developer", image: "/images/placeholder.png", team: "tech" },
   { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
@@ -59,7 +59,7 @@ export default function Home({
   return (
     <main className="overflow-hidden bg-charcoal text-cream">
       {/* Hero Section */}
-      <ScrollFrameAnimationLazy variant={frameVariant} />
+      <ScrollFrameAnimationLazy variant={frameVariant} startFrame={40}/>
 
 
       {/* About Section */}
@@ -74,7 +74,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[70vh] left-200 w-[45vw]"
+          className="absolute top-[70vh] left-210 w-[45vw]"
           src="/images/doubleloop.svg"
           alt=""
           width={674}
@@ -103,7 +103,7 @@ export default function Home({
                 />
               </div>
               {/* Text */}
-              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+              <div className="text-base font-pp-neue font-medium leading-relaxed lg:text-lg">
                 <p className="mb-6 lg:mb-8">
                   This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
@@ -123,8 +123,8 @@ export default function Home({
       {/* Tracks Section */}
       <section className="relative py-16 lg:mt-48 lg:py-24">
         <Image
-          className="absolute top-[135vh] aspect-auto w-screen rotate-2"
-          src="/images/bluerope2.png"
+          className="absolute top-[150vh] aspect-auto w-screen rotate-2"
+          src="/images/bluerope2 1.png"
           alt=""
           width={1920}
           height={420}
@@ -132,7 +132,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[135vh] w-screen rotate-2"
+          className="absolute top-[160vh] w-screen rotate-2"
           src="/images/squiggleoutline2.svg"
           alt=""
           width={1440}
@@ -141,8 +141,8 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[210vh] aspect-auto w-screen"
-          src="/images/bluerope3.png"
+          className="absolute top-[300vh] aspect-auto w-screen"
+          src="/images/bluerope4.png"
           alt=""
           width={1920}
           height={420}
@@ -150,7 +150,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[277vh] w-screen"
+          className="absolute top-[340vh] w-screen"
           src="/images/squiggleoutline.svg"
           alt=""
           width={1440}
@@ -159,7 +159,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[435vh] w-screen z-0"
+          className="absolute top-[490vh] z-0 w-screen"
           src="/images/squiggleoutline3.svg"
           alt=""
           width={1440}
@@ -186,7 +186,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Intention
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   What are the values, assumptions, and politics that underpin design intention?
                 </p>
               </div>
@@ -197,7 +197,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Investigation
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
@@ -224,7 +224,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Impact
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
                   How might we record, evaluate, and re-evaluate the social life of technologies and their afterlives?
                 </p>
               </div>
@@ -245,7 +245,7 @@ export default function Home({
             <div className="flex flex-col justify-center gap-6 lg:gap-16">
 
               {/* Text */}
-              <p className="max-w-[36ch] text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-lg">
+              <p className="max-w-[36ch] text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-lg">
               Welcome to Entangle, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
               Entangle is more than just a conference, it&apos;s a movement. It&apos;s about pushing boundaries, changing the way we 
               think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
@@ -302,7 +302,7 @@ export default function Home({
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">
 
               {/* Text */}
-              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+              <div className="text-base font-pp-neue font-medium leading-relaxed lg:text-lg">
                 <p className="mb-8 lg:mb-16">
                   We&apos;re Scout, Northeastern&apos;s student-driven design organization, and we&apos;re honored to be your hosts
                   this March 22nd! Our 100+ students work with real clients, offering creative solutions each semester.
@@ -331,7 +331,7 @@ export default function Home({
       </section>
 
       {/* Meet the Team */}
-      <section className="py-24 mb-48 lg:py-24">
+      <section className="relative py-24 z-1 mb-48 lg:py-24">
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 

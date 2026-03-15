@@ -31,12 +31,13 @@ const TeamSection = ({ members }: TeamProps) => {
                 meet the team
             </h1>
             {/* team nav */}
-            <div className="flex flex-row py-8 justify-between">
+            <hr className="h-px bg-lime border-0 -mx-50 relative" />
+            <div className="flex flex-row py-4 justify-between">
                 {TEAMS.map((team) => (
                     <div
                         key={team}
                         onClick={() => setActiveTeam(team)}
-                        className={`px-4 py-2 text-xl font-medium capitalize transition-colors border-b-2 -mb-px
+                        className={`px-4 py-2 text-3xl font-pp-neue font-medium uppercase transition-colors border-b-2 -mb-px
               ${activeTeam === team
                                 ? "border-lime"
                                 : "border-transparent"}`}>
@@ -44,8 +45,9 @@ const TeamSection = ({ members }: TeamProps) => {
                     </div>
                 ))}   
             </div>
+            <hr className="h-px bg-lime border-0 -mx-50 relative" />
             {/* members */}
-            <div className="grid gap-8 grid-cols-4">
+            <div className="grid py-8 gap-8 grid-cols-4">
                 {currentTeam.map((member) => (
                     <div key={member.name} className="flex flex-col gap-2">
                         {member.image && member.image !== "/images/placeholder.png" ? (
@@ -61,8 +63,8 @@ const TeamSection = ({ members }: TeamProps) => {
                         ) : (
                             <div className="w-full aspect-square border border-lime" aria-hidden="true" />
                         )}
-                        <h2 className="text-xl font-medium">{member.name}</h2>
-                        <p className="font-pp-neue text-lg text-lime">{member.role}</p>
+                        <h2 className="text-3xl font-medium">{member.name}</h2>
+                        <p className="font-pp-neue font-medium text-lg text-lime">{member.role}</p>
                     </div>
                 ))}
                 {Array.from({ length: placeholdersNeeded }).map((_, index) => (
