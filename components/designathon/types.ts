@@ -1,6 +1,7 @@
 export type DesignathonEvent = {
   time: string;
   title: string;
+  people?: string;
   description: string;
   location?: string;
 };
