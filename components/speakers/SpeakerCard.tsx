@@ -80,7 +80,7 @@ interface SpeakerProps {
 }
 
 export default function SpeakerCard({ img, name, title, description, link1, link2 }: SpeakerProps) {
-    const hasSpeakerImage = Boolean(img) && img !== "/assets/speaker-placeholder.png";
+    const hasSpeakerImage = Boolean(img) && img !== "/assets/speaker-placeholder.webp";
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (

@@ -20,7 +20,7 @@ export default function DecorativeBackground() {
         className="pointer-events-none absolute left-[-18rem] top-[14rem] hidden h-[42rem] w-[42rem] overflow-hidden md:block md:left-[-22rem] md:top-[8rem] md:h-[56rem] md:w-[56rem] lg:left-[47rem] lg:top-[-7rem] lg:h-[72rem] lg:w-[72rem]"
       >
         <Image
-          src="/assets/designathon/purple-vector.webp"
+          src="/assets/designathon/purple-vector.png"
           alt=""
           fill
           sizes="(min-width: 768px) 56rem, 42rem"

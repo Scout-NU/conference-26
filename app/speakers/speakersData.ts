@@ -22,7 +22,7 @@ export const speakersData: SpeakerTrack[] = [
     speakers: [
       {
         id: "intention-1",
-        img: "/images/xinxin.jpg",
+        img: "/images/xinxin.webp",
         name: "XIN XIN",
         title: "Co-Executive Director, Processing Foundation Assistant Professor of Interaction and Media Design, The New School",
         description:
@@ -42,7 +42,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-3",
-        img: "/images/eileen.jpg",
+        img: "/images/eileen.webp",
         name: "EILEEN MCGIVNEY",
         title: "Assistant Professor XR Education Design Lab Northeastern University College of Arts, Media and Design",
         description:
@@ -52,7 +52,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-4",
-        img: "/images/steven.jpg",
+        img: "/images/steven.webp",
         name: "STEVEN GEOFREY",
         title: "Associate Teaching Professor and Creative Coding Program Coordinator, Senior Researcher / Design Lead, Partnering Lab",
         description:
@@ -62,7 +62,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-5",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -73,7 +73,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-6",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -120,7 +120,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "investigation-4",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -131,7 +131,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "investigation-5",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -142,7 +142,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "investigation-6",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -189,7 +189,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "impact-4",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -200,7 +200,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "impact-5",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,
@@ -211,7 +211,7 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "impact-6",
-        img: "/assets/speaker-placeholder.png",
+        img: "/assets/speaker-placeholder.webp",
         name: "[Speaker Name]",
         title: "Title",
         isDraft: true,

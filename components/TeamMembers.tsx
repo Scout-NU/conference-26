@@ -48,7 +48,7 @@ const TeamSection = ({ members }: TeamProps) => {
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 {currentTeam.map((member) => (
                     <div key={member.name} className="flex flex-col gap-2">
-                        {member.image && member.image !== "/images/placeholder.png" ? (
+                        {member.image && member.image !== "/images/placeholder.webp" ? (
                             <div className="relative w-full aspect-square border border-lime">
                                 <Image
                                     src={member.image}

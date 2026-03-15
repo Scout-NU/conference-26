@@ -7,32 +7,32 @@ import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
 
 const MEMBERS: Member[] = [
-  { name: "jasmine sun", role: "Conference Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "adeline yu", role: "Conference Assistant Director", image: "/images/placeholder.png", team: "operations" },
-  { name: "nicole schubert", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "kendra ruan", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "saloni bhatia", role: "Operations Coordinator", image: "/images/placeholder.png", team: "operations" },
-  { name: "saidah ly", role: "Design Lead", image: "/images/placeholder.png", team: "design" },
-  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "design" },
-  { name: "ruby harkness", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "jocelyn hayes", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "ha ngyuen", role: "Designer", image: "/images/placeholder.png", team: "design" },
-  { name: "katherine kim", role: "Experience Design Lead", image: "/images/placeholder.png", team: "experience design" },
-  { name: "autumn gilmore", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "alexandra katz", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "lea lang", role: "Experience Designer", image: "/images/placeholder.png", team: "experience design" },
-  { name: "ah-roh ko", role: "Marketing Lead", image: "/images/placeholder.png", team: "marketing" },
-  { name: "reagan white", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Anika Parikh", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "eva yuan", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "medha gollamudi", role: "Marketer", image: "/images/placeholder.png", team: "marketing" },
-  { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.png", team: "marketing" },
-  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/placeholder.png", team: "tech" },
-  { name: "afra ankita", role: "Developer", image: "/images/placeholder.png", team: "tech" },
-  { name: "ivan lam", role: "Developer", image: "/images/placeholder.png", team: "tech" },
-  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.png", team: "tech" },
+  { name: "jasmine sun", role: "Conference Director", image: "/images/placeholder.webp", team: "operations" },
+  { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/placeholder.webp", team: "operations" },
+  { name: "adeline yu", role: "Conference Assistant Director", image: "/images/placeholder.webp", team: "operations" },
+  { name: "nicole schubert", role: "Operations Coordinator", image: "/images/placeholder.webp", team: "operations" },
+  { name: "kendra ruan", role: "Operations Coordinator", image: "/images/placeholder.webp", team: "operations" },
+  { name: "saloni bhatia", role: "Operations Coordinator", image: "/images/placeholder.webp", team: "operations" },
+  { name: "saidah ly", role: "Design Lead", image: "/images/placeholder.webp", team: "design" },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.webp", team: "design" },
+  { name: "ruby harkness", role: "Designer", image: "/images/placeholder.webp", team: "design" },
+  { name: "jocelyn hayes", role: "Designer", image: "/images/placeholder.webp", team: "design" },
+  { name: "ha ngyuen", role: "Designer", image: "/images/placeholder.webp", team: "design" },
+  { name: "katherine kim", role: "Experience Design Lead", image: "/images/placeholder.webp", team: "experience design" },
+  { name: "autumn gilmore", role: "Experience Designer", image: "/images/placeholder.webp", team: "experience design" },
+  { name: "alexandra katz", role: "Experience Designer", image: "/images/placeholder.webp", team: "experience design" },
+  { name: "lea lang", role: "Experience Designer", image: "/images/placeholder.webp", team: "experience design" },
+  { name: "ah-roh ko", role: "Marketing Lead", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "reagan white", role: "Marketer", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "Anika Parikh", role: "Marketer", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "eva yuan", role: "Marketer", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "medha gollamudi", role: "Marketer", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/placeholder.webp", team: "marketing" },
+  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/placeholder.webp", team: "tech" },
+  { name: "afra ankita", role: "Developer", image: "/images/placeholder.webp", team: "tech" },
+  { name: "ivan lam", role: "Developer", image: "/images/placeholder.webp", team: "tech" },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/placeholder.webp", team: "tech" },
 ];
 
 export default function Home({
@@ -68,7 +68,7 @@ export default function Home({
       <section className="relative py-24">
         <Image
           className="absolute top-[50vh] right-[14vw] w-[95vw] rotate-5"
-          src="/images/bluerope.png"
+          src="/images/bluerope.webp"
           alt=""
           width={1920}
           height={360}
@@ -126,7 +126,7 @@ export default function Home({
       <section className="relative py-16 lg:mt-48 lg:py-24">
         <Image
           className="absolute top-[135vh] aspect-auto w-screen rotate-2"
-          src="/images/bluerope2.png"
+          src="/images/bluerope2.webp"
           alt=""
           width={1920}
           height={420}
@@ -144,7 +144,7 @@ export default function Home({
         />
         <Image
           className="absolute top-[210vh] aspect-auto w-screen"
-          src="/images/bluerope3.png"
+          src="/images/bluerope3.webp"
           alt=""
           width={1920}
           height={420}
@@ -322,7 +322,7 @@ export default function Home({
               {/* Image placeholder */}
               <Image
                 className="h-auto w-full max-w-[18rem] self-center lg:w-105 lg:max-w-none"
-                src="/brand/limelogo.png"
+                src="/brand/limelogo.webp"
                 alt="Scout logo mark"
                 width={971}
                 height={971}

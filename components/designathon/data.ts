@@ -59,12 +59,12 @@ export const judges: Judge[] = [
   {
     name: "SNEHAL LADKE",
     title: "Senior UX Designer at MBTA",
-    image: "/images/snehal-ladke-image.png",
+    image: "/images/snehal-ladke-image.webp",
   },
   {
     name: "JOSEPH SCHNACKERTZ",
     title: "Senior UX Researcher at Symbotic",
-    image: "/images/joseph-schnackertz-image.jpg",
+    image: "/images/joseph-schnackertz-image.webp",
   },
   // { name: "Name", title: "Title" },
   // { name: "Name", title: "Title" },

@@ -13,7 +13,7 @@ const Navbar = () => {
         className='flex items-center'
       >
         <Image
-          src="/brand/entangle-logo.png"
+          src="/brand/entangle-logo.webp"
           alt="Entangle Logo"
           width={160}
           height={40}
