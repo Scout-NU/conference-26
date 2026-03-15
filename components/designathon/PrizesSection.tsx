@@ -20,7 +20,7 @@ export default function PrizesSection({ prizes }: { prizes: Prize[] }) {
                 className="object-contain"
               />
             </div>
-            <p className="text-center text-xl font-bold uppercase md:text-2xl">
+            <p className="text-center font-[550] text-xl uppercase md:text-2xl">
               {item.title}
             </p>
           </article>

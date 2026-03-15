@@ -39,17 +39,17 @@ export const designathonSchedule: DesignathonEvent[] = [
 ];
 
 export const prizes: Prize[] = [
+  // {
+  //   title: "redbull prize",
+  //   image: "/images/redbull.webp",
+  // },
+  // {
+  //   title: "surprise...",
+  //   image: "/images/Question_Mark.svg",
+  //   whiteBackground: true,
+  // },
   {
-    title: "redbull prize",
-    image: "/images/redbull.webp",
-  },
-  {
-    title: "surprise...",
-    image: "/images/Question_Mark.svg",
-    whiteBackground: true,
-  },
-  {
-    title: "shake shack prize",
+    title: "shake shack gift card",
     image: "/images/shakeshack.png",
     whiteBackground: true,
   },
