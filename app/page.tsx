@@ -85,7 +85,7 @@ export default function Home({
         <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
-          <div className="flex flex-col justify-center gap-6 lg:gap-5">
+          <div className="flex flex-col justify-center gap-5 lg:gap-8">
             <h1 className="max-w-[18ch] text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:max-w-none lg:text-[4rem]">
               to design is to entangle
             </h1>
@@ -105,7 +105,7 @@ export default function Home({
               {/* Text */}
               <div className="text-base font-pp-neue font-medium leading-relaxed lg:text-lg">
                 <p className="mb-6 lg:mb-8">
-                  This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
+                  This year, under the theme <span className='font-bold text-lime font-clash'>entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
                   evolving relations across scales – from quantum particles to planetary systems, and from intimate gestures to
                   techno-political infrastructures.
@@ -121,7 +121,7 @@ export default function Home({
       </section>
 
       {/* Tracks Section */}
-      <section className="relative py-16 lg:mt-48 lg:py-24">
+      <section className="relative py-16 lg:mt-24 lg:py-24">
         <Image
           className="absolute top-[150vh] aspect-auto w-screen rotate-2"
           src="/images/bluerope2 1.png"
@@ -159,7 +159,7 @@ export default function Home({
           aria-hidden="true"
         />
         <Image
-          className="absolute top-[490vh] z-0 w-screen"
+          className="absolute top-[500vh] z-0 w-screen"
           src="/images/squiggleoutline3.svg"
           alt=""
           width={1440}
@@ -186,7 +186,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Intention
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-2xl">
                   What are the values, assumptions, and politics that underpin design intention?
                 </p>
               </div>
@@ -197,7 +197,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Investigation
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-2xl">
                   What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
@@ -224,7 +224,7 @@ export default function Home({
                 <h3 className="mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
                   Impact
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-2xl">
                   How might we record, evaluate, and re-evaluate the social life of technologies and their afterlives?
                 </p>
               </div>
@@ -246,7 +246,7 @@ export default function Home({
 
               {/* Text */}
               <p className="max-w-[36ch] text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-lg">
-              Welcome to Entangle, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
+              Welcome to <span className='font-medium text-lime font-clash'>entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout. 
               Entangle is more than just a conference, it&apos;s a movement. It&apos;s about pushing boundaries, changing the way we 
               think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
                how do designers/creative individuals pause, reflect, and understand the complex systems they&apos;re part of before
@@ -296,7 +296,7 @@ export default function Home({
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-5">
-            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4git rem]">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] lg:text-[4rem] font-medium tracking-tight">
               about scout
             </h1>
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">

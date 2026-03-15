@@ -27,7 +27,7 @@ const TeamSection = ({ members }: TeamProps) => {
 
     return (
         <div className="mx-auto max-w-6xl justify-center">
-            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[6rem]">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] lg:text-[4rem] font-medium tracking-tight mb-8">
                 meet the team
             </h1>
             {/* team nav */}
