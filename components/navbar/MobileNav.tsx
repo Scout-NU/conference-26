@@ -58,7 +58,7 @@ const MobileNav = () => {
 
           <SheetClose asChild className="mt-16 block">
             <Link
-              href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs"
+              href="https://nuhuskies.evenue.net/event/SL2526/SCOUT0322"
               target="_blank"
               rel="noopener noreferrer"
               className="lowercase text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal"
