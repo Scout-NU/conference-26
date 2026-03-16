@@ -12,7 +12,12 @@ export type FrameVariant = "original" | "optimized" | "maxOptimized";
 
 const FRAME_SETS: Record<
   FrameVariant,
-  { basePath: string; totalFrames: number; trimEndFrames: number }
+  {
+    basePath: string;
+    totalFrames: number;
+    trimEndFrames: number;
+    useOriginalBoundaryFrames?: boolean;
+  }
 > = {
   original: {
     basePath: "/entangleanimation",
@@ -23,16 +28,28 @@ const FRAME_SETS: Record<
     basePath: "/entangleanimation_q70_step2",
     totalFrames: 168,
     trimEndFrames: 25,
+    useOriginalBoundaryFrames: true,
   },
   maxOptimized: {
     basePath: "/entangleanimation_q70_720p_step2",
     totalFrames: 168,
     trimEndFrames: 25,
+    useOriginalBoundaryFrames: true,
   },
 };
 
 const getFrameSrc = (basePath: string, index: number) =>
   `${basePath}/entangleanimation_${(index + 1).toString().padStart(4, "0")}.webp`;
+
+const mapFrameIndexToOriginal = (
+  sourceIndex: number,
+  sourceTotalFrames: number,
+  originalTotalFrames: number
+) => {
+  if (sourceTotalFrames <= 1 || originalTotalFrames <= 1) return 0;
+  const progress = sourceIndex / (sourceTotalFrames - 1);
+  return Math.round(progress * (originalTotalFrames - 1));
+};
 
 function loadFrame(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -75,6 +92,25 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
       },
       (_, index) => clampedStartFrameIndex + index * frameStep
     );
+
+    const getFrameSrcForPosition = (position: number) => {
+      const sourceFrameIndex = frameIndices[position];
+      const isBoundaryFrame =
+        position === 0 || position === frameIndices.length - 1;
+      const shouldUseOriginalBoundaryFrame =
+        selectedFrameSet.useOriginalBoundaryFrames && isBoundaryFrame;
+
+      if (!shouldUseOriginalBoundaryFrame) {
+        return getFrameSrc(selectedFrameSet.basePath, sourceFrameIndex);
+      }
+
+      const originalFrameIndex = mapFrameIndexToOriginal(
+        sourceFrameIndex,
+        selectedFrameSet.totalFrames,
+        FRAME_SETS.original.totalFrames
+      );
+      return getFrameSrc(FRAME_SETS.original.basePath, originalFrameIndex);
+    };
     const frames: Array<HTMLImageElement | null> = Array(frameIndices.length).fill(
       null
     );
@@ -168,9 +204,7 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
 
     const preloadFrames = async () => {
       try {
-        frames[0] = await loadFrame(
-          getFrameSrc(selectedFrameSet.basePath, frameIndices[0])
-        );
+        frames[0] = await loadFrame(getFrameSrcForPosition(0));
         if (destroyed) return;
         render();
         initGsap();
@@ -185,9 +219,7 @@ const ScrollFrameAnimation = ({ variant = "original" }: { variant?: FrameVariant
           nextIndex += 1;
           if (index >= frameIndices.length) return;
           try {
-            const frame = await loadFrame(
-              getFrameSrc(selectedFrameSet.basePath, frameIndices[index])
-            );
+            const frame = await loadFrame(getFrameSrcForPosition(index));
             if (destroyed) return;
             frames[index] = frame;
           } catch {
