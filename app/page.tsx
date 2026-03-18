@@ -292,7 +292,7 @@ export default function Home({
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-5">
-            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4git rem]">
+            <h1 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4rem]">
               about scout
             </h1>
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">
@@ -311,15 +311,37 @@ export default function Home({
                   Scout Website
                 </Link>
               </div>
-              {/* Image placeholder */}
-              <Image
-                className="h-auto w-full max-w-[18rem] self-center lg:w-105 lg:max-w-none"
-                src="/brand/limelogo.webp"
-                alt="Scout logo mark"
-                width={971}
-                height={971}
-                sizes="(max-width: 1024px) 70vw, 35vw"
-              />
+              {/* Scout logo + line overlays */}
+              <div className="relative self-center w-full max-w-[18rem] lg:w-105 lg:max-w-none">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-[-60vw] right-[-60vw] top-[82%] z-20 hidden border-t border-lime lg:block"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-[6%] -top-[6%] -bottom-[15%] z-10 hidden border-l border-lime lg:block"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-[8%] -top-[25%] -bottom-[15%] z-10 hidden border-l border-lime lg:block"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-[6%] right-[-70%] -top-[6%] z-10 hidden border-t border-lime lg:block"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-[6%] right-[-70%] -bottom-[15%] z-100 hidden border-t border-lime lg:block"
+                />
+                <Image
+                  className="h-auto w-full max-w-[18rem] self-center lg:w-105 lg:max-w-none z-20"
+                  src="/brand/limelogo.webp"
+                  alt="Scout logo mark"
+                  width={971}
+                  height={971}
+                  sizes="(max-width: 1024px) 70vw, 35vw"
+                />
+              </div>
 
             </div>
           </div>
@@ -329,8 +351,8 @@ export default function Home({
       {/* Meet the Team */}
       <section className="relative z-10 py-24 mb-48 lg:py-24">
         <Image
-          className="pointer-events-none absolute top-25 -scale-x-100 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10"
-          src="/images/bluerope.webp"
+          className="pointer-events-none absolute top-35 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10"
+          src="/images/squiggleoutline3.svg"
           alt=""
           width={1440}
           height={363}
