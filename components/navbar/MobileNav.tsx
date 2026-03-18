@@ -36,7 +36,7 @@ const MobileNav = () => {
         <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
         
         <Link href="/" className="mb-12 flex items-center text-cream font-clash font-[550] text-xl">
-          Entangle
+          entangle
         </Link>
 
         <div>

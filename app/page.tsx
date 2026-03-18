@@ -7,32 +7,32 @@ import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
 
 const MEMBERS: Member[] = [
-  { name: "jasmine sun", role: "Conference Director", image: "/images/Conference%20Headshots/Jasmine.webp", team: "operations" },
-  { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Andrew.webp", team: "operations" },
-  { name: "adeline yu", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Adeline%20Yu%20Conference%20Headshot.webp", team: "operations" },
-  { name: "nicole schubert", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Nicole.png", team: "operations" },
-  { name: "kendra ruan", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Kendra.webp", team: "operations" },
-  { name: "saloni bhatia", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Saloni.webp", team: "operations" },
-  { name: "saidah ly", role: "Design Lead", image: "/images/Conference%20Headshots/Saidah%20Ly.webp", team: "design" },
-  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/Conference%20Headshots/Xinning%20Liu.webp", team: "design" },
-  { name: "ruby harkness", role: "Designer", image: "/images/Conference%20Headshots/Ruby%20Harkness.webp", team: "design" },
-  { name: "jocelyn hayes", role: "Designer", image: "/images/Conference%20Headshots/Jocelyn.webp", team: "design" },
-  { name: "ha ngyuen", role: "Designer", image: "/images/Conference%20Headshots/Ha%20Nguyen.webp", team: "design" },
-  { name: "katherine kim", role: "Experience Design Lead", image: "/images/Conference%20Headshots/Katie.webp", team: "experience design" },
-  { name: "autumn gilmore", role: "Experience Designer", image: "/images/Conference%20Headshots/Autumn.webp", team: "experience design" },
-  { name: "alexandra katz", role: "Experience Designer", image: "/images/Conference%20Headshots/Alex.webp", team: "experience design" },
-  { name: "lea lang", role: "Experience Designer", image: "/images/placeholder.webp", team: "experience design" },
-  { name: "ah-roh ko", role: "Marketing Lead", image: "/images/Conference%20Headshots/Ah-roh.webp", team: "marketing" },
-  { name: "reagan white", role: "Marketer", image: "/images/Conference%20Headshots/Reagan.webp", team: "marketing" },
-  { name: "Anika Parikh", role: "Marketer", image: "/images/Conference%20Headshots/Anika.webp", team: "marketing" },
-  { name: "eva yuan", role: "Marketer", image: "/images/Conference%20Headshots/Eva.webp", team: "marketing" },
-  { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/Conference%20Headshots/Bua.webp", team: "marketing" },
-  { name: "medha gollamudi", role: "Marketer", image: "/images/Conference%20Headshots/Medha.webp", team: "marketing" },
-  { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/Conference%20Headshots/Sairah.webp", team: "marketing" },
-  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/Conference%20Headshots/Zaydaan.webp", team: "tech" },
-  { name: "afra ankita", role: "Developer", image: "/images/Conference%20Headshots/Afra.webp", team: "tech" },
-  { name: "ivan lam", role: "Developer", image: "/images/placeholder.webp", team: "tech" },
-  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/Conference%20Headshots/Xinning%20Liu.webp", team: "tech" },
+  { name: "jasmine sun", role: "Conference Director", image: "/images/Conference%20Headshots/Jasmine.webp", team: "operations", imagePosition: "50% 50%", imageScale: 1.6 },
+  { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Andrew.webp", team: "operations", imagePosition: "50% 60%", imageScale: 1.5 },
+  { name: "adeline yu", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Adeline%20Yu%20Conference%20Headshot.webp", team: "operations", imagePosition: "50% 55%", imageScale: 1.6 },
+  { name: "nicole schubert", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Nicole.png", team: "operations", imagePosition: "50% 20%", imageScale: 2.45 },
+  { name: "kendra ruan", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Kendra.webp", team: "operations", imagePosition: "50% 62%", imageScale: 1.5 },
+  { name: "saloni bhatia", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Saloni.webp", team: "operations", imagePosition: "50% 55%", imageScale: 1.5 },
+  { name: "saidah ly", role: "Design Lead", image: "/images/Conference%20Headshots/Saidah%20Ly.webp", team: "design", imagePosition: "50% 60%", imageScale: 1.5 },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/Conference%20Headshots/Xinning%20Liu.webp", team: "design", imagePosition: "50% 50%", imageScale: 1.5 },
+  { name: "ruby harkness", role: "Designer", image: "/images/Conference%20Headshots/Ruby%20Harkness.webp", team: "design", imagePosition: "60% 70%", imageScale: 1.5 },
+  { name: "jocelyn hayes", role: "Designer", image: "/images/Conference%20Headshots/Jocelyn.webp", team: "design", imagePosition: "50% 50%", imageScale: 1 },
+  { name: "ha nguyen", role: "Designer", image: "/images/Conference%20Headshots/Ha%20Nguyen.webp", team: "design", imagePosition: "50% 50%", imageScale: 1.5 },
+  { name: "katherine kim", role: "Experience Design Lead", image: "/images/Conference%20Headshots/Katie.webp", team: "experience design", imagePosition: "50% 45%", imageScale: 1.5 },
+  { name: "autumn gilmore", role: "Experience Designer", image: "/images/Conference%20Headshots/Autumn.webp", team: "experience design", imagePosition: "50% 53%", imageScale: 1.5 },
+  { name: "alexandra katz", role: "Experience Designer", image: "/images/Conference%20Headshots/Alex.webp", team: "experience design", imagePosition: "50% 67%", imageScale: 1.5 },
+  { name: "lea lang", role: "Experience Designer", image: "/images/placeholder.webp", team: "experience design", imagePosition: "50% 50%", imageScale: 1.5 },
+  { name: "ah-roh ko", role: "Marketing Lead", image: "/images/Conference%20Headshots/Ah-roh.webp", team: "marketing", imagePosition: "50% 50%", imageScale: 1.4 },
+  { name: "reagan white", role: "Marketer", image: "/images/Conference%20Headshots/Reagan.webp", team: "marketing", imagePosition: "50% 60%", imageScale: 1.5 },
+  { name: "Anika Parikh", role: "Marketer", image: "/images/Conference%20Headshots/Anika.webp", team: "marketing", imagePosition: "50% 50%", imageScale: 1.3 },
+  { name: "eva yuan", role: "Marketer", image: "/images/Conference%20Headshots/Eva.webp", team: "marketing", imagePosition: "50% 64%", imageScale: 1.5 },
+  { name: "bhasuk (bua) limpkittisin", role: "Marketer", image: "/images/Conference%20Headshots/Bua.webp", team: "marketing", imagePosition: "50% 60%", imageScale: 1.5 },
+  { name: "medha gollamudi", role: "Marketer", image: "/images/Conference%20Headshots/Medha.webp", team: "marketing", imagePosition: "50% 43%", imageScale: 2 },
+  { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/Conference%20Headshots/Sairah.webp", team: "marketing", imagePosition: "50% 62%", imageScale: 1.5 },
+  { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/Conference%20Headshots/Zaydaan.webp", team: "tech", imagePosition: "50% 55%", imageScale: 1.5 },
+  { name: "afra ankita", role: "Developer", image: "/images/Conference%20Headshots/Afra.webp", team: "tech", imagePosition: "50% 55%", imageScale: 1.5 },
+  { name: "ivan lam", role: "Developer", image: "/images/placeholder.webp", team: "tech", imagePosition: "50% 50%", imageScale: 1.5 },
+  { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/Conference%20Headshots/Xinning%20Liu.webp", team: "tech", imagePosition: "50% 50%", imageScale: 1.5 },
 ];
 
 export default function Home({
@@ -251,9 +251,9 @@ export default function Home({
                 Welcome to <span className="text-lime">entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout.
                 Entangle is more than just a conference, it&apos;s a movement. <br /> <br />
 
-                It&apos;s about pushing boundaries, changing the way we 
-              think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
-               how do designers/creative individuals pause, reflect, and understand the complex systems they&apos;re part of before
+                It&apos;s about pushing boundaries, changing the way we
+                think, and designing for a future where technology is rapidly changing. Instead of rushing forward, we&apos;re asking:
+                how do designers/creative individuals pause, reflect, and understand the complex systems they&apos;re part of before
                 building the future?
               </p>
               {/* Images */}
