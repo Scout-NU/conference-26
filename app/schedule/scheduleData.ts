@@ -154,7 +154,7 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "making dreams a reality",
-        speaker: "With Steven Max Patterson & Y. Jenny Wang",
+        speaker: "STEVEN MAX PATTERSON and Y. JENNY WANG",
         description:
           "More details to come!",
         location: "auditorium",

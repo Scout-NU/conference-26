@@ -16,15 +16,15 @@ const knotImages: Record<Knot, StaticImageData> = {
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
   <article className="flex flex-col gap-3">
-    <h3 className="text-xl font-semibold lowercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
+    <h3 className="text-xl font-[550] lowercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
       {name}
     </h3>
     {speaker && (
-      <p className="text-base font-bold uppercase leading-tight tracking-[-0.02em] text-cream sm:text-lg lg:text-[1.375rem]">
+      <p className="text-base font-[550] uppercase leading-tight tracking-[-0.02em] text-cream sm:text-lg lg:text-[1.375rem]">
         {speaker}
       </p>
     )}
-    <p className="text-sm leading-relaxed tracking-[-0.01em] text-cream sm:text-base lg:text-[1.0625rem]">
+    <p className="font-pp-neue text-sm leading-relaxed tracking-[-0.01em] text-cream sm:text-base lg:text-[1.0625rem]">
       {description}
     </p>
     <div className="mt-1 flex flex-wrap items-center gap-2">
