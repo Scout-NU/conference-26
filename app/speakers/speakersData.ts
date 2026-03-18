@@ -160,7 +160,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-2",
         img: "/images/jenny-wang.webp",
-        name: "Y. JENNY WANG, PH.D.",
+        name: "JENNY WANG",
         title: "Director @ medVR Medical XR Accelerator",
         description:
           "Y. Jenny Wang, Ph.D. is the Director of medVR, where she leads program development for the Medical XR Accelerator and guides teams in building commercially-viable solutions to real-world medical challenges. She also serves as the Hardware Track Director of MIT Reality Hack. A multidisciplinary builder and strategist, her background spans business development, education, and product design. She has developed go-to-market strategies, led VR and electronics workshops, and founded two companies, including Clever Rock Labs, which builds products blending software, hardware, and human interaction.",
@@ -170,7 +170,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-4",
         img: "/images/steven-patterson.webp",
-        name: "STEVEN PATTERSON, MS.",
+        name: "STEVEN MAX PATTERSON",
         title: "Executive Director @ medVR Medical XR Accelerator",
         description:
           "Steven Max Patterson is the Executive Director of medVR, a non-profit providing catalytic education in medical XR. With a background in engineering, project management, and technology journalism, Steven has written for Ars Technica, Quartz, Fast Company, and IDG. He has built open source and mobile tech communities for over two decades and has worked to expand AR/VR into new fields since 2014. He founded and led the AR/VR hackathon at the MIT Media Lab in 2015.",
