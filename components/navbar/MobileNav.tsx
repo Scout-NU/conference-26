@@ -35,7 +35,7 @@ const MobileNav = () => {
       <SheetContent className="bg-charcoal border-none p-6">
         <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
         
-        <Link href="/" className="mb-12 flex items-center text-cream font-clash font-bold text-xl">
+        <Link href="/" className="mb-12 flex items-center text-cream font-clash font-[550] text-xl">
           Entangle
         </Link>
 
@@ -48,7 +48,7 @@ const MobileNav = () => {
               >
                 <Link 
                   href={link.route}
-                  className="text-2xl font-bold lowercase text-cream font-clash py-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
+                  className="text-2xl font-[550] lowercase text-cream font-clash py-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
                 >
                   {link.name}
                 </Link>
@@ -61,7 +61,7 @@ const MobileNav = () => {
               href="https://www.eventbrite.com/e/entangle-2024-tickets-747955061117?aff=nextjs"
               target="_blank"
               rel="noopener noreferrer"
-              className="lowercase text-2xl font-clash tracking-[-0.264px] font-bold text-center text-charcoal px-8 py-4 rounded-lg bg-lime inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal"
+              className="lowercase text-2xl font-clash tracking-[-0.264px] font-[550] text-center text-charcoal px-8 py-4 rounded-lg bg-lime inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-charcoal"
             >
               Tickets
             </Link>

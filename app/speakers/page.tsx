@@ -27,7 +27,7 @@ export default function Speakers() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-10 md:px-10 lg:px-[62px]">
-        <h1 className="mb-14 mt-16 text-center font-clash text-4xl font-medium lowercase leading-none tracking-[-0.01em] text-cream sm:text-5xl md:mb-20 md:mt-10 md:text-left lg:mb-50 lg:text-[5.5rem]">
+        <h1 className="mb-14 mt-16 text-center font-clash text-4xl font-[550] lowercase leading-none tracking-[-0.01em] text-cream sm:text-5xl md:mb-20 md:mt-10 md:text-left lg:mb-50 lg:text-[5.5rem]">
           speakers
         </h1>
 

@@ -3,7 +3,7 @@ export default function AboutSection() {
     <section id="about" className="border-y border-cream/10">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-[1.25fr_0.75fr] md:px-10 md:py-20">
         <div className="space-y-6">
-          <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] leading-none lg:text-[4rem]">
+          <h2 className="font-clash font-[550] text-[clamp(2rem,5vw,4rem)] leading-none lg:text-[4rem]">
             about
           </h2>
           <div className="font-pp-neue max-w-[72ch] space-y-4 text-sm leading-relaxed text-cream/85 md:text-base">

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function JudgesSection({ judges }: { judges: Judge[] }) {
   return (
     <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10 md:py-20">
-      <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] lg:text-[4rem] leading-none">judges</h2>
+      <h2 className="font-clash font-[550] text-[clamp(2rem,5vw,4rem)] lg:text-[4rem] leading-none">judges</h2>
       <div className="mt-8 grid grid-cols-2 gap-5 md:mt-10 md:grid-cols-4 md:gap-8">
         {judges.map((judge, index) => (
           <article key={`${judge.name}-${index}`} className="space-y-3 text-left">

@@ -5,10 +5,10 @@ export const navLinkVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-cream font-semibold focus-visible:outline-lime",
-        mobile: "text-cream font-bold focus-visible:outline-lime",
-        button: "text-charcoal font-bold bg-lime px-8 py-4 rounded-lg focus-visible:outline-charcoal",
-        buttonLight: "text-charcoal font-bold bg-lime px-8 py-4 rounded-lg focus-visible:outline-cream",
+        default: "text-cream font-[550] focus-visible:outline-lime",
+        mobile: "text-cream font-[550] focus-visible:outline-lime",
+        button: "text-charcoal font-[550] bg-lime px-8 py-4 rounded-lg focus-visible:outline-charcoal",
+        buttonLight: "text-charcoal font-[550] bg-lime px-8 py-4 rounded-lg focus-visible:outline-cream",
       },
       size: {
         default: "text-xl lg:text-xl",

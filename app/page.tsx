@@ -185,7 +185,7 @@ export default function Home({
                 className="aspect-204/95 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
               <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
-                <h3 className="font-clash mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   intention
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
@@ -196,7 +196,7 @@ export default function Home({
             {/* Track 2 */}
             <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left">
               <div className="order-2 flex w-full flex-col items-center lg:order-1 lg:w-auto lg:items-start">
-                <h3 className="font-clash mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   investigation
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
@@ -223,7 +223,7 @@ export default function Home({
                 className="aspect-184/91 w-full max-w-[22rem] object-cover lg:w-140 lg:max-w-none"
               />
               <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
-                <h3 className="font-clash mb-3 text-2xl font-medium lg:mb-4 lg:text-[2rem]">
+                <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   impact
                 </h3>
                 <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
