@@ -66,24 +66,6 @@ export default function Home({
 
       {/* About Section */}
       <section className="relative py-24">
-        <Image
-          className="absolute top-[50vh] right-[14vw] w-[95vw] rotate-5"
-          src="/images/bluerope.webp"
-          alt=""
-          width={1920}
-          height={360}
-          sizes="95vw"
-          aria-hidden="true"
-        />
-        <Image
-          className="absolute top-[70vh] left-200 w-[45vw]"
-          src="/images/doubleloop.svg"
-          alt=""
-          width={674}
-          height={537}
-          sizes="25vw"
-          aria-hidden="true"
-        />
         <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
 
           {/* Content */}
@@ -93,7 +75,16 @@ export default function Home({
             </h1>
             <div className="flex flex-col gap-6 lg:flex-row lg:justify-center lg:gap-16">
               {/* Image placeholder */}
-              <div className="w-full border border-lime bg-zinc-300 lg:w-5/3">
+              <div className="relative w-full border border-lime bg-zinc-300 lg:w-5/3">
+                <Image
+                  className="pointer-events-none absolute -right-[30rem] top-70 hidden w-[78rem] max-w-none rotate-5 lg:block z-20"
+                  src="/images/bluerope.webp"
+                  alt=""
+                  width={1920}
+                  height={360}
+                  sizes="1248px"
+                  aria-hidden="true"
+                />
                 <Image
                   src="/images/conference-home-1.webp"
                   alt="Conference overview"
@@ -101,7 +92,7 @@ export default function Home({
                   height={1000}
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="aspect-159/100 w-full object-cover"
+                  className="relative z-10 aspect-159/100 w-full object-cover"
                 />
               </div>
               {/* Text */}
@@ -124,52 +115,34 @@ export default function Home({
 
       {/* Tracks Section */}
       <section className="relative py-16 lg:mt-48 lg:py-24">
-        <Image
-          className="absolute top-[135vh] aspect-auto w-screen rotate-2"
-          src="/images/bluerope2.webp"
-          alt=""
-          width={1920}
-          height={420}
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <Image
-          className="absolute top-[135vh] w-screen rotate-2"
-          src="/images/squiggleoutline2.svg"
-          alt=""
-          width={1440}
-          height={554}
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <Image
-          className="absolute top-[210vh] aspect-auto w-screen"
-          src="/images/bluerope3.webp"
-          alt=""
-          width={1920}
-          height={420}
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <Image
-          className="absolute top-[277vh] w-screen"
-          src="/images/squiggleoutline.svg"
-          alt=""
-          width={1440}
-          height={363}
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <Image
-          className="absolute top-[400vh] w-screen z-10"
-          src="/images/squiggleoutline3.svg"
-          alt=""
-          width={1440}
-          height={363}
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
+        <div className="relative mx-auto grid max-w-6xl px-6 lg:px-0 lg:pb-20">
+          <Image
+            className="pointer-events-none absolute left-180 -top-38 hidden w-[36rem] max-w-none lg:block"
+            src="/images/doubleloop.svg"
+            alt=""
+            width={674}
+            height={537}
+            sizes="576px"
+            aria-hidden="true"
+          />
+          <Image
+            className="pointer-events-none absolute scale-150 left-[1rem] top-300 hidden w-[86rem] max-w-none rotate-2 lg:block"
+            src="/images/bluerope2.webp"
+            alt=""
+            width={1920}
+            height={420}
+            sizes="1376px"
+            aria-hidden="true"
+          />
+          <Image
+            className="pointer-events-none absolute scale-100 -left-[10rem] top-290 hidden w-[96rem] max-w-none rotate-2 lg:block z-20"
+            src="/images/squiggleoutline2.svg"
+            alt=""
+            width={1440}
+            height={554}
+            sizes="1536px"
+            aria-hidden="true"
+          />
           <h1 className="mb-10 text-center text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:mb-16 lg:text-left lg:text-[4rem]">
             tracks
           </h1>
@@ -236,8 +209,9 @@ export default function Home({
       </section>
 
       {/* About Interventions Section */}
-      <section className="py-12 lg:mt-80 lg:py-24">
-        <div className="mx-auto grid max-w-6xl px-6 lg:px-0">
+      <section className="relative overflow-hidden py-12 lg:mt-80 lg:py-24">
+        <div className="relative mx-auto grid max-w-6xl px-6 lg:px-0">
+
 
           {/* Content */}
           <div className="flex flex-col justify-center gap-5">
@@ -260,7 +234,25 @@ export default function Home({
             </div>
           </div>
         </div>
-        <div className="my-40 hidden flex-row items-start justify-end lg:flex">
+        <div className="relative my-40 hidden flex-row items-start justify-end lg:flex">
+          <Image
+            className="pointer-events-none absolute -scale-x-150 right-40 top-70 w-[104rem] max-w-none rotate-185"
+            src="/images/bluerope3.webp"
+            alt=""
+            width={1920}
+            height={420}
+            sizes="1664px"
+            aria-hidden="true"
+          />
+          <Image
+            className="pointer-events-none absolute scale-115 left-1 top-82 w-[90rem] max-w-none"
+            src="/images/squiggleoutline.svg"
+            alt=""
+            width={1440}
+            height={363}
+            sizes="1440px"
+            aria-hidden="true"
+          />
           <div className="inline-block border border-lime shrink-0">
             <Image
               src="/images/home-interventions-1.webp"
@@ -336,6 +328,15 @@ export default function Home({
 
       {/* Meet the Team */}
       <section className="relative z-10 py-24 mb-48 lg:py-24">
+        <Image
+          className="pointer-events-none absolute top-25 -scale-x-100 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10"
+          src="/images/bluerope.webp"
+          alt=""
+          width={1440}
+          height={363}
+          sizes="1472px"
+          aria-hidden="true"
+        />
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
