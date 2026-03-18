@@ -248,7 +248,7 @@ export default function Home({
 
               {/* Text */}
               <p className="max-w-[36ch] text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-lg">
-                Welcome to <span className="text-lime">entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout.
+                Welcome to <span className="text-lime font-[550]">entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout.
                 Entangle is more than just a conference, it&apos;s a movement. <br /> <br />
 
                 It&apos;s about pushing boundaries, changing the way we
@@ -308,8 +308,8 @@ export default function Home({
               {/* Text */}
               <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
                 <p className="mb-8 lg:mb-16">
-                  We&apos;re Scout, Northeastern&apos;s student-driven design organization, and we&apos;re honored to be your hosts
-                  this March 22nd! Our 100+ students work with real clients, offering creative solutions each semester.
+                  We&apos;re Scout, Northeastern&apos;s <span className="font-[550]">student-driven</span> design organization, and we&apos;re honored to be your hosts
+                  this March 22nd! Our <span className="font-[550]">100+</span> students work with real clients, offering creative solutions each semester.
                   Beyond client work, we enrich the Northeastern design community through events, Scout Labs collaborations
                   with local organizations, and Scout Media&apos;s focus on animation, photography, and video. And of course,
                   we&apos;re behind Interventions, our annual design conference that brings together Boston&apos;s creative professionals.
