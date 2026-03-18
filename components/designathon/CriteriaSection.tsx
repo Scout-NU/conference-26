@@ -39,7 +39,7 @@ const criteria: Criterion[] = [
 export default function CriteriaSection() {
   return (
     <section className="px-6 md:px-8 lg:px-[110px] py-16 lg:py-[94px] overflow-hidden">
-      <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] lg:text-[4rem] text-cream mb-10 lg:mb-[152px]">
+      <h2 className="font-clash font-[550] text-[clamp(2rem,5vw,4rem)] lg:text-[4rem] text-cream mb-10 lg:mb-[152px]">
         judging criteria
       </h2>
 
@@ -50,7 +50,7 @@ export default function CriteriaSection() {
             <div className="w-16 h-16 lg:w-24 lg:h-24 bg-neutral-300 rounded-2xl flex-shrink-0" />
             {/* Content */}
             <div className="flex flex-col gap-1">
-              <h3 className="font-clash text-lg md:text-xl lg:text-2xl text-cream">
+              <h3 className="font-clash font-[550] text-lg md:text-xl lg:text-2xl text-cream">
                 {criterion.title}
               </h3>
               <p className="text-cream text-sm md:text-base lg:text-lg leading-relaxed">

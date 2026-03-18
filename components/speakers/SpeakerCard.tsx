@@ -77,9 +77,10 @@ interface SpeakerProps {
     description: string;
     link1: string;
     link2: string;
+    trackImg: string;
 }
 
-export default function SpeakerCard({ img, name, title, description, link1, link2 }: SpeakerProps) {
+export default function SpeakerCard({ img, name, title, description, link1, link2, trackImg }: SpeakerProps) {
     const hasSpeakerImage = Boolean(img) && img !== "/assets/speaker-placeholder.webp";
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -104,7 +105,17 @@ export default function SpeakerCard({ img, name, title, description, link1, link
             </div>
             <div className="mt-10 flex flex-1 flex-col gap-7">
                 <div className="min-h-[8.5rem]">
-                    <h3 className="font-pp-neue text-[1.875rem] font-medium leading-tight tracking-[-0.02em] text-cream">{name}</h3>
+                    <div className="flex items-center gap-3">
+                        <h3 className="font-pp-neue text-[1.875rem] font-medium leading-tight tracking-[-0.02em] text-cream">{name}</h3>
+                        <Image
+                            src={trackImg}
+                            alt=""
+                            aria-hidden="true"
+                            width={48}
+                            height={30}
+                            className="h-auto w-16 shrink-0"
+                        />
+                    </div>
                     <p className="font-pp-neue mt-2 text-[1.5rem] font-medium leading-[1.2] text-cream">{title}</p>
                 </div>
 

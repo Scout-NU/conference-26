@@ -32,16 +32,6 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-2",
-        img: "/images/paolo.jpg",
-        name: "PAOLO CIUCCARELLI",
-        title: "",
-        description:
-          "",
-        link1: "https://www.linkedin.com/in/paolociuccarelli/",
-        link2: "https://instagram.com/bobsmith",
-      },
-      {
-        id: "intention-3",
         img: "/images/eileen.webp",
         name: "EILEEN MCGIVNEY",
         title: "Assistant Professor XR Education Design Lab Northeastern University College of Arts, Media and Design",
@@ -49,6 +39,16 @@ export const speakersData: SpeakerTrack[] = [
           "Dr. Eileen McGivney is an Assistant Professor at Northeastern University's College of Arts, Media, and Design. As Principal Investigator at the XR Education Design Lab, she conducts research on how VR and other immersive technologies can bring transformative learning experiences into the classroom. Using design-based research methods, her current work includes AI-powered simulations for health sciences students to practice patient communication skills, the design of VR field trips for high school STEM classrooms, and the study of problem-solving in VR escape rooms. Prior to Northeastern, Dr. McGivney earned her PhD at the Harvard Graduate School of Education and conducted research on education policy at the Brookings Institution.",
         link1: "https://www.linkedin.com/in/eileen-mcgivney-phd-73733963/",
         link2: "https://instagram.com/alicejohnson",
+      },
+      {
+        id: "intention-3",
+        img: "/images/paolo.jpg",
+        name: "PAOLO CIUCCARELLI",
+        title: " Professor of Design, Art +Design Department, College of Arts, Media and Design, Northeastern University",
+        description:
+          "Paolo Ciuccarelli is Full Professor of (Information) Design at Northeastern University and Founding Director of the Center for Design. His research investigates how visualization, sonification, and data experience design make complex social, urban, and organizational phenomena legible and actionable. He co-founded the DensityDesign Research Lab at Politecnico di Milano, co-edits Big Data & Society, and is a Senior Affiliate at metaLAB Harvard. His work bridges design research, digital humanities, and emerging technologies (including AI).",
+        link1: "https://www.linkedin.com/in/paolociuccarelli/",
+        link2: "https://instagram.com/bobsmith",
       },
       {
         id: "intention-4",
@@ -91,7 +91,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-1",
         img: "/images/tiange-wang.webp",
-        name: "Tiange Wang",
+        name: "TIANGE WANG",
         title: "Design Lead, Software & Interaction, IDEO",
         description:
           "Tiange Wang is an award-winning and internationally-exhibiting designer and creative technologist. Her work investigates innovative interactive paradigms among humans, technology and the environment. Tackling subjects like intelligent systems, multisensory experiences, holistic wellbeing, and climate futures, she employs mediums including multimodal interaction, creative data visualization, multimedia art, software, food, physical AI, and games. As a Senior Design Lead at IDEO, she leads the design and prototyping of human-centered, planet-conscious, data-informed, and emerging-tech enabled products for Fortune 500 clients and high-growth ventures, taking ideas from 0 to 1 and transforming them into market-ready products across the digital and physical realms.",
@@ -101,7 +101,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-3",
         img: "/images/jonny-ouk.webp",
-        name: "Jonny Sokhean Ouk",
+        name: "JONNY SOKHEAN OUK",
         title: "Director, Cinematographer, XR Artist, XR Immersive Media Lab Manager",
         description:
           "A director and cinematographer, Jonny Ouk focuses on creating immersive experiences that enrich his storytelling. Using Unreal Engine for indie virtual production, photogrammetry for photo realistic characters and spaces, spatial video and motion capture, his development of novel workflows highlights the transformative use of emerging tools. Balancing technical acumen with creative vision, he’s committed to creating innovative media experiences that educate, inspire, and tell meaningful impactful human stories.",
@@ -160,7 +160,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-2",
         img: "/images/jenny-wang.webp",
-        name: "Y. Jenny Wang, Ph.D.",
+        name: "JENNY WANG",
         title: "Director @ medVR Medical XR Accelerator",
         description:
           "Y. Jenny Wang, Ph.D. is the Director of medVR, where she leads program development for the Medical XR Accelerator and guides teams in building commercially-viable solutions to real-world medical challenges. She also serves as the Hardware Track Director of MIT Reality Hack. A multidisciplinary builder and strategist, her background spans business development, education, and product design. She has developed go-to-market strategies, led VR and electronics workshops, and founded two companies, including Clever Rock Labs, which builds products blending software, hardware, and human interaction.",
@@ -170,7 +170,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-4",
         img: "/images/steven-patterson.webp",
-        name: "Steven Patterson, MS.",
+        name: "STEVEN MAX PATTERSON",
         title: "Executive Director @ medVR Medical XR Accelerator",
         description:
           "Steven Max Patterson is the Executive Director of medVR, a non-profit providing catalytic education in medical XR. With a background in engineering, project management, and technology journalism, Steven has written for Ars Technica, Quartz, Fast Company, and IDG. He has built open source and mobile tech communities for over two decades and has worked to expand AR/VR into new fields since 2014. He founded and led the AR/VR hackathon at the MIT Media Lab in 2015.",

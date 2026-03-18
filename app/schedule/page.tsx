@@ -16,15 +16,15 @@ const knotImages: Record<Knot, StaticImageData> = {
 
 const EventCard = ({ name, speaker, description, location, knots }: Event) => (
   <article className="flex flex-col gap-3">
-    <h3 className="text-xl font-semibold lowercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
+    <h3 className="text-xl font-[550] lowercase leading-tight tracking-[-0.02em] text-cream sm:text-2xl lg:text-[2rem]">
       {name}
     </h3>
     {speaker && (
-      <p className="text-base font-bold uppercase leading-tight tracking-[-0.02em] text-cream sm:text-lg lg:text-[1.375rem]">
+      <p className="text-base font-[550] uppercase leading-tight tracking-[-0.02em] text-cream sm:text-lg lg:text-[1.375rem]">
         {speaker}
       </p>
     )}
-    <p className="text-sm leading-relaxed tracking-[-0.01em] text-cream sm:text-base lg:text-[1.0625rem]">
+    <p className="font-pp-neue text-sm leading-relaxed tracking-[-0.01em] text-cream sm:text-base lg:text-[1.0625rem]">
       {description}
     </p>
     <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -109,7 +109,7 @@ export default function Schedule() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-        <h1 className="mb-16 text-4xl font-semibold leading-none tracking-[-0.01em] text-cream sm:mb-24 sm:text-5xl lg:mb-50 lg:text-[5.5rem]">
+        <h1 className="mb-16 text-4xl font-medium leading-none tracking-[-0.01em] text-cream sm:mb-24 sm:text-5xl lg:mb-50 lg:text-[5.5rem]">
           schedule
         </h1>
 

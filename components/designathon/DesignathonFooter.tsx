@@ -12,7 +12,7 @@ export default function DesignathonFooter() {
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-8 md:grid-cols-[1.2fr_0.9fr_0.7fr] md:px-10 md:py-12">
           <div>
             <p className="text-2xl text-cream/95 md:text-4xl">interventions:</p>
-            <p className="font-clash text-5xl leading-none md:text-6xl">&amp;entangle</p>
+            <p className="font-pp-neue text-5xl leading-none md:text-6xl">&amp;entangle</p>
           </div>
           <div className="space-y-1 text-sm leading-relaxed text-cream md:text-base">
             <p>March 22nd, 2026</p>
@@ -24,7 +24,7 @@ export default function DesignathonFooter() {
             <p>805 Columbus Ave Boston, MA 02118 United States</p>
           </div>
           <div className="space-y-4">
-            <p className="font-clash text-xl md:text-2xl">Connect with us!</p>
+            <p className="font-clash font-[550] text-xl md:text-2xl">Connect with us!</p>
             <Image
               src="/assets/tickets-vector.svg"
               alt="Scout social links"

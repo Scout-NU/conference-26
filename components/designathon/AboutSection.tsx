@@ -3,7 +3,7 @@ export default function AboutSection() {
     <section id="about" className="border-y border-cream/10">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-[1.25fr_0.75fr] md:px-10 md:py-20">
         <div className="space-y-6">
-          <h2 className="font-clash text-[clamp(2rem,5vw,4rem)] leading-none lg:text-[4rem]">
+          <h2 className="font-clash font-[550] text-[clamp(2rem,5vw,4rem)] leading-none lg:text-[4rem]">
             about
           </h2>
           <div className="font-pp-neue max-w-[72ch] space-y-4 text-sm leading-relaxed text-cream/85 md:text-base">
@@ -23,7 +23,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-3 h-fit self-start border-l-[6px] border-cream pl-4 text-base leading-relaxed md:mt-8 md:pl-6 md:text-lg lg:mt-[4.5rem] font-semibold">
+        <div className="mt-3 h-fit self-start border-l-[6px] border-cream pl-4 text-base leading-relaxed md:mt-8 md:pl-6 md:text-lg lg:mt-[4.5rem] font-[550]">
           <p>theme: design and technology</p>
           <p className="mt-2">date: march 20th - march 22nd</p>
           <p className="mt-2">locations: center for design, isec</p>
