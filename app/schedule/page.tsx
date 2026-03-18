@@ -109,7 +109,7 @@ export default function Schedule() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-        <h1 className="mb-16 text-4xl font-semibold leading-none tracking-[-0.01em] text-cream sm:mb-24 sm:text-5xl lg:mb-50 lg:text-[5.5rem]">
+        <h1 className="mb-16 text-4xl font-medium leading-none tracking-[-0.01em] text-cream sm:mb-24 sm:text-5xl lg:mb-50 lg:text-[5.5rem]">
           schedule
         </h1>
 
