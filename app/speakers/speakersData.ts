@@ -101,7 +101,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-3",
         img: "/images/jonny-ouk.webp",
-        name: "JONNY SOKHEAN OUK",
+        name: "SOKHEAN JONATHAN OUK",
         title: "Director, Cinematographer, XR Artist, XR Immersive Media Lab Manager",
         description:
           "A director and cinematographer, Jonny Ouk focuses on creating immersive experiences that enrich his storytelling. Using Unreal Engine for indie virtual production, photogrammetry for photo realistic characters and spaces, spatial video and motion capture, his development of novel workflows highlights the transformative use of emerging tools. Balancing technical acumen with creative vision, he’s committed to creating innovative media experiences that educate, inspire, and tell meaningful impactful human stories.",
