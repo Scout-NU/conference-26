@@ -86,7 +86,7 @@ export default function SpeakerCard({ img, name, title, description, link1, link
 
     return (
         <article
-            className={`speaker-card-shine relative overflow-hidden flex flex-col rounded-2xl bg-transparent p-6 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)] transition-[height] duration-300 md:p-8 ${isExpanded ? "h-auto" : "h-[42rem]"}`}
+            className={`speaker-card-shine relative overflow-hidden flex flex-col rounded-2xl border border-white/10 bg-white/10 p-6 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)] supports-[backdrop-filter]:bg-white/5 supports-[backdrop-filter]:backdrop-blur-[1px] supports-[backdrop-filter]:backdrop-saturate-150 transition-[height] duration-300 md:p-8 ${isExpanded ? "h-auto" : "h-[42rem]"}`}
         >
             <div>
                 <div className="relative w-full overflow-hidden aspect-[23.416667/18.75]">
