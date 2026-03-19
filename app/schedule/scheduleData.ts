@@ -60,18 +60,19 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "Data Visualization Panel",
+        speaker: "Steven Geofrey, Paolo Ciuccarelli, and Pedro Cruz ",
         description:
           "More details to come!",
         location: "Auditorium",
         // knots: ["impact_pink"],
       },
-       {
-        name: "Smart Textiles & Biodesign Panel",
-        // speaker: "Speaker",
+      {
+        name: "Biodesign Presentation",
+        speaker: "KATIA ZOLOTOVSKY",
         description:
           "More details to come!",
-        location: "Classroom 140",
-        // knots: ["investigation_yellow"],
+        location: "Classroom 140 & 142",
+        // knots: ["impact_pink"],
       },
     ],
   },
@@ -105,14 +106,14 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "Student Keynote Presentations",
         description:
-          "Hear and engage with exciting work being done by four Northeastern undergraduate and graduate students through their slide presentations and brief Q&A sessions.",
+          "Hear and engage with exciting work being done by some Northeastern undergraduate and graduate students through their slide presentations and brief Q&A sessions.",
         location: "Classroom 140",
         // knots: ["investigation_yellow"],
       },
       {
         name: "Lobby Activities",
         description:
-        "Get hands on with string entanglement boards and keychain making!",
+        "Our Conference team has also created interactive installations to encourage guests to reflect on their own entanglement and the collective overlap and unique experiences of all of the attendees.",
         location: "Atrium",
       },
     ],
@@ -142,10 +143,10 @@ export const scheduleData: TimeSlot[] = [
       },
       {
         name: "From Frame to Presence - Designing an AI & XR Workflow for Immersive Storytelling",
-        speaker: "Johnny Ouk",
+        speaker: "Sokhean Jonathan Ouk",
         description:
-        "More details to come!",
-        location: "ROOM 140",
+        "An introduction to using AI and XR tools to design immersive storytelling experiences, with a focus on practical workflows for creating and translating content across 3D, VR, and 360 media.",
+        location: "Classroom 142",
       },
     ],
   },
@@ -161,7 +162,8 @@ export const scheduleData: TimeSlot[] = [
         // knots: ["intention_blue"],
       },
       {
-        name: "Portal Workshop with NU Oakland",
+        name: "(CONTINUED) From Frame to Presence - Designing an AI & XR Workflow for Immersive Storytelling",
+        speaker: "Sokhean Jonathan Ouk",
         description:
         "More details to come!",
         location: "Classroom 142",
@@ -169,7 +171,7 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "portfolio reviews",
         description:
-          "Receive expert feedback on your portfolio from industry professionals and Northeastern professors from the College of Arts, Media, and Design. Whether you're fine-tuning your work or preparing for job opportunities, this session will help you refine your presentation and make a lasting impact.",
+          "Receive expert feedback on your portfolio from industry professionals. Whether you're fine-tuning your work or preparing for job opportunities, this session will help you refine your presentation and make a lasting impact.",
         location: "Atrium",
         // knots: ["impact_pink"],
       },
@@ -180,7 +182,7 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "Accessibility and Autonomy in the Digital Age Panel",
-        // speaker: "accessibility and autonomy in the digital age",
+        speaker: "HUGH GUINEY, ISKRA ALEXIEVA JONES, and EILEEN MCGIVNEY (Moderator)",
         description:
           "More details to come!",
         location: "auditorium",

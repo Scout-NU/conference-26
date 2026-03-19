@@ -7,7 +7,7 @@ import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
 
 const MEMBERS: Member[] = [
-  { name: "jasmine sun", role: "Conference Director", image: "/images/Conference%20Headshots/Jasmine.webp", team: "operations", imagePosition: "50% 50%", imageScale: 1.6 },
+  { name: "jasmine yiming sun", role: "Conference Director", image: "/images/Conference%20Headshots/Jasmine.webp", team: "operations", imagePosition: "50% 50%", imageScale: 1.6 },
   { name: "andrew wallace", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Andrew.webp", team: "operations", imagePosition: "50% 60%", imageScale: 1.5 },
   { name: "adeline yu", role: "Conference Assistant Director", image: "/images/Conference%20Headshots/Adeline%20Yu%20Conference%20Headshot.webp", team: "operations", imagePosition: "50% 55%", imageScale: 1.6 },
   { name: "nicole schubert", role: "Operations Coordinator", image: "/images/Conference%20Headshots/Nicole.png", team: "operations", imagePosition: "50% 20%", imageScale: 2.45 },
@@ -351,7 +351,7 @@ export default function Home({
       {/* Meet the Team */}
       <section className="relative z-10 py-24 mb-48 lg:py-24">
         <Image
-          className="pointer-events-none absolute top-35 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10"
+          className="pointer-events-none absolute top-40 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10 -rotate-20"
           src="/images/squiggleoutline3.svg"
           alt=""
           width={1440}
