@@ -182,6 +182,7 @@ export const speakersData: SpeakerTrack[] = [
         img: "/images/catherineclark.jpeg",
         name: "CATHERINE CLARKE",
         title: "",
+        isDraft: true,
         description:
           "",
         link1: "https://www.linkedin.com/in/catherine-clarke-b38bb4196/",
