@@ -165,7 +165,7 @@ export const scheduleData: TimeSlot[] = [
         name: "(CONTINUED) From Frame to Presence - Designing an AI & XR Workflow for Immersive Storytelling",
         speaker: "Sokhean Jonathan Ouk",
         description:
-        "More details to come!",
+        "An introduction to using AI and XR tools to design immersive storytelling experiences, with a focus on practical workflows for creating and translating content across 3D, VR, and 360 media.",
         location: "Classroom 142",
       },
       {
