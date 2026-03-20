@@ -62,14 +62,14 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-5",
-        img: "/assets/speaker-placeholder.webp",
-        name: "[Speaker Name]",
-        title: "Title",
-        isDraft: true,
+        img: "/images/Pedro Cruz.png",
+        name: "PEDRO CRUZ",
+        title:
+          "Associate Professor, Art + Design at Northeastern University Co-Director, Co-Lab for Data Impact Core Faculty, Center for Design.",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        link1: "https://linkedin.com/in/bobsmith",
-        link2: "https://instagram.com/bobsmith",
+          "Pedro M. Cruz explores nature-inspired metaphors to portray data and information through design. He is an Associate Professor in the Art + Design Department at Northeastern University, teaching Information Design and Data Visualization. Cruz co-directs the Co-Lab for Data Impact and is a core faculty member of the Center for Design. His work has been featured in prestigious venues such as the London Design Biennale, MoMA, CES, the Museum of the City of New York, the Ibero-American Biennale of Design, SIGGRAPH, the IEEE VIS Arts Program, the ALIFE Conference on Artificial Life, the Museum of Fine Arts in Boston, FACTT Festival of Art & Science, the Albright-Knox Art Gallery, and in the Information is Beautiful Awards.",
+        link1: "https://camd.northeastern.edu/people/pedro-m-cruz/",
+        link2: "",
       },
       {
         id: "intention-6",
@@ -120,14 +120,14 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "investigation-4",
-        img: "/assets/speaker-placeholder.webp",
-        name: "[Speaker Name]",
-        title: "Title",
-        isDraft: true,
+        img: "/images/Katia Zolotovsky.png",
+        name: "KATIA ZOLOTOVSKY",
+        title:
+          "Assistant Professor of Biotechnology in Design Departments of Art + Design and Chemistry",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        link1: "https://linkedin.com/in/danawhite",
-        link2: "https://instagram.com/danawhite",
+          "Katia Zolotovsky is an Assistant Professor in Art + Design with a joint appointment in the College of Science, Department of Chemistry and Chemical Biology. She is directing the BioInteractive Design lab. Katia is an architect, biologist, and bio-design researcher. She holds a Ph.D. in Computation from the Massachusetts Institute of Technology, where her dissertation focused on design and computation with biologically active materials. Katia's research focuses on the impact of biotechnology on everyday life and the ecosystems we live in, as well as the implications of this emerging technology. In her research, she collaborates with material scientists, synthetic biologists, and computational designers to develop practical ways for artists and designers to engage with biological materials and systems.",
+        link1: "https://cos.northeastern.edu/people/katia-zolotovsky/",
+        link2: "",
       },
       {
         id: "investigation-5",

@@ -67,7 +67,7 @@ export const scheduleData: TimeSlot[] = [
         // knots: ["impact_pink"],
       },
       {
-        name: "Biodesign Presentation",
+        name: "Living Textiles and Microbial Computations",
         speaker: "KATIA ZOLOTOVSKY",
         description:
           "More details to come!",
