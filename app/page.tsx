@@ -77,7 +77,7 @@ export default function Home({
               {/* Image placeholder */}
               <div className="relative w-full border border-lime bg-zinc-300 lg:w-5/3">
                 <Image
-                  className="pointer-events-none absolute -right-[30rem] top-70 hidden w-[78rem] max-w-none rotate-5 lg:block z-20"
+                  className="pointer-events-none absolute -right-[45rem] top-60 hidden w-[95rem] max-w-none rotate-5 lg:block z-20"
                   src="/images/bluerope.webp"
                   alt=""
                   width={1920}
@@ -85,6 +85,15 @@ export default function Home({
                   sizes="1248px"
                   aria-hidden="true"
                 />
+                              <Image
+            className="pointer-events-none absolute left-150 top-88 hidden w-[46rem] max-w-none lg:block z-30"
+            src="/images/doubleloop.svg"
+            alt=""
+            width={674}
+            height={537}
+            sizes="576px"
+            aria-hidden="true"
+          />
                 <Image
                   src="/images/conference-home-1.webp"
                   alt="Conference overview"
@@ -96,7 +105,7 @@ export default function Home({
                 />
               </div>
               {/* Text */}
-              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+              <div className="text-base font-pp-neue font-medium leading-relaxed lg:text-lg">
                 <p className="mb-6 lg:mb-8">
                   This year, under the theme <span className='font-bold text-lime'>Entangle</span>,
                   we invite participants to trace the threads that weave humans, technologies, and environments into complex,
@@ -116,15 +125,6 @@ export default function Home({
       {/* Tracks Section */}
       <section className="relative py-16 lg:mt-48 lg:py-24">
         <div className="relative mx-auto grid max-w-6xl px-6 lg:px-0 lg:pb-20">
-          <Image
-            className="pointer-events-none absolute left-180 -top-38 hidden w-[36rem] max-w-none lg:block"
-            src="/images/doubleloop.svg"
-            alt=""
-            width={674}
-            height={537}
-            sizes="576px"
-            aria-hidden="true"
-          />
           <Image
             className="pointer-events-none absolute scale-150 left-[1rem] top-300 hidden w-[86rem] max-w-none rotate-2 lg:block"
             src="/images/bluerope2.webp"
@@ -161,7 +161,7 @@ export default function Home({
                 <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   intention
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-xl">
                   What are the values, assumptions, and politics that underpin design intention?
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function Home({
                 <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   investigation
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-xl">
                   What role does design play in re-entangling technology with ecology, culture, and society?
                 </p>
               </div>
@@ -199,7 +199,7 @@ export default function Home({
                 <h3 className="font-clash mb-3 text-2xl font-[550] lg:mb-4 lg:text-[2rem]">
                   impact
                 </h3>
-                <p className="max-w-[32ch] text-center text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-left lg:text-lg">
+                <p className="max-w-[32ch] text-center text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-left lg:text-xl">
                   How might we record, evaluate, and re-evaluate the social life of technologies and their afterlives?
                 </p>
               </div>
@@ -221,7 +221,7 @@ export default function Home({
             <div className="flex flex-col justify-center gap-6 lg:gap-16">
 
               {/* Text */}
-              <p className="max-w-[36ch] text-base font-pp-neue leading-relaxed lg:max-w-none lg:text-lg">
+              <p className="max-w-[36ch] text-base font-pp-neue font-medium leading-relaxed lg:max-w-none lg:text-lg">
                 Welcome to <span className="text-lime font-[550]">entangle</span>, the ninth Interventions event, a one-day design conference hosted annually by Scout.
                 Entangle is more than just a conference, it&apos;s a movement. <br /> <br />
 
@@ -298,7 +298,7 @@ export default function Home({
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-center lg:gap-16">
 
               {/* Text */}
-              <div className="text-base font-pp-neue leading-relaxed lg:text-lg">
+              <div className="text-base font-pp-neue font-medium leading-relaxed lg:text-lg">
                 <p className="mb-8 lg:mb-16">
                   We&apos;re Scout, Northeastern&apos;s <span className="font-[550]">student-driven</span> design organization, and we&apos;re honored to be your hosts
                   this March 22nd! Our <span className="font-[550]">100+</span> students work with real clients, offering creative solutions each semester.
@@ -307,7 +307,7 @@ export default function Home({
                   we&apos;re behind Interventions, our annual design conference that brings together Boston&apos;s creative professionals.
                 </p>
                 <Link href="https://scout.camd.northeastern.edu/"
-                  className="font-pp-neue inline-block rounded-xl bg-lime px-6 py-3 text-xl text-charcoal hover:bg-sky lg:px-8 lg:py-4 lg:text-[2rem]">
+                  className="font-pp-neue font-medium inline-block rounded-xl font-medium bg-lime px-6 py-3 text-xl text-charcoal hover:bg-sky lg:px-8 lg:py-4 lg:text-[2rem]">
                   Scout Website
                 </Link>
               </div>

@@ -66,7 +66,7 @@ const TeamSection = ({ members }: TeamProps) => {
                             <div
                                 key={team}
                                 onClick={() => setActiveTeam(team)}
-                                className={`font-pp-neue shrink-0 cursor-pointer select-none px-3 py-1.5 text-base font-medium uppercase transition-colors md:px-5 md:py-2 md:text-xl ${activeTeam === team ? "text-charcoal" : "text-cream"
+                                className={`font-pp-neue shrink-0 cursor-pointer select-none px-3 py-1.5 text-base uppercase transition-colors md:px-5 md:py-2 md:text-2xl ${activeTeam === team ? "text-lime font-bold" : "text-cream font-medium"
                                     }`}
                                 role="button"
                                 tabIndex={0}
