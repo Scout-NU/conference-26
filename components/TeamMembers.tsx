@@ -93,7 +93,7 @@ const TeamSection = ({ members }: TeamProps) => {
                     return (
                         <div key={member.name} className="flex flex-col gap-2">
                             {member.image && member.image !== "/images/placeholder.webp" ? (
-                                <div className="relative w-full aspect-square overflow-hidden border border-lime bg-charcoal">
+                                <div className="relative w-full aspect-square overflow-hidden border border-lime bg-[#3B46FF]">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
@@ -108,7 +108,7 @@ const TeamSection = ({ members }: TeamProps) => {
                                     />
                                 </div>
                             ) : (
-                                <div className="w-full aspect-square border border-lime bg-charcoal" aria-hidden="true" />
+                                <div className="w-full aspect-square border border-lime bg-[#3B46FF]" aria-hidden="true" />
                             )}
                             <h2 className="font-pp-neue text-xl font-medium uppercase">{member.name}</h2>
                             <p className="font-pp-neue text-lg ">{member.role}</p>
@@ -117,7 +117,7 @@ const TeamSection = ({ members }: TeamProps) => {
                 })}
                 {Array.from({ length: placeholdersNeeded }).map((_, index) => (
                     <div key={`placeholder-${index}`} className="invisible flex flex-col gap-2" aria-hidden="true">
-                        <div className="w-full aspect-square border border-lime bg-charcoal" />
+                        <div className="w-full aspect-square border border-lime bg-[#3B46FF]" />
                         <h2 className="font-pp-neue text-xl font-medium uppercase">Placeholder Name</h2>
                         <p className="font-pp-neue text-lg text-lime">Placeholder Role</p>
                     </div>

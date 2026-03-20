@@ -31,7 +31,7 @@ const MEMBERS: Member[] = [
   { name: "sairah sachdeva", role: "Social Media Coordinator", image: "/images/Conference%20Headshots/Sairah.webp", team: "marketing", imagePosition: "50% 62%", imageScale: 1.5 },
   { name: "Zaydaan Jahangir", role: "Tech Lead", image: "/images/Conference%20Headshots/Zaydaan.webp", team: "tech", imagePosition: "50% 55%", imageScale: 1.5 },
   { name: "afra ankita", role: "Developer", image: "/images/Conference%20Headshots/Afra.webp", team: "tech", imagePosition: "50% 55%", imageScale: 1.5 },
-  { name: "ivan lam", role: "Developer", image: "/images/placeholder.webp", team: "tech", imagePosition: "50% 50%", imageScale: 1.5 },
+  { name: "ivan lam", role: "Developer", image: "/images/Conference%20Headshots/Ivan.png", team: "tech", imagePosition: "50% 50%", imageScale: 1 },
   { name: "xinning lucy liu", role: "Designer + Developer", image: "/images/Conference%20Headshots/Xinning%20Liu.webp", team: "tech", imagePosition: "50% 50%", imageScale: 1.5 },
 ];
 
