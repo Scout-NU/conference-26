@@ -100,7 +100,7 @@ export const scheduleData: TimeSlot[] = [
         name: "From Information to Intuition: Human-Scale Ways to Experience Abstract Tech",
         speaker: "TIANGE WANG",
         description:
-        "Learn about human scale ways to experience abstract tech.",
+        "Learn ways designers can translate data- and model-driven systems into tangible, playful encounters. We’ll explore how materiality, interaction, and performance can help audiences build intuition for complex ideas like climate signals, GenAI meaning drift, and probability.",
         location: "AUDITORIUM",
       },
       {
@@ -157,7 +157,7 @@ export const scheduleData: TimeSlot[] = [
         name: "making dreams a reality",
         speaker: "STEVEN MAX PATTERSON and Y. JENNY WANG",
         description:
-          "More details to come!",
+          "Get to know the journey with six clinician led development teams comprising their first medical XR accelerator cohort. From Apple Vision Pro technical training, to training on medical workflows, and medical device management through working with clinical domain experts to build prototypes of solutions to real medical problems.",
         location: "auditorium",
         // knots: ["intention_blue"],
       },
