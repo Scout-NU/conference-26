@@ -130,7 +130,7 @@ export default function Schedule() {
       <div className="mt-12 lg:hidden">
         <MobileFooter />
       </div>
-      <div className="mt-12 lg:mt-[20rem] hidden lg:block md:block">
+      <div className="mt-12 lg:mt-[20rem] hidden lg:block">
         <Footer />
       </div>
     </div>

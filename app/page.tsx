@@ -362,7 +362,7 @@ export default function Home({
       </section>
 
       {/* Meet the Team */}
-      <section className="relative z-10 py-24 mb-48 lg:py-24">
+      <section className="relative z-10 -mb-50 lg:mb-48 lg:py-24">
         <Image
           className="pointer-events-none absolute top-40 left-1/2 hidden w-[92rem] max-w-none -translate-x-1/2 lg:block -z-10 -rotate-20"
           src="/images/squiggleoutline3.svg"
@@ -377,7 +377,7 @@ export default function Home({
 
 
       {/* Sponsors */}
-      <section className="relative z-10 py-20 mb-96 lg:py-24">
+      <section className="relative z-10 pb-54 lg:mb-96 lg:pb-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-0">
           <h2 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4rem]">
             our sponsors
@@ -432,7 +432,7 @@ export default function Home({
       <div className="lg:hidden">
         <MobileFooter />
       </div>
-      <div className="hidden lg:block md:block">
+      <div className="hidden lg:block">
         <Footer />
       </div>
 
