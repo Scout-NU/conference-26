@@ -59,10 +59,10 @@ export const scheduleData: TimeSlot[] = [
     time: "10:45 AM",
     events: [
       {
-        name: "Data Visualization Panel",
+        name: "Making the Invisible Public: Designing Emotional Data Experiences for Collective Life",
         speaker: "Steven Geofrey, Paolo Ciuccarelli, and Pedro Cruz ",
         description:
-          "More details to come!",
+          "This panel explores how designers use data, computation, and interaction to make complex collective systems publicly legible through immersive, affective, and participatory platforms.",
         location: "Auditorium",
         // knots: ["impact_pink"],
       },

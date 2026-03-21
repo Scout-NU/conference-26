@@ -73,14 +73,13 @@ export const speakersData: SpeakerTrack[] = [
       },
       {
         id: "intention-6",
-        img: "/assets/speaker-placeholder.webp",
-        name: "[Speaker Name]",
-        title: "Title",
-        isDraft: true,
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus metus ante, vitae dignissim elit ornare tristique. Nam sodales ultrices convallis. Quisque pellentesque commodo ante quis congue. Nam malesuada libero at purus efficitur fermentum. Morbi lacinia, turpis quis vehicula ornare, purus erat molestie sem, in cursus augue quam volutpat odio.",
-        link1: "https://linkedin.com/in/bobsmith",
-        link2: "https://instagram.com/bobsmith",
+        img: "/images/Iskra Alexieva Jones.jpeg",
+        name: "ISKREA ALEXVIA JONES",
+        title:
+          "Director, Product Design at Insurify Adjunct Design Professor at Lesley University.",
+        description: "",
+        link1: "",
+        link2: "",
       },
     ],
   },
