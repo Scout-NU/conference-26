@@ -1,6 +1,7 @@
 import AboutSection from "@/components/designathon/AboutSection";
 import DecorativeBackground from "@/components/designathon/DecorativeBackground";
 import Footer from "@/components/designathon/Footer";
+import MobileFooter from "@/components/designathon/MobileFooter";
 import HeroSection from "@/components/designathon/HeroSection";
 import JudgesSection from "@/components/designathon/JudgesSection";
 import JudgingCriteriaSection from "@/components/designathon/JudgingCriteriaSection";
@@ -23,7 +24,10 @@ export default function DesignathonPage() {
       <PrizesSection prizes={prizes} />
       <JudgesSection judges={judges} />
       <JudgingCriteriaSection criteria={judgingCriteria} />
-      <div className="mt-12 lg:mt-[20rem] hidden lg:block md:block">
+      <div className="mt-12 lg:hidden">
+        <MobileFooter />
+      </div>
+      <div className="mt-12 lg:mt-[20rem] hidden lg:block">
         <Footer />
       </div>
     </main>

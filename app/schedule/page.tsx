@@ -7,6 +7,7 @@ import impact_pink from './assets/impact_pink.png';
 import intention_blue from './assets/intention_blue.png';
 import investigation_yellow from './assets/investigation_yellow.png';
 import Footer from '@/components/designathon/Footer';
+import MobileFooter from '@/components/designathon/MobileFooter';
 
 const knotImages: Record<Knot, StaticImageData> = {
   impact_pink,
@@ -126,7 +127,10 @@ export default function Schedule() {
           ))}
         </div>
       </div>
-      <div className="mt-12 lg:mt-[20rem] hidden lg:block md:block">
+      <div className="mt-12 lg:hidden">
+        <MobileFooter />
+      </div>
+      <div className="mt-12 lg:mt-[20rem] hidden lg:block">
         <Footer />
       </div>
     </div>
