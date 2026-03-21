@@ -362,6 +362,59 @@ export default function Home({
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
+      {/* Sponsors */}
+      <section className="relative z-10 py-20 mb-96 lg:py-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-0">
+          <h2 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4rem]">
+            our sponsors
+          </h2>
+
+          <div className="flex items-center justify-start gap-10 flex-wrap mt-10">
+            <Image
+              src="/sponsors/center-for-design.png"
+              alt="Center for Design"
+              width={90}
+              height={100}
+            />
+            <Image
+              src="/sponsors/camd.png"
+              alt="CAMD"
+              width={480}
+              height={100}
+              className="self-start"
+            />
+            <Image
+              src="/sponsors/honors.png"
+              alt="Honors"
+              width={480}
+              height={100}
+              className="self-start"
+            />
+            <Image
+              src="/sponsors/student-life.png"
+              alt="Student Life"
+              width={380}
+              height={100}
+              className="self-start"
+            />
+            <Image
+              src="/sponsors/other-tomorrows.png"
+              alt="Other Tomorrows"
+              width={370}
+              height={100}
+              className="self-start"
+            />
+            <Image
+              src="/sponsors/insurify.png"
+              alt="Insurify"
+              width={240}
+              height={100}
+              className="self-start"
+            />
+          </div>
+        </div>
+      </section>
+
       <div className="hidden lg:block md:block">
         <Footer />
       </div>
