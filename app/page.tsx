@@ -365,7 +365,7 @@ export default function Home({
       {/* Sponsors */}
       <section className="relative z-10 py-20 mb-96 lg:py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-0">
-          <h2 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[6rem]">
+          <h2 className="text-[clamp(2rem,8vw,2.5rem)] font-medium tracking-tight lg:text-[4rem]">
             our sponsors
           </h2>
 
