@@ -1,6 +1,7 @@
 import { getPublishedSpeakerTracks, speakersData } from "./speakersData";
 import TrackSection from "@/components/speakers/TrackSection";
 import Footer from "@/components/designathon/Footer";
+import MobileFooter from "@/components/designathon/MobileFooter";
 import Image from "next/image";
 
 export default function Speakers() {
@@ -41,6 +42,9 @@ export default function Speakers() {
             />
           ))}
         </div>
+      </div>
+      <div className="mt-12 lg:hidden">
+        <MobileFooter />
       </div>
       <div className="mt-12 lg:mt-[25rem] hidden lg:block md:block">
         <Footer />

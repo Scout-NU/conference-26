@@ -5,6 +5,7 @@ import ScrollFrameAnimationLazy from "@/components/ScrollFrameAnimationLazy";
 import type { Member } from "@/components/TeamMembers"
 import type { FrameVariant } from "@/components/test";
 import Footer from "@/components/designathon/Footer";
+import MobileFooter from "@/components/designathon/MobileFooter";
 
 const MEMBERS: Member[] = [
   { name: "jasmine yiming sun", role: "Conference Director", image: "/images/Conference%20Headshots/Jasmine.webp", team: "operations", imagePosition: "50% 50%", imageScale: 1.6 },
@@ -61,6 +62,18 @@ export default function Home({
       {/* Hero Section (desktop only) */}
       <div className="hidden md:block">
         <ScrollFrameAnimationLazy variant={frameVariant} />
+      </div>
+      <div className="relative md:hidden">
+        <Image
+          src="/entangleanimation/entangleanimation_0183.webp"
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={1080}
+          priority
+          sizes="100vw"
+          className="h-auto w-full object-cover"
+        />
       </div>
 
 
@@ -362,6 +375,9 @@ export default function Home({
         <TeamSection members={MEMBERS}></TeamSection>
       </section>
 
+      <div className="lg:hidden">
+        <MobileFooter />
+      </div>
       <div className="hidden lg:block md:block">
         <Footer />
       </div>
