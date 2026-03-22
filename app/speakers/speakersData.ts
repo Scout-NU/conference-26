@@ -74,7 +74,7 @@ export const speakersData: SpeakerTrack[] = [
       {
         id: "intention-6",
         img: "/images/Iskra Alexieva Jones.jpeg",
-        name: "ISKREA ALEXVIA JONES",
+        name: "ISKRA ALEXIEVA-JONES",
         title:
           "Director, Product Design at Insurify Adjunct Design Professor at Lesley University.",
         description: "",

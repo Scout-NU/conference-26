@@ -182,7 +182,7 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "Accessibility and Autonomy in the Digital Age Panel",
-        speaker: "HUGH GUINEY, ISKRA ALEXIEVA JONES, and EILEEN MCGIVNEY (Moderator)",
+        speaker: "HUGH GUINEY, ISKRA ALEXIEVA-JONES, and EILEEN MCGIVNEY (Moderator)",
         description:
           "A conversation on accessibility and inclusive design in the digital age, exploring how autonomy, emerging technologies, and personal perspective shape the way we design and build. Panelists will reflect on both the opportunities and gaps in creating more equitable digital experiences.",
         location: "auditorium",
