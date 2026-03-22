@@ -123,7 +123,7 @@ export const scheduleData: TimeSlot[] = [
     events: [
       {
         name: "designathon presentations",
-        speaker: "Joseph Schnackertz and Snehal Ladkes",
+        speaker: "Joseph Schnackertz and Snehal Ladke",
         description:
         "See and experience the hard work of all of the Entangle designathon participants during their 36 work period as they present their final presentations to the panel of judges.",
         location: "Auditorium",
