@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EventDetails from "@/components/designathon/EventDetails";
 
 export default function HeroSection() {
   return (
@@ -15,6 +16,7 @@ export default function HeroSection() {
         >
           register now
         </Link>
+        <EventDetails className="mt-3 md:hidden" />
       </div>
     </section>
   );
