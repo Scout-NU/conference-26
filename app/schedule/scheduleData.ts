@@ -139,7 +139,7 @@ export const scheduleData: TimeSlot[] = [
         speaker: "Scout Media Team",
         description:
         "Need a fresh, high-quality headshot? Stop by the second floor of ISEC, where the Scout Media team will be stationed to capture polished photos for LinkedIn, portfolios, and more!",
-        location: "ISEC 2nd Floor",
+        location: "ISEC 3rd Floor",
       },
       {
         name: "From Frame to Presence - Designing an AI & XR Workflow for Immersive Storytelling",
