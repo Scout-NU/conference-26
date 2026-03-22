@@ -10,20 +10,20 @@ export default function Speakers() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-charcoal">
       {/* Vector backgrounds - right side */}
-      <div className="pointer-events-none absolute right-[-16rem] top-[-3rem] z-0 hidden h-[48rem] w-[60rem] overflow-visible md:block xl:right-[-14rem]">
+      <div className="pointer-events-none absolute right-[-9rem] top-[-6rem] z-0 h-[24rem] w-[28rem] overflow-visible sm:right-[-8rem] sm:top-[-5rem] sm:h-[30rem] sm:w-[34rem] md:right-[-16rem] md:top-[-3rem] md:h-[48rem] md:w-[60rem] xl:right-[-14rem]">
         <Image
           src="/assets/speakers-svgs/vector2.webp"
           alt=""
           fill
           sizes="(min-width: 1280px) 60rem, 90vw"
-          className="object-contain object-top-right -translate-y-[7rem] translate-x-[10rem] -rotate-[0deg] scale-[0.68]"
+          className="object-contain object-top-right -translate-y-[1.75rem] translate-x-[1.75rem] scale-[0.95] opacity-65 sm:-translate-y-[2.5rem] sm:translate-x-[2.5rem] sm:scale-[0.9] md:-translate-y-[7rem] md:translate-x-[10rem] md:scale-[0.68] md:opacity-100"
         />
         <Image
           src="/assets/speakers-svgs/vector1.webp"
           alt=""
           fill
           sizes="(min-width: 1280px) 72rem, 90vw"
-          className="origin-top-right object-contain object-top-right translate-x-[17rem] translate-y-[-10rem] rotate-[3deg] scale-[1.5] xl:translate-x-[32rem]"
+          className="origin-top-right object-contain object-top-right translate-x-[1rem] translate-y-[4rem] rotate-[2deg] scale-[0.95] opacity-70 sm:translate-x-[6rem] sm:-translate-y-[3.5rem] sm:scale-[1.05] md:translate-x-[17rem] md:translate-y-[-10rem] md:rotate-[3deg] md:scale-[1.5] md:opacity-100 xl:translate-x-[32rem]"
         />
       </div>
 

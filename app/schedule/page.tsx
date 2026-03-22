@@ -77,18 +77,18 @@ export default function Schedule() {
       className="relative min-h-dvh overflow-hidden"
       style={{ background: "var(--Grey, #272727)" }}
     >
-      <div className="pointer-events-none absolute right-0 top-0 z-0 hidden w-[clamp(31.25rem,55vw,56.25rem)] md:block">
+      <div className="pointer-events-none absolute right-[-6rem] top-[-3rem] z-0 w-[24rem] sm:right-[-4rem] sm:top-[-2rem] sm:w-[30rem] md:right-0 md:top-0 md:w-[clamp(31.25rem,55vw,56.25rem)]">
         <Image
           src={blue_blob_header}
           alt=""
           aria-hidden="true"
           sizes="(min-width: 768px) 55vw, 0px"
-          className="h-auto w-full translate-x-16 -translate-y-8 object-contain"
+          className="h-auto w-full translate-x-6 -translate-y-3 object-contain opacity-70 sm:translate-x-10 sm:-translate-y-5 sm:opacity-80 md:translate-x-16 md:-translate-y-8 md:opacity-100"
         />
       </div>
 
       <div
-        className="pointer-events-none absolute right-0 top-0 z-10 hidden w-[clamp(75rem,130vw,106.25rem)] translate-x-[48%] -translate-y-[25%] rotate-[10.17deg] md:block"
+        className="pointer-events-none absolute right-0 top-0 z-10 w-[46rem] translate-x-[60%] -translate-y-[38%] rotate-[10.17deg] opacity-45 sm:w-[60rem] sm:translate-x-[54%] sm:-translate-y-[32%] sm:opacity-55 md:w-[clamp(75rem,130vw,106.25rem)] md:translate-x-[48%] md:-translate-y-[25%] md:opacity-100"
       >
         <Image
           src={yellowKnot}
@@ -99,7 +99,7 @@ export default function Schedule() {
         />
       </div>
 
-      <div className="pointer-events-none absolute left-[23%] top-[37%] z-0 hidden w-[clamp(37.5rem,65vw,59.375rem)] -rotate-[108.93deg] md:block">
+      <div className="pointer-events-none absolute left-[-45%] top-[42%] z-0 w-[28rem] -rotate-[100deg] opacity-60 sm:left-[-25%] sm:top-[40%] sm:w-[34rem] md:left-[23%] md:top-[37%] md:w-[clamp(37.5rem,65vw,59.375rem)] md:-rotate-[108.93deg] md:opacity-100">
         <Image
           src={blue_blob_center}
           alt=""
