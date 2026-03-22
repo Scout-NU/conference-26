@@ -266,36 +266,75 @@ export default function Home({
             sizes="1440px"
             aria-hidden="true"
           />
-          <div className="inline-block border border-lime shrink-0">
+          <Link
+            href="https://2025.interventions.design"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit 2025 Interventions site"
+            className="group relative inline-block shrink-0 overflow-hidden border border-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
+          >
             <Image
               src="/images/home-interventions-1.webp"
-              alt="Interventions collage image one"
+              alt="Interventions 2025 preview image"
               width={1590}
               height={1000}
               sizes="(max-width: 1024px) 100vw, 30vw"
-              className="w-160 object-cover aspect-159/100"
+              className="aspect-159/100 w-160 object-cover"
             />
-          </div>
-          <div className="inline-block border border-lime -m-24 shrink-0">
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 bg-black/25 transition-colors duration-200 group-hover:bg-black/45 group-focus-visible:bg-black/45"
+            />
+            <span className="pointer-events-none absolute bottom-5 left-5 z-10 inline-flex rounded-full border border-lime bg-charcoal/80 px-4 py-2 text-sm font-medium text-cream transition-colors duration-200 group-hover:bg-lime group-hover:text-charcoal group-focus-visible:bg-lime group-focus-visible:text-charcoal">
+              Interventions: Shift
+            </span>
+          </Link>
+          <Link
+            href="https://2024.interventions.design"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit 2024 Interventions site"
+            className="group relative -m-24 inline-block shrink-0 overflow-hidden border border-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
+          >
             <Image
               src="/images/home-interventions-2.webp"
-              alt="Interventions collage image two"
+              alt="Interventions 2024 preview image"
               width={1590}
               height={1000}
               sizes="(max-width: 1024px) 100vw, 25vw"
-              className="w-120 object-cover aspect-159/100"
+              className="aspect-159/100 w-120 object-cover"
             />
-          </div>
-          <div className="inline-block border border-lime my-16 shrink-0">
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 bg-black/25 transition-colors duration-200 group-hover:bg-black/45 group-focus-visible:bg-black/45"
+            />
+            <span className="pointer-events-none absolute bottom-5 left-5 z-10 inline-flex rounded-full border border-lime bg-charcoal/80 px-4 py-2 text-sm font-medium text-cream transition-colors duration-200 group-hover:bg-lime group-hover:text-charcoal group-focus-visible:bg-lime group-focus-visible:text-charcoal">
+              Interventions: Collide
+            </span>
+          </Link>
+          <Link
+            href="https://2023.interventions.design"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit 2023 Interventions site"
+            className="group relative my-16 inline-block shrink-0 overflow-hidden border border-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
+          >
             <Image
               src="/images/home-interventions-3.webp"
-              alt="Interventions collage image three"
+              alt="Interventions 2023 preview image"
               width={1590}
               height={1000}
               sizes="(max-width: 1024px) 100vw, 24vw"
-              className="w-110 object-cover aspect-159/100"
+              className="aspect-159/100 w-110 object-cover"
             />
-          </div>
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 bg-black/25 transition-colors duration-200 group-hover:bg-black/45 group-focus-visible:bg-black/45"
+            />
+            <span className="pointer-events-none absolute bottom-5 left-5 z-10 inline-flex rounded-full border border-lime bg-charcoal/80 px-4 py-2 text-sm font-medium text-cream transition-colors duration-200 group-hover:bg-lime group-hover:text-charcoal group-focus-visible:bg-lime group-focus-visible:text-charcoal">
+              Interventions: Ignite
+            </span>
+          </Link>
         </div>
       </section>
 
