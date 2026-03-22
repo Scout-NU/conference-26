@@ -99,12 +99,12 @@ export default function Schedule() {
         />
       </div>
 
-      <div className="pointer-events-none absolute left-[-45%] top-[42%] z-0 w-[28rem] -rotate-[100deg] opacity-100 sm:left-[-25%] sm:top-[40%] sm:w-[34rem] md:left-[23%] md:top-[37%] md:w-[clamp(37.5rem,65vw,59.375rem)] md:-rotate-[108.93deg] md:opacity-100">
+      <div className="pointer-events-none absolute left-1/2 top-[34%] z-0 w-[clamp(75rem,130vw,118.75rem)] -translate-x-1/2 -rotate-[108.93deg] opacity-100 md:left-[23%] md:top-[37%] md:w-[clamp(37.5rem,65vw,59.375rem)] md:translate-x-0 md:-rotate-[108.93deg] md:opacity-100">
         <Image
           src={blue_blob_center}
           alt=""
           aria-hidden="true"
-          sizes="(min-width: 768px) 65vw, 95vw"
+          sizes="(min-width: 768px) 65vw, 150vw"
           className="h-auto w-full scale-110 object-contain"
         />
       </div>
