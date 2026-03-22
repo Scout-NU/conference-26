@@ -49,7 +49,7 @@ export const scheduleData: TimeSlot[] = [
       {
         name: "keynote speaker",
         speaker: "XIN XIN",
-        description: "Learn about the power of collectives in building a more equitable digital future from Xin Xin,  Co-Executive Director and Processing Foundation Assistant Professor of Interaction and Media Design at The New School.",
+        description: "Reshaping language and power through socially-engaged software. \n Learn about the power of collectives in building a more equitable digital future with Xin Xin, Co-Executive Director of Processing Foundation and Assistant Professor of Interaction and Media Design at The New School. Through mediating, subverting, and innovating modes of social interaction in the digital space, Xin invites participants to relate to one another and experience togetherness in new and unfamiliar ways.",
         location: "Auditorium",
         // knots: ["intention_blue"],
       },
