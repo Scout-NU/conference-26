@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import CursorTrailGate from "@/components/CursorTrailGate";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -31,8 +32,10 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${geistMono.variable} antialiased bg-[#212121]`}
       >
+        <ScrollProgress />
         <CursorTrailGate />
         <Navbar />
         {children}
