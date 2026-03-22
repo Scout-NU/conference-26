@@ -275,3 +275,25 @@
   opacity: 1;
   animation: speaker-shine 3.4s linear infinite;
 }
+
+@keyframes mobile-ticket-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-sky) 50%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-sky) 0%, transparent);
+  }
+}
+
+.mobile-ticket-pulse {
+  position: relative;
+  z-index: 0;
+  animation: mobile-ticket-pulse 1.9s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-ticket-pulse {
+    animation: none;
+  }
+}
