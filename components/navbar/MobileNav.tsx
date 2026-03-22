@@ -8,6 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { NavbarLinks } from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 
 const MobileNav = () => {
@@ -36,9 +37,22 @@ const MobileNav = () => {
         <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
 
         <div className="flex flex-1 flex-col">
-          <Link href="/" className="shrink-0 flex items-center text-cream font-clash font-[550] text-xl">
-            entangle
-          </Link>
+          <SheetClose asChild>
+            <Link
+              href="/"
+              aria-label="Go to home page"
+              className="shrink-0 flex items-center"
+            >
+              <Image
+                src="/brand/entangle-logo.webp"
+                alt="Entangle Logo"
+                width={160}
+                height={40}
+                priority
+                className="h-auto w-[140px] sm:w-[160px]"
+              />
+            </Link>
+          </SheetClose>
 
           <section className="flex flex-1 flex-col items-center justify-center gap-7 text-center">
             {NavbarLinks.map((link) => (
