@@ -47,9 +47,9 @@ export const scheduleData: TimeSlot[] = [
     time: "9:45 AM",
     events: [
       {
-        name: "keynote speaker",
+        name: "Reshaping language and power through socially-engaged software",
         speaker: "XIN XIN",
-        description: "Learn about the power of collectives in building a more equitable digital future from Xin Xin,  Co-Executive Director and Processing Foundation Assistant Professor of Interaction and Media Design at The New School.",
+        description: "Learn about the power of collectives in building a more equitable digital future with Xin Xin, Co-Executive Director of Processing Foundation and Assistant Professor of Interaction and Media Design at The New School. Through mediating, subverting, and innovating modes of social interaction in the digital space, Xin invites participants to relate to one another and experience togetherness in new and unfamiliar ways.",
         location: "Auditorium",
         // knots: ["intention_blue"],
       },
@@ -70,7 +70,7 @@ export const scheduleData: TimeSlot[] = [
         name: "Living Textiles and Microbial Computations",
         speaker: "KATIA ZOLOTOVSKY",
         description:
-          "More details to come!",
+          "Learn more about design and computation with biologically active materials and the impact of biotechnology on everyday life and the ecosystems we live in from Katia Zolotovsky, Assistant Professor in Art + Design with a joint appointment in the College of Science, Department of Chemistry and Chemical Biology.",
         location: "Classroom 140 & 142",
         // knots: ["impact_pink"],
       },
@@ -184,7 +184,7 @@ export const scheduleData: TimeSlot[] = [
         name: "Accessibility and Autonomy in the Digital Age Panel",
         speaker: "HUGH GUINEY, ISKRA ALEXIEVA JONES, and EILEEN MCGIVNEY (Moderator)",
         description:
-          "More details to come!",
+          "A conversation on accessibility and inclusive design in the digital age, exploring how autonomy, emerging technologies, and personal perspective shape the way we design and build. Panelists will reflect on both the opportunities and gaps in creating more equitable digital experiences.",
         location: "auditorium",
       },
     ],
