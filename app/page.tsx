@@ -424,31 +424,46 @@ export default function Home({
 
           <div className="flex items-center justify-start gap-10 flex-wrap mt-10">
             <Image
-              src="/sponsors/center-for-design.png"
-              alt="Center for Design"
-              width={90}
-              height={100}
-            />
-            <Image
               src="/sponsors/camd.png"
               alt="CAMD"
               width={480}
               height={100}
-              className="self-start"
+              className="h-16 w-auto self-start"
             />
             <Image
               src="/sponsors/honors.png"
               alt="Honors"
               width={480}
               height={100}
-              className="self-start"
+              className="h-16 w-auto self-start"
             />
             <Image
               src="/sponsors/student-life.png"
               alt="Student Life"
               width={380}
               height={100}
-              className="self-start"
+              className="h-16 w-auto self-start"
+            />
+            <Image
+              src="/sponsors/coe.png"
+              alt="College of Engineering"
+              width={487}
+              height={100}
+              className="h-16 w-auto self-start"
+            />
+            <Image
+              src="/sponsors/khoury.png"
+              alt="Khoury College of Computer Sciences"
+              width={811}
+              height={100}
+              className="h-16 w-auto self-start"
+            />
+            <Image
+              src="/sponsors/center-for-design.png"
+              alt="Center for Design"
+              width={90}
+              height={100}
+              className="h-16 w-auto self-start"
             />
             <Image
               src="/sponsors/other-tomorrows.png"
@@ -463,6 +478,20 @@ export default function Home({
               width={240}
               height={100}
               className="self-start"
+            />
+            <Image
+              src="/sponsors/StickerGiant.png"
+              alt="StickerGiant"
+              width={153}
+              height={100}
+              className="self-start"
+            />
+            <Image
+              src="/sponsors/shakeshack2.png"
+              alt="Shake Shack"
+              width={384}
+              height={131}
+              className="h-[5.25rem] w-auto self-start"
             />
           </div>
         </div>
